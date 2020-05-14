@@ -1,0 +1,20 @@
+// ** svg.scss
+
+@function _buildIcon($icon) {
+  $icon: "#{$icon}";
+  @return $icon;
+}
+
+@function icon($icon-name, $color, $color2: "") {
+  $icons: (
+    //SVG 아이콘 목록
+      // 검색
+      search:
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 20" xml:space="preserve"><g transform="translate(-1160.543 -67.822)"><circle cx="1168.5" cy="75.39" r="7.5" fill="none"/><circle cx="1168.5" cy="75.39" r="6.58" fill="none" stroke="%23#{$color}" stroke-width="1.8" /><path fill="none" stroke="%23#{$color}" stroke-width="1.8" d="M1172.5 80.39l6 6"/></g></svg>',
+    // 아래 화살표
+      arrow-bottom:
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 13"><path d="M1.6 2.7L9.9 11l8.3-8.3" fill="none" stroke="%23#{$color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+  );
+  $icon: _buildIcon(map-get($icons, $icon-name));
+  @return url("data:image/svg+xml;utf8,#{$icon}");
+}
