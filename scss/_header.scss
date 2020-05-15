@@ -51,6 +51,21 @@
   }
 
   &__gnb {
+    @include flexbox();
+    @include align-items(center);
+
+    .nav__gnb-home {
+      margin-right: 50px;
+      font-weight: 700;
+      font-size: 16px;
+      color: #2c2828;
+      transition: color 0.2s;
+
+      &:hover {
+        color: $c-main;
+      }
+    }
+
     // * 기본 스타일 덮어씌우기
     .link_tit,
     .sub_category_list,

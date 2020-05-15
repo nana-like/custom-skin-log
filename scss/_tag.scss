@@ -1,0 +1,33 @@
+.box_tag_trail {
+  width: 100%;
+  box-sizing: border-box;
+
+  .title_category {
+    max-width: $max-width;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  .tag_area {
+    background-color: #fafafa;
+  }
+
+  .tag_cont {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 80px 20px;
+  }
+
+  .tag_cloud {
+    padding: 4px 22px;
+    border-radius: 88px;
+    border: solid 1px #c4c4c4;
+    background-color: #ffffff;
+    font-size: 17px;
+    line-height: 2.18;
+    letter-spacing: 0.17px;
+    text-align: left;
+    color: #7b7b7b;
+    margin-right: 16px;
+  }
+}

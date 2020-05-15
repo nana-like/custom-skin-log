@@ -90,7 +90,7 @@
           <div class="nav">
             <div class="nav__container">
               <div class="nav__gnb">
-                <div class="nav__gnb-home"><a href="[##_blog_link_##]">Home</a></div>
+                <a href="[##_blog_link_##]" class="nav__gnb-home">Home</a>
                 [##_category_list_##]
               </div>
               <div class="nav__menu">
@@ -261,145 +261,38 @@
                 </s_cover>
 
                 <s_cover name="horizontal">
+                  <!-- index_type_list  -->
                   <div class="index_type_common index_type_horizontal index_type_horizontal_line2 logSkin-list">
-                    <h2 class="title_category">최신 글</h2>
+                    <h2 class="title_category">[##_cover_title_##]</h2>
                     <ul class="list_horizontal index_list_container logSkin-new">
+                      <s_cover_item>
+                        <li class="list_horizontal_item">
+                          <div class="article_content">
 
-                      <li class="list_horizontal_item">
-                        <div class="article_content">
-
-                          <a href="/8" class="logSkin-list-link">
-                            <div class="thumbnail_zone">
-                              <div class="thumbnail_post"
-                                style="background-image:url('https://k.kakaocdn.net/dn/na1wA/btqD9uXg8gG/9gPoA9KtydepWrEuHn4zE0/img.gif')">
+                            <a href="[##_cover_item_url_##]" class="logSkin-list-link">
+                              <div class="thumbnail_zone">
+                                <div class="thumbnail_post" <s_cover_item_thumbnail>
+                                  style="background-image:url('[##_cover_item_thumbnail_##]')"
+                                  </s_cover_item_thumbnail>></div>
                               </div>
-                            </div>
-                            <div class="info_zone">
-                              <p class="category_post"></p>
-                              <strong class="title_post">213123</strong>
-                              <p class="txt_post">
-                                12312
-                              </p>
-
-                              <p class="date_post">2020.05.14</p>
-
-                            </div>
-                          </a>
-                        </div>
-                      </li>
-
-                      <li class="list_horizontal_item">
-                        <div class="article_content">
-
-                          <a href="/7" class="logSkin-list-link">
-                            <div class="thumbnail_zone">
-                              <div class="thumbnail_post"
-                                style="background-image:url('https://k.kakaocdn.net/dn/b2mZPb/btqEaZPFr6P/NCQueJ9cxbPE73xC7Ky1lK/img.jpg')">
-                              </div>
-                            </div>
-                            <div class="info_zone">
-                              <p class="category_post"></p>
-                              <strong class="title_post">42</strong>
-                              <p class="txt_post">
-                                22
-                              </p>
-
-                              <p class="date_post">2020.05.14</p>
-
-                            </div>
-                          </a>
-                        </div>
-                      </li>
-
-                      <li class="list_horizontal_item">
-                        <div class="article_content">
-
-                          <a href="/6" class="logSkin-list-link">
-                            <div class="thumbnail_zone">
-                              <div class="thumbnail_post"
-                                style="background-image:url('https://k.kakaocdn.net/dn/cjgBvQ/btqEa0ntEor/YCTqLUJAWF18be58zW04ek/img.jpg')">
-                              </div>
-                            </div>
-                            <div class="info_zone">
-                              <p class="category_post"></p>
-                              <strong class="title_post">222x</strong>
-                              <p class="txt_post">
-
-                              </p>
-
-                              <p class="date_post">2020.05.14</p>
-
-                            </div>
-                          </a>
-                        </div>
-                      </li>
-
-                      <li class="list_horizontal_item">
-                        <div class="article_content">
-
-                          <a href="/5" class="logSkin-list-link">
-                            <div class="thumbnail_zone">
-                              <div class="thumbnail_post"></div>
-                            </div>
-                            <div class="info_zone">
-                              <p class="category_post"></p>
-                              <strong class="title_post">45</strong>
-                              <p class="txt_post">
-                                123
-                              </p>
-
-                              <p class="date_post">2020.05.14</p>
-
-                            </div>
-                          </a>
-                        </div>
-                      </li>
-
-                      <li class="list_horizontal_item">
-                        <div class="article_content">
-
-                          <a href="/4" class="logSkin-list-link">
-                            <div class="thumbnail_zone">
-                              <div class="thumbnail_post"></div>
-                            </div>
-                            <div class="info_zone">
-                              <p class="category_post"></p>
-                              <strong class="title_post">TEST123</strong>
-                              <p class="txt_post">
-                                123
-                              </p>
-
-                              <p class="date_post">2020.05.14</p>
-
-                            </div>
-                          </a>
-                        </div>
-                      </li>
-
-                      <li class="list_horizontal_item">
-                        <div class="article_content">
-
-                          <a href="/3" class="logSkin-list-link">
-                            <div class="thumbnail_zone">
-                              <div class="thumbnail_post"></div>
-                            </div>
-                            <div class="info_zone">
-                              <p class="category_post"></p>
-                              <strong class="title_post">테스트글</strong>
-                              <p class="txt_post">
-                                TEST
-                              </p>
-
-                              <p class="date_post">2020.05.14</p>
-
-                            </div>
-                          </a>
-                        </div>
-                      </li>
-
+                              <s_cover_item_article_info>
+                                <div class="info_zone">
+                                  <p class="category_post">[##_cover_item_category_##]</p>
+                                  <strong class="title_post">[##_cover_item_title_##]</strong>
+                                  <p class="txt_post">
+                                    [##_cover_item_summary_##]
+                                  </p>
+                                  <p class="date_post">[##_cover_item_simple_date_##]</p>
+                                </div>
+                              </s_cover_item_article_info>
+                            </a>
+                          </div>
+                        </li>
+                      </s_cover_item>
                     </ul>
 
                   </div>
+                  <!-- // index_type_list -->
 
                 </s_cover>
 
@@ -433,9 +326,10 @@
               </div>
             </s_list>
 
+
             <!-- category_list -->
             <s_article_rep>
-              <div class="category_list index_type_common index_type_[##_var_penelopeListType_##]">
+              <div class="logSkin-list-normal category_list index_type_common index_type_[##_var_penelopeListType_##]">
                 <ul class="list_[##_var_penelopeListType_##]">
 
                   <li class="list_horizontal_item">
@@ -665,24 +559,24 @@
                 <div class="category_list index_type_common index_type_horizontal">
                   <ul class="list_horizontal">
                     <li class="list_horizontal_item">
-                      <div class="article_content">
-                        <div class="box_contents">
-                          <a href="[##_article_rep_link_##]" class="link_title"><strong
-                              class="title_view">[##_article_rep_title_##]</strong></a>
-                          <div class="info_post">
-                            <a class="link_category thema_apply"><span class="category">보호글</span></a>
-                            <span class="date">[##_article_rep_date_##]</span>
+                      <a href="[##_article_rep_link_##]" class="link_title  protected-list">
+                        <div class="article_content">
+
+
+                          <div class="thumbnail_zone">
+                            <div class="thumbnail_post"></div>
                           </div>
 
-                          <a href="[##_article_rep_link_##]" class="link_article">
+                          <div class="info_zone">
+                            <p class="category">[##_article_rep_category_##]</p>
+                            <strong class="title_post">[##_article_rep_title_##]</strong>
                             <p class="txt_post">
-                              보호되어 있는 글입니다.
+                              보호되어 있는 글입니다. 비밀번호를 입력해야 내용을 볼 수 있어요.
                             </p>
-                            <button type="button" class="btn_more thema_apply mobile_blind">Read
-                              More</button>
-                          </a>
+                            <p class="date">[##_article_rep_simple_date_##]</p>
+                          </div>
                         </div>
-                      </div>
+                      </a>
                     </li>
               </s_index_article_rep>
 
@@ -958,15 +852,14 @@
 
               </s_sidebar_element>
 
-              <s_ad_div>
-                <s_sidebar_element>
-                  <!-- 관리자 메뉴 -->
-                  <div class="admin">
-                    <a href="[##_owner_url_##]" class="admin"><span class="">관리자 화면</span></a>
-                    <a href="[##_owner_url_##]/entry/post" class="write"><span class="">글쓰기</span></a>
-                  </div>
-                </s_sidebar_element>
-              </s_ad_div>
+
+              <s_sidebar_element>
+                <!-- 관리자 메뉴 -->
+                <div class="admin">
+                  <a href="[##_owner_url_##]"><span class="">로그인</span></a>
+                  <!-- <a href="[##_owner_url_##]/entry/post" class="write"><span class="">글쓰기</span></a> -->
+                </div>
+              </s_sidebar_element>
             </div>
 
             <div class="footer-right">
@@ -987,7 +880,7 @@
                 <p class="copyright">
                   [##_var_footerCopyright_##]</p>
               </div>
-            </div>\
+            </div>
 
           </div>
           <div class="logSkin-copy">
