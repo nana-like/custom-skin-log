@@ -44,6 +44,12 @@
     transition: border-color 0.2s;
 
     &:hover {
+      border-color: #bebebe;
+    }
+  }
+
+  .logSkin-list-link {
+    &:hover {
       cursor: pointer;
       border-color: #bebebe;
       .thumbnail_post {
@@ -94,6 +100,7 @@
     margin-bottom: 50px;
     font-size: 15px;
     color: #4b4b4b;
+    min-height: 69px;
     line-height: 1.55;
     @include ellipsis(3);
     letter-spacing: -0.14px;
@@ -178,7 +185,7 @@
   margin-top: 110px;
   padding: 60px 0;
   text-align: center;
-  background-color: #fafafa;
+  background-color: #f7f7f7;
   letter-spacing: -0.2px;
   @include res--laptop {
     margin-top: 80px;
@@ -210,4 +217,53 @@
 .another_category {
   //카테고리 내 다른 글 보여주기
   display: none;
+}
+
+// 홈 화면일 때만 최신 글 다르게 표시
+
+#tt-body-index {
+  .logSkin-new {
+    & > li:first-child {
+      position: relative;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      padding: 40px 40px;
+      border: 0;
+      background: #f5f5f5;
+
+      &:hover {
+        border: 0;
+      }
+
+      .thumbnail_post {
+        width: 350px;
+        height: 230px;
+      }
+
+      .thumbnail_zone {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .info_zone {
+        width: 80%;
+        margin-left: auto;
+        padding: 54px 40px 54px 160px;
+        background-color: #fff;
+
+        .category_post {
+          margin-bottom: 25px;
+        }
+
+        .txt_post {
+          margin-top: 4px;
+          margin-bottom: 45px;
+          line-height: 1.45;
+          letter-spacing: -0.15px;
+          min-height: 42px;
+        }
+      }
+    }
+  }
 }

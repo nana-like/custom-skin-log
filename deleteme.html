@@ -513,11 +513,12 @@
                 <form action="" method="get">
                   <legend><span class="blind">컨텐츠 검색</span></legend>
 
-                  <input type="text" name="search" title="Search" placeholder="Search" value=""
+                  <input type="text" name="search" title="Search" placeholder="검색어를 입력해 주세요." value=""
                     class="inp_search cc_cursor"
                     onkeypress="if (event.keyCode == 13) { try{window.location.href='/search/'+looseURIEncode(document.getElementsByName('search')[0].value);document.getElementsByName('search')[0].value='';return false;}catch(e){} }">
 
-                  <button type="button" title="검색어 삭제" class="btn_search_del cc_pointer">삭제</button>
+                  <button type="button" title="검색어 삭제" class="btn_search_del cc_pointer"><span
+                      class="blind">삭제</span></button>
                 </form>
               </div>
               <a class="btn-link" href="https://nykim.net" target="_blank" rel="noopener">
@@ -550,7 +551,7 @@
           <!-- index_type_list  -->
           <div class="index_type_common index_type_horizontal index_type_horizontal_line2 logSkin-list">
             <h2 class="title_category">최신 글</h2>
-            <ul class="list_horizontal index_list_container">
+            <ul class="list_horizontal index_list_container logSkin-new">
 
               <li class="list_horizontal_item">
                 <div class="article_content">

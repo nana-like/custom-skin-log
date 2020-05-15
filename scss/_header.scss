@@ -84,3 +84,92 @@
     }
   }
 }
+
+//검색영역
+.area_search {
+  position: relative;
+  width: 220px;
+  height: 31px;
+  margin-right: 4px;
+
+  &:before {
+    position: absolute;
+    top: 9px;
+    left: -28px;
+    display: inline-block;
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-image: icon(search, "7b7b7b");
+    background-repeat: no-repeat;
+  }
+
+  .inp_search {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+    transform: translateY(-50%);
+    padding: 9px 0px;
+    border-bottom: 1px solid #828282;
+    background-color: #fff;
+    transition: border 0.2s;
+
+    &:focus {
+      border-color: #4b4b4b;
+    }
+
+    @include placeholder {
+      color: #a0a0a0;
+      letter-spacing: -0.14px;
+    }
+  }
+
+  .btn_search_del {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 25px;
+    height: 31px;
+
+    &:before,
+    &:after {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 2px;
+      height: 13px;
+      background-color: rgb(191, 191, 191);
+      transition: background 0.2s;
+    }
+
+    &:before {
+      top: 8px;
+      left: 11px;
+      transform: rotate(-42deg);
+    }
+
+    &:after {
+      top: 8px;
+      right: 12px;
+      transform: rotate(42deg);
+    }
+
+    &:hover {
+      &:before,
+      &:after {
+        background-color: rgb(155, 155, 155);
+      }
+    }
+  }
+}
+
+.search_on {
+  .btn_search {
+    display: none;
+  }
+}

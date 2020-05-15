@@ -106,10 +106,11 @@
                   <form action="" method="get">
                     <legend><span class="blind">컨텐츠 검색</span></legend>
 
-                    <input type="text" name="search" title="Search" placeholder="Search" value="" class="inp_search"
+                    <input type="text" name="search" title="Search" placeholder="검색어를 입력해 주세요." value=""
+                      class="inp_search"
                       onkeypress="if (event.keyCode == 13) { try{window.location.href='/search/'+looseURIEncode(document.getElementsByName('search')[0].value);document.getElementsByName('search')[0].value='';return false;}catch(e){} }">
 
-                    <button type="button" title="검색어 삭제" class="btn_search_del">삭제</button>
+                    <button type="button" title="검색어 삭제" class="btn_search_del"><span class="blind">삭제</span></button>
                   </form>
                 </div>
                 <a class="btn-link" href="https://nykim.net" target="_blank" rel="noopener">
@@ -259,38 +260,145 @@
                 </s_cover>
 
                 <s_cover name="horizontal">
-                  <!-- index_type_list  -->
                   <div class="index_type_common index_type_horizontal index_type_horizontal_line2 logSkin-list">
-                    <h2 class="title_category">[##_cover_title_##]</h2>
-                    <ul class="list_horizontal index_list_container">
-                      <s_cover_item>
-                        <li class="list_horizontal_item">
-                          <div class="article_content">
+                    <h2 class="title_category">최신 글</h2>
+                    <ul class="list_horizontal index_list_container logSkin-new">
 
-                            <a href="[##_cover_item_url_##]" class="logSkin-list-link">
-                              <div class="thumbnail_zone">
-                                <div class="thumbnail_post" <s_cover_item_thumbnail>
-                                  style="background-image:url('[##_cover_item_thumbnail_##]')"
-                                  </s_cover_item_thumbnail>></div>
+                      <li class="list_horizontal_item">
+                        <div class="article_content">
+
+                          <a href="/8" class="logSkin-list-link">
+                            <div class="thumbnail_zone">
+                              <div class="thumbnail_post"
+                                style="background-image:url('https://k.kakaocdn.net/dn/na1wA/btqD9uXg8gG/9gPoA9KtydepWrEuHn4zE0/img.gif')">
                               </div>
-                              <div class="info_zone">
-                                <p class="category_post">[##_cover_item_category_##]</p>
-                                <strong class="title_post">[##_cover_item_title_##]</strong>
-                                <p class="txt_post">
-                                  [##_cover_item_summary_##]
-                                </p>
-                                <s_cover_item_article_info>
-                                  <p class="date_post">[##_cover_item_simple_date_##]</p>
-                                </s_cover_item_article_info>
+                            </div>
+                            <div class="info_zone">
+                              <p class="category_post"></p>
+                              <strong class="title_post">213123</strong>
+                              <p class="txt_post">
+                                12312
+                              </p>
+
+                              <p class="date_post">2020.05.14</p>
+
+                            </div>
+                          </a>
+                        </div>
+                      </li>
+
+                      <li class="list_horizontal_item">
+                        <div class="article_content">
+
+                          <a href="/7" class="logSkin-list-link">
+                            <div class="thumbnail_zone">
+                              <div class="thumbnail_post"
+                                style="background-image:url('https://k.kakaocdn.net/dn/b2mZPb/btqEaZPFr6P/NCQueJ9cxbPE73xC7Ky1lK/img.jpg')">
                               </div>
-                            </a>
-                          </div>
-                        </li>
-                      </s_cover_item>
+                            </div>
+                            <div class="info_zone">
+                              <p class="category_post"></p>
+                              <strong class="title_post">42</strong>
+                              <p class="txt_post">
+                                22
+                              </p>
+
+                              <p class="date_post">2020.05.14</p>
+
+                            </div>
+                          </a>
+                        </div>
+                      </li>
+
+                      <li class="list_horizontal_item">
+                        <div class="article_content">
+
+                          <a href="/6" class="logSkin-list-link">
+                            <div class="thumbnail_zone">
+                              <div class="thumbnail_post"
+                                style="background-image:url('https://k.kakaocdn.net/dn/cjgBvQ/btqEa0ntEor/YCTqLUJAWF18be58zW04ek/img.jpg')">
+                              </div>
+                            </div>
+                            <div class="info_zone">
+                              <p class="category_post"></p>
+                              <strong class="title_post">222x</strong>
+                              <p class="txt_post">
+
+                              </p>
+
+                              <p class="date_post">2020.05.14</p>
+
+                            </div>
+                          </a>
+                        </div>
+                      </li>
+
+                      <li class="list_horizontal_item">
+                        <div class="article_content">
+
+                          <a href="/5" class="logSkin-list-link">
+                            <div class="thumbnail_zone">
+                              <div class="thumbnail_post"></div>
+                            </div>
+                            <div class="info_zone">
+                              <p class="category_post"></p>
+                              <strong class="title_post">45</strong>
+                              <p class="txt_post">
+                                123
+                              </p>
+
+                              <p class="date_post">2020.05.14</p>
+
+                            </div>
+                          </a>
+                        </div>
+                      </li>
+
+                      <li class="list_horizontal_item">
+                        <div class="article_content">
+
+                          <a href="/4" class="logSkin-list-link">
+                            <div class="thumbnail_zone">
+                              <div class="thumbnail_post"></div>
+                            </div>
+                            <div class="info_zone">
+                              <p class="category_post"></p>
+                              <strong class="title_post">TEST123</strong>
+                              <p class="txt_post">
+                                123
+                              </p>
+
+                              <p class="date_post">2020.05.14</p>
+
+                            </div>
+                          </a>
+                        </div>
+                      </li>
+
+                      <li class="list_horizontal_item">
+                        <div class="article_content">
+
+                          <a href="/3" class="logSkin-list-link">
+                            <div class="thumbnail_zone">
+                              <div class="thumbnail_post"></div>
+                            </div>
+                            <div class="info_zone">
+                              <p class="category_post"></p>
+                              <strong class="title_post">테스트글</strong>
+                              <p class="txt_post">
+                                TEST
+                              </p>
+
+                              <p class="date_post">2020.05.14</p>
+
+                            </div>
+                          </a>
+                        </div>
+                      </li>
+
                     </ul>
 
                   </div>
-                  <!-- // index_type_list -->
 
                 </s_cover>
 
