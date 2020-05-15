@@ -404,6 +404,131 @@
 
 
 
+                          <!-- area_reply -->
+                          <div class="area_reply">
+
+                            <div class="box_reply_info">
+                              <p class="item_info">댓글 <span class="count">
+                                  <s_rp_count>[##_article_rep_rp_cnt_##]</s_rp_count>
+                                </span></p>
+                            </div>
+                            <!-- reply_content -->
+                            <div class="reply_content">
+                              <button type="button" class="btn_more btn_replymore" style="display:none;">+ 이전 댓글
+                                더보기</button>
+
+                              <s_rp>
+                                <!-- box_comment_list -->
+                                <div class="box_comment_list">
+                                  <s_rp_container>
+                                    <ul class="list_reply">
+                                      <s_rp_rep>
+                                        <li id='[##_rp_rep_id_##]' class="item_reply [##_rp_rep_class_##]">
+
+                                          <div class="reply-line">
+                                            <div class="thumbnail_reply">
+                                              <img src="//i1.daumcdn.net/thumb/C100x100/?fname=[##_rp_rep_logo_##]"
+                                                width="50" height="50" alt="프로필사진">
+                                            </div>
+                                            <div class="box_reply_content">
+                                              <div class="reply-info-top"><span class="user">
+                                                  [##_rp_rep_name_##]
+                                                </span><span class="date">[##_rp_rep_date_##]</span></div>
+                                              <p class="txt">[##_rp_rep_desc_##]</p>
+                                              <div class="modify">
+                                                <a href="#" onclick="[##_rp_rep_onclick_delete_##]">수정/삭제</a><span
+                                                  class="slash"></span><a href="#"
+                                                  onclick="[##_rp_rep_onclick_reply_##]">답글</a>
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                          <s_rp2_container>
+                                            <!-- list_reply_comment -->
+                                            <ul class="list_reply_comment">
+                                              <s_rp2_rep>
+                                                <li id='[##_rp_rep_id_##]'
+                                                  class="item_comment reply [##_rp_rep_class_##]">
+                                                  <div class="ico_commnent">ㄴ</div>
+                                                  <div class="thumbnail_reply">
+                                                    <!-- <img
+                                                                                src="https://t1.daumcdn.net/tistory_admin/blog/admin/profile_default_07.png"
+                                                                                width="50" height="50" alt="프로필사진"> -->
+                                                    <img
+                                                      src="//i1.daumcdn.net/thumb/C100x100/?fname=[##_rp_rep_logo_##]"
+                                                      width="50" height="50" alt="프로필사진">
+                                                  </div>
+                                                  <div class="box_reply_content">
+                                                    <div class="reply-info-top"><span class="user">
+                                                        [##_rp_rep_name_##]
+                                                      </span><span class="date">[##_rp_rep_date_##]</span></div>
+                                                    <p class="txt">[##_rp_rep_desc_##]</p>
+                                                    <div class="modify">
+                                                      <a href="#" onclick="[##_rp_rep_onclick_delete_##]">수정/삭제</a>
+                                                    </div>
+                                                  </div>
+                                                </li>
+                                              </s_rp2_rep>
+                                            </ul>
+                                            <!-- // list_reply_comment -->
+                                          </s_rp2_container>
+                                        </li>
+                                      </s_rp_rep>
+                                    </ul>
+                                  </s_rp_container>
+                                </div>
+                                <!-- // box_comment_list -->
+
+                                <s_rp_input_form>
+                                  <!-- reply_write -->
+                                  <form method="post">
+                                    <div class="reply-form-container">
+                                      <div class="reply_write">
+                                        <s_rp_member>
+                                          <s_rp_guest>
+                                            <div class="form_guest">
+                                              <!-- name -->
+                                              <div class="box_inp">
+                                                <div class="inner_inp">
+                                                  <input type="text" name="[##_rp_input_name_##]"
+                                                    value="[##_guest_name_##]" title="이름" placeholder="이름"
+                                                    class="inp_comment inp_name" />
+                                                </div>
+                                              </div>
+                                              <!-- password -->
+                                              <div class="box_inp">
+                                                <div class="inner_inp">
+                                                  <input type="password" name="[##_rp_input_password_##]"
+                                                    value="[##_rp_admin_check_##]" title="비밀번호" maxlength="12"
+                                                    placeholder="비밀번호" class="inp_comment inp_password" />
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </s_rp_guest>
+                                        </s_rp_member>
+                                        <div class="form_content">
+                                          <textarea class="reply-form-textarea" id="[##_rp_input_comment_##]"
+                                            name="[##_rp_input_comment_##]" placeholder="댓글은 언제든 환영입니다 :D"></textarea>
+                                        </div>
+
+                                        <div class="form_reg thema_apply">
+                                          <label><input type="checkbox" name="[##_rp_input_is_secret_##]">비밀 댓글</label>
+                                          <button type="button" class="btn_register"
+                                            onclick="[##_rp_onclick_submit_##]">댓글 남기기</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </form>
+                                  <!-- // reply_write -->
+                                </s_rp_input_form>
+                              </s_rp>
+
+                            </div>
+                            <!-- // reply_content -->
+
+                          </div>
+                          <!-- // area_reply -->
+
                           <s_article_related>
                             <!-- related_type_view -->
                             <div class="related_type related_type_view">
@@ -429,119 +554,10 @@
                             <!-- // related_type_view -->
                           </s_article_related>
 
-                          <!-- area_comment -->
-                          <div class="area_reply">
-                            <div class="box_reply_info">
-                              <a href="#rp" onclick="[##_article_rep_rp_link_##]" class="reply_events">
-                                <p class="item_info">댓글 <span class="thema_apply">
-                                    <s_rp_count>[##_article_rep_rp_cnt_##]</s_rp_count>
-                                  </span></p>
-                              </a>
-                              <button type="button" class="btn_fold"><span class="blind">댓글
-                                  접기</span></button>
-                              <button type="button" class="btn_spread" style="display: none;"><span class="blind">댓글
-                                  펼치기</span></button>
-                            </div>
 
-                            <s_rp>
-                              <!-- reply_content -->
-                              <div class="reply_content">
-                                <button type="button" class="btn_more btn_replymore" style="display: none;">이전 댓글
-                                  더보기</button>
-
-                                <!-- box_comment_list -->
-                                <div class="box_comment_list">
-                                  <s_rp_container>
-                                    <div class="comment-list">
-                                      <ul>
-                                        <s_rp_rep>
-                                          <li id="[##_rp_rep_id_##]">
-                                            <div class="author-meta">
-                                              <img src="[##_rp_rep_logo_##]" class="avatar" alt="">
-                                              <span class="nickname">[##_rp_rep_name_##]</span>
-                                              <span class="date">[##_rp_rep_date_##]</span>
-                                            </div>
-                                            <p>[##_rp_rep_desc_##]</p>
-                                            <div class="control">
-                                              <a href="[##_rp_rep_link_##]">댓글주소</a>
-                                              <a href="#" onclick="[##_rp_rep_onclick_delete_##]">수정/삭제</a>
-                                              <a href="#" onclick="[##_rp_rep_onclick_reply_##]">댓글쓰기</a>
-                                            </div>
-                                            <s_rp2_container>
-                                              <ul>
-                                                <s_rp2_rep>
-                                                  <li id="[##_rp_rep_id_##]">
-                                                    <div class="author-meta">
-                                                      <img src="[##_rp_rep_logo_##]" class="avatar" alt="">
-                                                      <span class="nickname">[##_rp_rep_name_##]</span>
-                                                      <span class="date">[##_rp_rep_date_##]</span>
-                                                    </div>
-                                                    <p>[##_rp_rep_desc_##]</p>
-                                                    <div class="control">
-                                                      <a href="[##_rp_rep_link_##]">댓글주소</a>
-                                                      <a href="#" onclick="[##_rp_rep_onclick_delete_##]">수정/삭제</a>
-                                                    </div>
-                                                  </li>
-                                                </s_rp2_rep>
-                                              </ul>
-                                            </s_rp2_container>
-                                          </li>
-                                        </s_rp_rep>
-                                      </ul>
-                                    </div>
-                                  </s_rp_container>
-                                </div>
-                                <!-- // box_comment_list -->
-
-                                <s_rp_input_form>
-                                  <!-- reply_write -->
-                                  <form method="post">
-                                    <div class="reply_write">
-
-                                      <div class="form_content thema_apply">
-                                        <textarea id="[##_rp_input_comment_##]" name="[##_rp_input_comment_##]"
-                                          placeholder="댓글을 입력해주세요."></textarea>
-                                      </div>
-                                      <s_rp_member>
-                                        <s_rp_guest>
-                                          <div class="form_guest">
-                                            <div class="box_inp">
-                                              <div class="inner_inp">
-                                                <input type="text" name="[##_rp_input_name_##]" value="" title="이름"
-                                                  placeholder="이름" class="inp_comment inp_name" />
-                                              </div>
-                                            </div>
-                                            <div class="box_inp">
-                                              <div class="inner_inp">
-                                                <input type="password" name="[##_rp_input_password_##]" value=""
-                                                  title="비밀번호" maxlength="12" placeholder="비밀번호"
-                                                  class="inp_comment inp_password" />
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </s_rp_guest>
-
-                                        <div class="form_reg">
-                                          <label><input type="checkbox" name="[##_rp_input_is_secret_##]">
-                                            비밀글</label>
-                                        </div>
-                                      </s_rp_member>
-
-                                      <div class="form_reg">
-                                        <button type="button" class="btn_register thema_apply"
-                                          onclick="[##_rp_onclick_submit_##]">등록</button>
-                                      </div>
-                                    </div>
-                                  </form>
-                                  <!-- // reply_write -->
-                                </s_rp_input_form>
-
-                              </div>
-                              <!-- // reply_content -->
-                            </s_rp>
+                          <div class="go-to-top">
+                            <a href="#skip">맨 위로</a>
                           </div>
-                          <!-- // area_comment -->
-
                         </div>
                         <!-- article_content -->
 
@@ -927,11 +943,14 @@
   }
 
 
-  function rmvComma() {
-    var rmvTagComma = document.getElementsByClassName("tag_content");
-    if (rmvTagComma) { rmvTagComma[0].innerHTML = rmvTagComma[0].innerHTML.replace(/,/g, " "); }
+  if ($('.tag_content').length != false) {
+
+    function rmvComma() {
+      var rmvTagComma = document.getElementsByClassName("tag_content");
+      if (rmvTagComma) { rmvTagComma[0].innerHTML = rmvTagComma[0].innerHTML.replace(/,/g, " "); }
+    }
+    rmvComma();
   }
-  rmvComma();
 </script>
 
 </html>

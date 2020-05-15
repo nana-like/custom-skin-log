@@ -1,0 +1,349 @@
+#tt-body-page {
+  .inner_index > .index_type_common {
+    max-width: 100%;
+  }
+}
+
+.article_content {
+  // outline: 3px solid red;
+
+  .article_top {
+    position: relative;
+    max-width: $max-width;
+    width: 100%;
+    height: 320px;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    filter: blur(0.4px);
+    -webkit-filter: blur(0.4px);
+
+    &:after {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(10, 10, 10, 0.4);
+    }
+
+    //커버가 없는 경우
+    .no-cover {
+      margin-bottom: 0;
+    }
+  }
+
+  .info_post {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding-bottom: 22px;
+    border-bottom: solid 1px #7e7e7e;
+
+    .link_category {
+      display: block;
+      font-size: 15px;
+      color: $c-main;
+      letter-spacing: -0.15px;
+    }
+    .link_title {
+      display: block;
+      margin: 12px 0 4px;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.32px;
+      color: $c-black;
+    }
+
+    .line {
+      @include flexbox();
+      @include justify-content(space-between);
+      @include align-items(center);
+    }
+
+    .date {
+      display: block;
+      font-size: 14px;
+      letter-spacing: -0.15px;
+      color: #7b7b7b;
+    }
+
+    .author {
+      font-size: 14px;
+      letter-spacing: -0.15px;
+      text-align: right;
+      color: #7b7b7b;
+    }
+  }
+}
+
+.article_admin {
+  // 아티클 상단 어드민 영역
+  text-align: right;
+  display: block;
+  margin: 20px auto 0;
+  max-width: $max-width;
+
+  a {
+    &:not(:first-child) {
+      margin-left: 4px;
+    }
+  }
+}
+
+.article_profile {
+  // 아티클 하단 프로필 영역
+  margin-top: 100px;
+  max-width: 650px;
+  box-sizing: border-box;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 6px;
+  border: solid 1px #e6e6e6;
+  background-color: #fcfcfc;
+
+  @include flexbox();
+  @include align-items(center);
+
+  .profile_img {
+    width: 82px;
+    height: 82px;
+    margin-right: 25px;
+    @include flex-shrink(0);
+
+    img {
+      display: block;
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  .profile_contents {
+    & > strong {
+      display: block;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    & > p {
+      margin-top: -2px;
+      font-size: 14px;
+      color: #2c2828;
+      line-height: 1.6;
+    }
+  }
+}
+
+//공감 버튼 등
+.container_postbtn {
+  padding: 0 !important;
+  @include flexbox();
+  @include align-items(center);
+
+  .postbtn_like {
+    float: none !important;
+    padding: 0 !important;
+    border: 0 !important;
+  }
+
+  .ico_like {
+    position: relative !important;
+    width: 55px !important;
+    max-width: 55px !important;
+    height: 55px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: solid 1px #b9b9b9 !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    border-radius: 50% !important;
+
+    &:before,
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: 25px;
+      transition: opacity 0.3s;
+    }
+
+    &:before {
+      opacity: 1;
+      background-image: icon(heart, "555555", "ffffff");
+    }
+
+    &:after {
+      opacity: 0;
+      background-image: icon(heart, "ff5461", "ff5461");
+    }
+
+    &:hover {
+      &:before {
+        background-image: icon(heart, "101010", "fafafa");
+      }
+    }
+  }
+
+  //좋아요 숫자
+  .btn_post.uoc-icon .txt_like.uoc-count {
+    margin-left: 12px !important;
+    margin-right: 16px !important;
+    font-size: 0px !important;
+    height: 55px !important;
+    line-height: 58px !important;
+    color: #404040 !important;
+    text-align: left !important;
+
+    &:after {
+      display: inline-block;
+      font-size: 14px;
+      content: "좋아요";
+    }
+  }
+
+  .btn_post .uoc-icon.like_on .txt_like.uoc-count {
+    display: inline-block !important;
+    font-size: 15px !important;
+    margin-right: 12px !important;
+
+    &:after {
+      display: none !important;
+    }
+  }
+
+  //좋아요 누른 경우
+  .like_on .ico_like {
+    &:before {
+      opacity: 0;
+    }
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  .wrap_btn {
+    height: 55px !important;
+    line-height: 55px !important;
+
+    & > button {
+      display: inline-block !important;
+    }
+  }
+
+  .wrap_btn_share,
+  .wrap_btn_share + .wrap_btn,
+  .wrap_btn_etc {
+    margin: 14px 0 0 !important;
+  }
+}
+
+//구독하기 버튼
+.container_postbtn .postbtn_like + .btn_menu_toolbar {
+  margin: 8px 0px 0px 4px !important;
+}
+
+//태그영역
+.area_tag {
+  max-width: $max-width;
+  margin: 0 auto 21px;
+
+  a {
+    display: inline-block;
+    padding: 3px 20px;
+    border-radius: 88px;
+    border: solid 1px #c4c4c4;
+    background-color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0.17px;
+    text-align: left;
+    color: #7b7b7b;
+    margin-right: 16px;
+    margin-bottom: 9px;
+    transition: color 0.2s, border 0.2s;
+
+    &:hover {
+      color: $c-main;
+      border-color: $c-main;
+    }
+  }
+}
+
+//관련글영역
+
+.related_type {
+  padding: 40px 0;
+  background-color: #fafafa;
+  .title_related {
+    display: block;
+    max-width: $max-width;
+    margin: 0 auto 30px;
+    display: block;
+    margin-bottom: 21px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.18px;
+    text-align: left;
+    color: #1d1b1b;
+  }
+  .list_related {
+    max-width: $max-width;
+    margin: 0 auto 0px;
+    @include flexbox();
+  }
+  .item_related {
+    width: 25%;
+    margin-left: 40px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  .link_related {
+    display: block;
+
+    strong {
+      display: block;
+      margin: 18px 0 0;
+      font-size: 16px;
+      color: #2c2828;
+      font-weight: 700;
+      @include ellipsis();
+    }
+
+    .info {
+      display: block;
+      font-size: 13px;
+      letter-spacing: -0.13px;
+      color: #969696;
+    }
+  }
+  .thumbnail {
+    display: block;
+    width: 100%;
+    padding-top: 50%;
+    background: url(images/bg_empty.jpg) no-repeat;
+    background-size: cover !important;
+    background-position: 50% 50% !important;
+  }
+}
+
+//////// * 본문 영역
+.article_view {
+  margin: 90px auto 30px;
+  max-width: $max-width;
+  padding: 0 0 38px 0;
+  font-size: 16px;
+  border-bottom: solid 1px #e6e6e6;
+
+  p {
+    line-height: 1.75;
+  }
+}

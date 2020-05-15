@@ -1,0 +1,187 @@
+//댓글여역
+.area_reply {
+  margin-top: 48px;
+
+  .box_reply_info {
+    max-width: $max-width;
+    margin: 0 auto;
+    .item_info {
+      display: block;
+      margin-bottom: 21px;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.18px;
+      text-align: left;
+      color: #1d1b1b;
+
+      .count {
+        font-weight: 400;
+      }
+    }
+  }
+
+  .box_comment_list {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .list_reply:first-child {
+    border-top: solid 1px #e6e6e6;
+    padding-top: 35px;
+  }
+
+  .list_reply:last-child {
+    margin-bottom: 40px;
+  }
+
+  .item_reply {
+    margin-top: 40px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    .thumbnail_reply {
+      width: 48px;
+      height: 48px;
+      margin-right: 20px;
+
+      img {
+        display: block;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .box_reply_content {
+    .reply-info-top {
+      @include flexbox();
+      @include align-items(center);
+    }
+    .user {
+      display: block;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.15px;
+      text-align: left;
+      color: #2c2828;
+      margin-right: 10px;
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+    .date {
+      display: block;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: -0.14px;
+      text-align: left;
+      color: #9d9d9d;
+
+      a {
+        opacity: 0.7;
+        margin-left: 4px;
+        font-size: 11px;
+      }
+    }
+    .txt {
+      display: block;
+      margin-top: 4px;
+      font-size: 15px;
+      line-height: 1.47;
+      letter-spacing: -0.15px;
+      text-align: left;
+      color: #4b4b4b;
+    }
+    .modify {
+      margin-top: 8px;
+
+      a {
+        margin-right: 16px;
+        font-size: 13px;
+        letter-spacing: -0.13px;
+        text-align: left;
+        color: #b9b9b9;
+      }
+    }
+  }
+
+  .reply-line {
+    @include flexbox();
+  }
+  //답글의 경우
+  .list_reply_comment {
+    margin-left: 90px;
+
+    .item_comment.reply {
+      position: relative;
+      margin-top: 20px;
+      @include flexbox();
+      @include align-items(flex-start);
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: -20px;
+        display: block;
+        content: "";
+        width: 1px;
+        height: 14px;
+        background: #b9b9b9;
+        transform: rotate(-40deg);
+      }
+    }
+
+    .ico_commnent {
+      display: none;
+    }
+  }
+}
+
+//댓글작성영역
+.reply-form-container {
+  padding: 0px 0 53px;
+  // background-color: #f3f3f3;
+}
+
+.reply_write {
+  max-width: $max-width;
+  margin: 0 auto;
+
+  .reply-form-textarea {
+    font-size: 16px;
+    padding: 16px 16px;
+    width: 100%;
+    height: 140px;
+    resize: none;
+    border-radius: 4px;
+    border: solid 1px #d1d1d1;
+    background-color: #ffffff;
+    letter-spacing: -0.16px;
+    width: 100%;
+    line-height: 1.45;
+    transition: border 0.2s;
+    outline: 0;
+
+    &:focus {
+      border-color: #9d9d9d;
+    }
+
+    @include placeholder {
+      color: #b9b9b9;
+      letter-spacing: -0.16px;
+    }
+  }
+}
+
+.btn_register {
+  padding: 8px 14px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.16px;
+  border-radius: 4px;
+  background-color: $c-main;
+}
