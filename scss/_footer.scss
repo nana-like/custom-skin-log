@@ -1,0 +1,158 @@
+.footer {
+  border-top: solid 1px #c4c4c4;
+  margin-bottom: 30px;
+
+  &__container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding-top: 50px;
+    @include flexbox();
+    @include justify-content(space-between);
+    font-size: 14px;
+
+    @include res--desktop {
+      max-width: 100%;
+      padding: 50px 20px 0;
+      box-sizing: border-box;
+    }
+
+    @include res--mobile {
+      font-size: 13px;
+      @include flex-direction(column);
+      @include justify-content(center);
+    }
+  }
+
+  .footer-left {
+    @include res--mobile {
+      text-align: center;
+    }
+  }
+}
+
+//링크
+.side-links {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+
+  &__list {
+    @include flexbox();
+    @include res--mobile {
+      @include justify-content(center);
+      margin-bottom: 10px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-right: 26px;
+
+    &:after {
+      position: absolute;
+      top: 2px;
+      right: -14px;
+      display: block;
+      content: "";
+      width: 2px;
+      height: 15px;
+      background-color: #b6b6b6;
+    }
+
+    a {
+      font-size: 15px;
+      font-weight: 700;
+      color: #4a4a4a;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.admin {
+  display: inline-block;
+  margin-right: 6px;
+
+  a {
+    font-size: 13px;
+    color: $c-gray;
+    color: #676767;
+    border: 1px solid #c4c4c4;
+    padding: 3px 7px;
+    border-radius: 2px;
+    transition: all 0.2s;
+    @include res--mobile {
+      font-size: 12px;
+      padding: 5px 10px;
+    }
+
+    &:hover {
+      color: $c-black;
+      border-color: #676767;
+    }
+  }
+
+  .write {
+    color: $c-main;
+    border-color: $c-main;
+
+    &:hover {
+      border-color: $c-main;
+      background-color: $c-main;
+      color: #fff;
+    }
+  }
+}
+
+.visit-counter {
+  font-size: 1em;
+  color: #5c5c5c;
+  text-align: right;
+
+  @include res--mobile {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  &__list {
+    display: inline-block;
+
+    &:first-child {
+      margin-right: 8px;
+
+      .visit-counter__num {
+        color: $c-main;
+      }
+    }
+  }
+  &__num {
+    margin-left: 2px;
+    font-weight: 700;
+  }
+}
+
+.copyright {
+  text-align: right;
+  margin-top: 2px;
+  color: #919191;
+  font-size: 1em;
+  letter-spacing: -0.14px;
+  @include res--mobile {
+    text-align: center;
+  }
+}
+
+.logSkin-copy {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 11px;
+  color: rgb(181, 181, 181);
+}

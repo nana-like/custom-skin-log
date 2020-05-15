@@ -1,5 +1,4 @@
 .header {
-  outline: 3px solid red;
   margin-bottom: 70px;
 
   &__logo {
@@ -10,6 +9,11 @@
   &__text {
     font-size: 38px;
     font-weight: bold;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   &__link {

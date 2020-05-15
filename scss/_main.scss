@@ -1,0 +1,213 @@
+.index_type_common {
+  max-width: $max-width;
+  margin: 0 auto;
+
+  @include res--desktop {
+    // max-width: 100%;
+    // background: red;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+}
+
+.title_category {
+  // 큼직한 카테고리
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: -0.24px;
+  color: #1d1b1b;
+}
+
+.logSkin-list ul {
+  display: grid;
+  grid-template-columns: repeat(3, 370px);
+  grid-gap: 70px 85px;
+
+  @include res--desktop {
+    max-width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-gap: 60px 60px;
+  }
+
+  @include res--laptop {
+    grid-gap: 50px;
+  }
+  @include res--mobile {
+    grid-template-columns: repeat(auto-fill, 100%);
+    grid-gap: 30px;
+  }
+
+  li {
+    box-sizing: border-box;
+    border: solid 1px #d9d9d9;
+    transition: border-color 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      border-color: #bebebe;
+      .thumbnail_post {
+        opacity: 0.9;
+      }
+      .txt_post {
+        text-decoration: underline;
+      }
+    }
+  }
+  .thumbnail_post {
+    height: 210px;
+    display: block;
+    background: url(images/bg_empty.jpg) no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: opacity 0.2s;
+    @include res--mobile {
+      height: 170px;
+    }
+  }
+
+  .info_zone {
+    padding: 25px;
+    box-sizing: border-box;
+
+    @include res--mobile {
+      padding: 20px;
+    }
+  }
+
+  .category_post {
+    font-size: 13px;
+    color: $c-main;
+    margin-bottom: 12px;
+  }
+
+  .title_post {
+    display: block;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: -0.14px;
+    @include ellipsis();
+  }
+
+  .txt_post {
+    margin-top: 8px;
+    margin-bottom: 50px;
+    font-size: 15px;
+    color: #4b4b4b;
+    line-height: 1.55;
+    @include ellipsis(3);
+    letter-spacing: -0.14px;
+
+    @include res--mobile {
+      margin-top: 6px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .date_post {
+    font-size: 13px;
+    color: #969696;
+  }
+
+  .logSkin-list-link {
+    display: block;
+  }
+}
+
+// 인기글 영역
+.logSkin-hot {
+  margin-top: 130px;
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(4, 290px);
+    grid-gap: 40px;
+
+    @include res--desktop {
+      max-width: 100%;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      grid-gap: 30px;
+    }
+    @include res--mobile {
+      grid-template-columns: repeat(auto-fill, 100%);
+    }
+
+    li {
+      .title_post {
+        display: block;
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 12px;
+        margin-bottom: 1px;
+        letter-spacing: -0.14px;
+      }
+      .date_post {
+        font-size: 13px;
+        color: #969696;
+      }
+      &:hover {
+        .thumbnail_post {
+          opacity: 0.9;
+        }
+        .title_post {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .thumbnail_post {
+    height: 270px;
+    display: block;
+    background: url(images/bg_empty.jpg) no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: opacity 0.2s;
+
+    @include res--mobile {
+      height: 210px;
+    }
+  }
+}
+
+.area_menu {
+  display: none;
+}
+
+.logSkin-showAll {
+  // 전체 글 보기
+  margin-top: 110px;
+  padding: 60px 0;
+  text-align: center;
+  background-color: #fafafa;
+  letter-spacing: -0.2px;
+  @include res--laptop {
+    margin-top: 80px;
+  }
+  @include res--mobile {
+    margin-top: 60px;
+    padding: 40px 0;
+  }
+
+  & > a {
+    font-size: 18px;
+    font-weight: bold;
+    padding-right: 21px;
+
+    background-image: icon(arrow-right, "4b4b4b");
+    background-repeat: no-repeat;
+    background-position: 100% 49%;
+    background-size: 14px 14px;
+    @include res--mobile {
+      font-size: 16px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.another_category {
+  //카테고리 내 다른 글 보여주기
+  display: none;
+}

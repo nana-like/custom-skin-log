@@ -39,12 +39,12 @@
   </script>
 </head>
 
-<body id="[##_body_id_##]" class="[##_var_colorSet_##] logSkin theme-blue">
+<body id="[##_body_id_##]" class="[##_var_colorSet_##] logSkin">
   <s_t3>
     <div id="wrap">
 
-      <!-- ! 헤더 (header) -->
-      <header class="header">
+      <!-- ! 헤더 (.header) -->
+      <header class="header box_header">
         <div class="nav">
           <div class="nav__container">
             <div class="nav__gnb">
@@ -68,15 +68,14 @@
         </div>
         <h1 class="header__logo">
           <a href="[##_blog_link_##]" title="[##_title_##]" class="header__link">
-            <!-- <s_if_var_logoImage>
+            <s_if_var_logoImage>
               <img src="[##_var_logoImage_##]" class="img_logo" alt="[##_title_##]">
             </s_if_var_logoImage>
             <s_not_var_logoImage>
               <span class="header__text">
                 [##_title_##]
               </span>
-            </s_not_var_logoImage> -->
-            <img src="./images/logo.png" class="img_logo" alt="[##_title_##]">
+            </s_not_var_logoImage>
           </a>
           <p class="header__info">[##_desc_##]</p>
         </h1>
@@ -279,150 +278,11 @@
     </div>
     <!-- // area_popup -->
 
+    <!-- ! 메인 (#main) -->
     <main id="main">
-      <!-- area_cover -->
-      <s_cover_group>
-        <div class="area_cover">
-          <s_cover_rep>
-            <s_cover name='featured'>
-              <!-- type_featured -->
-              <div class="type_featured">
 
-                <!-- slide_zone -->
-                <div class="slide_zone">
-                  <s_cover_item>
-                    <div class="slide_item">
-                      <div class="link_slide item-thumbnail"
-                        style="background-image:url('<s_cover_item_thumbnail>[##_cover_item_thumbnail_##]</s_cover_item_thumbnail>');">
-                        <div class="text_slide thema_apply">
-                          <strong>[##_cover_item_title_##]</strong>
-                          <p class="text">[##_cover_item_summary_##]</p>
-                          <a href="[##_cover_item_url_##]" class="link_detail">자세히보기</a>
-                        </div>
-                      </div>
-                    </div>
-                  </s_cover_item>
-                </div>
-
-                <div class="box_arrow thema_apply">
-                  <button type="button" class="btn_arrow btn_prev"><span class="blind">왼쪽</span></button>
-                  <button type="button" class="btn_arrow btn_next"></span><span class="blind">오른쪽</span></button>
-                </div>
-
-                <div class="inner_main_slide">
-
-                </div>
-              </div>
-              <!-- // type_featured -->
-            </s_cover>
-
-            <s_cover name='post'>
-              <!-- type_post  -->
-              <div class="type_post">
-
-                <h2 class="title_section">[##_cover_title_##]</h2>
-
-                <ul class="list_post">
-                  <s_cover_item>
-                    <li class="item_post">
-                      <a href="[##_cover_item_url_##]" class="link_post item-thumbnail"
-                        style="background-image:url('<s_cover_item_thumbnail>[##_cover_item_thumbnail_##]</s_cover_item_thumbnail>')">
-                        <div class="info">
-                          <strong class="name">[##_cover_item_title_##]</strong>
-                          <s_cover_item_article_info>
-                            <span class="date">[##_cover_item_date_##]</span>
-                          </s_cover_item_article_info>
-                        </div>
-                      </a>
-                    </li>
-                  </s_cover_item>
-                </ul>
-              </div>
-              <!-- // type_post -->
-            </s_cover>
-
-            <s_cover name='card'>
-              <!-- type_card  -->
-              <div class="type_card">
-
-                <h2 class="title_section">[##_cover_title_##]</h2>
-
-                <ul class="list_type_card">
-                  <s_cover_item>
-                    <li class="item_card">
-                      <a href="[##_cover_item_url_##]" class="link_card">
-                        <span class="thumnail item-thumbnail"
-                          style="background-image:url('<s_cover_item_thumbnail>[##_cover_item_thumbnail_##]</s_cover_item_thumbnail>')"></span>
-                        <strong>[##_cover_item_title_##]</strong>
-                        <p class="text">[##_cover_item_summary_##]</p>
-                      </a>
-                    </li>
-                  </s_cover_item>
-                </ul>
-              </div>
-              <!-- // type_card -->
-            </s_cover>
-
-            <s_cover name='banner'>
-              <!-- type_banner  -->
-              <div class="type_banner">
-
-                <h2 class="title_section">[##_cover_title_##]</h2>
-
-                <ul class="list_type_banner">
-                  <s_cover_item>
-                    <li class="item_banner">
-                      <a href="[##_cover_item_url_##]" class="link_banner item-thumbnail"
-                        style="background-image:url('<s_cover_item_thumbnail>[##_cover_item_thumbnail_##]</s_cover_item_thumbnail>')">
-                        <div class="box_content">
-                          <strong>[##_cover_item_title_##]</strong>
-                          <p class="text">[##_cover_item_summary_##]</p>
-                          <button class="btn_go">go</button>
-                        </div>
-                      </a>
-                    </li>
-                  </s_cover_item>
-                </ul>
-
-              </div>
-              <!-- // type_banner -->
-            </s_cover>
-
-            <s_cover name='notice'>
-              <!-- type_list  -->
-              <div class="type_notice">
-
-                <h2 class="title_section">[##_cover_title_##]</h2>
-
-                <ul class="list_type_notice">
-                  <s_cover_item>
-                    <li class="item_notice">
-                      <a href="[##_cover_item_url_##]" class="link_notice">
-                        <span class="thumnail item-thumbnail"
-                          style="background-image:url('<s_cover_item_thumbnail>[##_cover_item_thumbnail_##]</s_cover_item_thumbnail>')"></span>
-
-                        <div class="info">
-                          <strong>[##_cover_item_title_##]</strong>
-                          <p class="text">[##_cover_item_summary_##]</p>
-                          <s_cover_item_article_info>
-                            <span class="date">[##_cover_item_date_##]</span>
-                          </s_cover_item_article_info>
-                        </div>
-                      </a>
-                    </li>
-                  </s_cover_item>
-                </ul>
-
-              </div>
-              <!-- // type_list -->
-            </s_cover>
-          </s_cover_rep>
-        </div>
-      </s_cover_group>
-      <!-- // area_cover -->
-
-      <s_list>
-        <!-- area_category / 카테고리 타입 따로 css 변경 category_type_notice / category_type_related-->
+      <!-- area_category / 카테고리 타입 따로 css 변경 category_type_notice / category_type_related-->
+      <!-- <s_list>
         <div class="area_category category_type_[##_var_listType_##] category_search_list">
 
           <h2 class="title_section">[##_list_conform_##]<span>([##_list_count_##])</span></h2>
@@ -442,14 +302,51 @@
             </s_list_rep>
           </ul>
         </div>
-        <!-- // area_category -->
-      </s_list>
+      </s_list> -->
+
+      <!-- <s_list>
+        <div style="outline: 3px solid green;">
+          <h2>불타는 핫한 로그</h2>
+          <ul>
+            <s_rctps_popular_rep>
+              <li>
+                <a href="[##_rctps_rep_link_##]">[##_rctps_rep_title_##]</a>
+                <span class="cnt">[##_rctps_rep_rp_cnt_##]</span>
+                <s_rctps_rep_thumbnail>
+                  <img src="[##_rctps_rep_thumbnail_##]" />
+                </s_rctps_rep_thumbnail>
+                <a href="[##_rctps_rep_category_link_##]">[##_rctps_rep_category_##]</a>
+              </li>
+            </s_rctps_popular_rep>
+          </ul>
+        </div>
+      </s_list> -->
 
       <!-- area_view -->
       <div class="area_view">
         <s_article_rep>
 
           <s_index_article_rep>
+
+            <s_sidebar_element>
+              <!-- 최근에 올라온 글 -->
+              <div class="recentPost">
+                <h3>최근에 올라온 글 </h3>
+                <ul>
+                  <s_rctps_rep>
+                    <li>
+                      <a href="[##_rctps_rep_link_##]">[##_rctps_rep_title_##]</a>
+                      <span class="cnt">[##_rctps_rep_rp_cnt_##]</span>
+                      <s_rctps_rep_thumbnail>
+                        <img src="[##_rctps_rep_thumbnail_##]" />
+                      </s_rctps_rep_thumbnail>
+                      <a href="[##_rctps_rep_category_link_##]">[##_rctps_rep_category_##]</a>
+                    </li>
+                  </s_rctps_rep>
+                </ul>
+              </div>
+            </s_sidebar_element>
+
             <div class="list_index category_type_[##_var_listType_##] category_index_list">
               <div class="item_category">
                 <a href="[##_article_rep_link_##]" class="link_category">
@@ -646,8 +543,12 @@
 
           </s_permalink_article_rep>
         </s_article_rep>
+
       </div>
       <!-- // area_view -->
+
+
+
 
       <s_article_protected>
         <s_permalink_article_rep>
@@ -913,10 +814,35 @@
         </div>
         <!-- // area_paging -->
       </s_paging>
+
+
+
     </main>
 
     </div>
     <!-- // container -->
+
+
+    <s_sidebar_element>
+      <!-- 이 블로그 인기글 -->
+      <div class="popularPost">
+        <h3 style="color: red; font-size:40px;">이 블로그 닝끼글 </h3>
+        <ul>
+          <s_rctps_popular_rep>
+            <li>
+              <a href="[##_rctps_rep_link_##]">[##_rctps_rep_title_##]</a>
+              <span class="cnt">[##_rctps_rep_rp_cnt_##]</span>
+              <s_rctps_rep_thumbnail>
+                <img src="[##_rctps_rep_thumbnail_##]" />
+              </s_rctps_rep_thumbnail>
+              <a href="[##_rctps_rep_category_link_##]">[##_rctps_rep_category_##]</a>
+            </li>
+          </s_rctps_popular_rep>
+        </ul>
+      </div>
+    </s_sidebar_element>
+
+
 
     <!-- footer -->
     <footer id="footer">
