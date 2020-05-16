@@ -37,58 +37,49 @@
       <!-- area_menu -->
       <div class="area_menu">
 
-        <nav class="menu_navigation">
-          [##_blog_menu_##]
-          [##_category_list_##]
-        </nav>
+        <div class="area_menu_inner">
 
-        <div class="m_sidebar pc_blind">
-          <div class="related_posts_mobile">
-            <!-- related_type_view -->
-            <div class="related_type related_type_view" style="display:block;">
-              <ul class="list_related"></ul>
-            </div>
+          <div class="sidebar_header">
+            <!-- <h1 class="title_logo">
+              <a href="[##_blog_link_##]" title="[##_title_##]" class="link_logo">
+                <s_if_var_logoImage>
+                  <img src="[##_var_logoImage_##]" class="img_logo" alt="[##_title_##]">
+                </s_if_var_logoImage>
+                <s_not_var_logoImage>
+                  [##_title_##]
+                </s_not_var_logoImage>
+              </a>
+            </h1> -->
+            <strong class="area_menu_title">
+              <a href="[##_blog_link_##]" title="[##_title_##]" class="link_logo"> [##_title_##]</a>
+            </strong>
+            <button type="button" class="btn_close" title="닫기"><span class="icon-Close"></span></button>
           </div>
-          <!-- // related_type_view -->
 
-          <!-- about_me -->
-          <div class="about_me_mobile">
-            <div class="box_sidebar about_me">
-              <h3 class="title_sidebar">ABOUT ME</h3>
-              <p class="text_about">-</p>
-            </div>
-          </div>
+          <nav class="menu_navigation">
+            <a href="[##_blog_link_##]" class="area_menu_nav-home">Home</a>
+            [##_category_list_##]
+          </nav>
+
+          <!-- <ul class="list_sns">
+            <s_if_var_snsFacebook>
+              <li><a href="[##_var_snsFacebook_##]" class="link_sns link_fb" target="_blank"><span
+                    class="blind">페이스북</span></a></li>
+            </s_if_var_snsFacebook>
+            <s_if_var_snsTwitter>
+              <li><a href="[##_var_snsTwitter_##]" class="link_sns link_twitter" target="_blank"><span
+                    class="blind">트위터</span></a></li>
+            </s_if_var_snsTwitter>
+            <s_if_var_snsInstagram>
+              <li><a href="[##_var_snsInstagram_##]" class="link_sns link_insta" target="_blank"><span
+                    class="blind">인스타그램</span></a></li>
+            </s_if_var_snsInstagram>
+          </ul> -->
+
         </div>
 
-        <ul class="list_sns">
-          <s_if_var_snsFacebook>
-            <li><a href="[##_var_snsFacebook_##]" class="link_sns link_fb" target="_blank"><span
-                  class="blind">페이스북</span></a></li>
-          </s_if_var_snsFacebook>
-          <s_if_var_snsTwitter>
-            <li><a href="[##_var_snsTwitter_##]" class="link_sns link_twitter" target="_blank"><span
-                  class="blind">트위터</span></a></li>
-          </s_if_var_snsTwitter>
-          <s_if_var_snsInstagram>
-            <li><a href="[##_var_snsInstagram_##]" class="link_sns link_insta" target="_blank"><span
-                  class="blind">인스타그램</span></a></li>
-          </s_if_var_snsInstagram>
-        </ul>
 
-        <div class="box_visit">
-          <dl class="data_today">
-            <dt class="title_visit">Today</dt>
-            <dd class="item_visit">-</dd>
-          </dl>
-          <dl class="data_yesterday">
-            <dt class="title_visit">Yesterday</dt>
-            <dd class="item_visit">-</dd>
-          </dl>
-          <dl class="data_total">
-            <dt class="title_visit">Total</dt>
-            <dd class="item_visit">-</dd>
-          </dl>
-        </div>
+        <div class="dimmed_sidebar"></div>
       </div>
       <!-- // area_menu -->
 
@@ -106,8 +97,7 @@
               <div class="nav__menu">
 
                 <!-- ? 메뉴 및 검색 버튼 클릭시 area_sidebar / area_popup 논처리 삭제 / body 에 style="overflow:hidden" 추가 -->
-                <!-- * 모바일에서만 표시 -->
-                <!-- <button type="button" class="btn_menu" title="메뉴"><span class="blind">메뉴</span></button> -->
+                <button type="button" class="btn_menu" title="메뉴"><span class="blind">메뉴</span></button>
               </div>
               <div class="nav__utils">
                 <button class="btn_search btn-search">
@@ -396,7 +386,9 @@
                             <div class="article_admin admin">
                               <a href="[##_s_ad_m_link_##]">수정</a>
                               <a href="#" onclick="[##_s_ad_d_onclick_##]">삭제</a>
-                              <a href="#" onclick="[##_s_ad_s2_onclick_##]">[##_s_ad_s2_label_##]</a>
+
+                              <a href="[##_owner_url_##]" class="staff-only"><span>관리자 화면</span></a>
+                              <!-- <a href="#" onclick="[##_s_ad_s2_onclick_##]">[##_s_ad_s2_label_##]</a> -->
                             </div>
                           </s_ad_div>
 
@@ -883,10 +875,9 @@
 
               <s_sidebar_element>
                 <!-- 관리자 메뉴 -->
-                <div class="admin">
+                <!-- <div class="admin">
                   <a href="[##_owner_url_##]"><span class="">STAFF ONLY</span></a>
-                  <!-- <a href="[##_owner_url_##]/entry/post" class="write"><span class="">글쓰기</span></a> -->
-                </div>
+                </div> -->
               </s_sidebar_element>
             </div>
 
@@ -932,7 +923,7 @@
   var profile = document.createElement("div");
   profile.classList.add("article_profile")
   profile.innerHTML += "<div class='profile_img'><img src='https://img1.daumcdn.net/thumb/C100x100.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/4Ftr/image/6PuWflOPDPexDH0f6zSEn81F7gY.jpg' alt='profile'/></div>"
-  profile.innerHTML += "<div class='profile_contents'><strong>나나 (nykim)</strong><p>열심히 구르면서 나아가는 중이에요. 쉬고 싶을 땐 아이스 아메리카노 호로록.</p></div>"
+  profile.innerHTML += "<div class='profile_contents'><strong>나나 (nykim)</strong><p>열심히 나아가는 중! HP 회복이 필요할 땐 아이스 아메리카노를 호로록.</p></div>"
   $('.container_postbtn').before(profile);
 
   // // 글 출력이 있는 경우
