@@ -18,6 +18,15 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
   <script src="./images/common.js"></script>
+
+
+  <!--highlight-->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.6.0/dist/highlightjs-line-numbers.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();</script>
+  <!--//highlight-->
 </head>
 
 <body id="[##_body_id_##]" class="[##_var_penelopeColorSet_##]">
@@ -87,6 +96,7 @@
       <div id="container">
         <!-- ! 헤더 (.header) -->
         <header id="header" class="header">
+          <div id="skip"></div>
           <div class="nav">
             <div class="nav__container">
               <div class="nav__gnb">
@@ -368,13 +378,14 @@
                         <div class="article_content">
                           <div class="info_post">
 
-                            <div class="article_top">나나</div>
+                            <div class="article_top"></div>
                             <div class="view_info_post">
-                              <p class="link_category">[##_article_rep_category_##]</p>
+                              <p class="link_category"><a
+                                  href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a></p>
                               <h1 class="link_title">[##_article_rep_title_##]
                               </h1>
                               <div class="line">
-                                <p class="date">[##_article_rep_date_##]</p>
+                                <p class="date">[##_article_rep_simple_date_##]</p>
                                 <p class="author">by. [##_article_rep_author_##]</p>
                               </div>
 
@@ -512,7 +523,8 @@
                                         </div>
 
                                         <div class="form_reg thema_apply">
-                                          <label><input type="checkbox" name="[##_rp_input_is_secret_##]">비밀 댓글</label>
+                                          <label><input type="checkbox" name="[##_rp_input_is_secret_##]"><span>비밀
+                                              댓글</span></label>
                                           <button type="button" class="btn_register"
                                             onclick="[##_rp_onclick_submit_##]">댓글 남기기</button>
                                         </div>
@@ -872,7 +884,7 @@
               <s_sidebar_element>
                 <!-- 관리자 메뉴 -->
                 <div class="admin">
-                  <a href="[##_owner_url_##]"><span class="">관리자</span></a>
+                  <a href="[##_owner_url_##]"><span class="">STAFF ONLY</span></a>
                   <!-- <a href="[##_owner_url_##]/entry/post" class="write"><span class="">글쓰기</span></a> -->
                 </div>
               </s_sidebar_element>
@@ -923,24 +935,24 @@
   profile.innerHTML += "<div class='profile_contents'><strong>나나 (nykim)</strong><p>열심히 구르면서 나아가는 중이에요. 쉬고 싶을 땐 아이스 아메리카노 호로록.</p></div>"
   $('.container_postbtn').before(profile);
 
-  // 글 출력이 있는 경우
-  if ($('.area_view_content').length != false) {
-    var seoImage = $('meta[property="og:image"]').attr('content');
-    if (seoImage === "https://t1.daumcdn.net/tistory_admin/static/images/openGraph/opengraph.png") {
-      seoImage = undefined;
-    }
-    if (seoImage != undefined && seoImage != false) {
-      $('.area_view_content .article_top').css({
-        "background-image": "url(" + seoImage + ")"
-      });
-      $('.article_top').addClass('has-cover');
+  // // 글 출력이 있는 경우
+  // if ($('.area_view_content').length != false) {
+  //   var seoImage = $('meta[property="og:image"]').attr('content');
+  //   if (seoImage === "https://t1.daumcdn.net/tistory_admin/static/images/openGraph/opengraph.png") {
+  //     seoImage = undefined;
+  //   }
+  //   if (seoImage != undefined && seoImage != false) {
+  //     $('.area_view_content .article_top').css({
+  //       "background-image": "url(" + seoImage + ")"
+  //     });
+  //     $('.article_top').addClass('has-cover');
 
-    } else {
-      $('.article_top').addClass('no-cover');
-    }
+  //   } else {
+  //     $('.article_top').addClass('no-cover');
+  //   }
 
 
-  }
+  // }
 
 
   if ($('.tag_content').length != false) {

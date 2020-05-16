@@ -1,6 +1,13 @@
 //댓글여역
 .area_reply {
   margin-top: 48px;
+  padding: 0 20px;
+
+  input,
+  textarea {
+    font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "Nanum Gothic", Dotum, "돋움",
+      Helvetica, sans-serif;
+  }
 
   .box_reply_info {
     max-width: $max-width;
@@ -13,6 +20,10 @@
       letter-spacing: -0.18px;
       text-align: left;
       color: #1d1b1b;
+
+      @include res--mobile {
+        font-size: 17px;
+      }
 
       .count {
         font-weight: 400;
@@ -66,7 +77,6 @@
       letter-spacing: -0.15px;
       text-align: left;
       color: #2c2828;
-      margin-right: 10px;
 
       a:hover {
         text-decoration: underline;
@@ -79,6 +89,7 @@
       letter-spacing: -0.14px;
       text-align: left;
       color: #9d9d9d;
+      margin-left: 10px;
 
       a {
         opacity: 0.7;
@@ -88,9 +99,9 @@
     }
     .txt {
       display: block;
-      margin-top: 4px;
+      margin-top: 5px;
       font-size: 15px;
-      line-height: 1.47;
+      line-height: 1.49;
       letter-spacing: -0.15px;
       text-align: left;
       color: #4b4b4b;
@@ -144,26 +155,84 @@
 .reply-form-container {
   padding: 0px 0 53px;
   // background-color: #f3f3f3;
+  box-sizing: border-box;
 }
 
 .reply_write {
   max-width: $max-width;
   margin: 0 auto;
 
+  //이름 및 비밀번호
+  .form_guest {
+    @include flexbox();
+    @include align-items(center);
+    margin-bottom: 10px;
+
+    @include res--mobile {
+      .box_inp {
+        width: 40%;
+        &:first-child {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .inp_comment {
+    font-size: 15px;
+    padding: 10px 14px;
+    width: 270px;
+    border: solid 1px #d1d1d1;
+    background-color: #ffffff;
+    letter-spacing: -0.14px;
+    transition: border 0.2s;
+    outline: 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    @include res--tablet {
+      width: 200px;
+    }
+
+    @include res--mobile {
+      width: 100%;
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+
+    &:focus {
+      border-color: #9d9d9d;
+    }
+
+    @include placeholder {
+      color: #b9b9b9;
+      letter-spacing: -0.16px;
+    }
+
+    &.inp_name {
+      margin-right: 10px;
+    }
+  }
+
+  //댓글 영역
   .reply-form-textarea {
-    font-size: 16px;
-    padding: 16px 16px;
+    font-size: 15px;
+    padding: 14px;
     width: 100%;
-    height: 140px;
+    height: 130px;
     resize: none;
     border-radius: 4px;
     border: solid 1px #d1d1d1;
     background-color: #ffffff;
-    letter-spacing: -0.16px;
-    width: 100%;
+    letter-spacing: -0.14px;
     line-height: 1.45;
     transition: border 0.2s;
     outline: 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    @include res--mobile {
+      font-size: 14px;
+      padding: 12px;
+    }
 
     &:focus {
       border-color: #9d9d9d;
@@ -176,12 +245,107 @@
   }
 }
 
-.btn_register {
-  padding: 8px 14px;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: -0.16px;
-  border-radius: 4px;
-  background-color: $c-main;
+.form_reg {
+  margin-top: 14px;
+  @include flexbox();
+  @include justify-content(flex-end);
+  @include align-items(center);
+
+  label {
+    cursor: pointer;
+  }
+
+  span {
+    font-size: 15px;
+    color: #676767;
+    letter-spacing: -0.16px;
+
+    @include res--mobile {
+      font-size: 14px;
+    }
+
+    &:before {
+      display: inline-block;
+      vertical-align: middle;
+      width: 18px;
+      height: 18px;
+      margin-right: 6px;
+      border-radius: 2px;
+      border: solid 1px #c4c4c4;
+      background-color: #f5f5f5;
+      content: "";
+      background-image: icon(check, "cecece");
+      background-size: 12px;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      @include res--mobile {
+        width: 15px;
+        height: 15px;
+        background-size: 11px;
+      }
+    }
+  }
+
+  input[type="checkbox"] {
+    @include invisible;
+
+    &:hover + span {
+      color: $c-black;
+
+      &:before {
+        border-color: #9d9d9d;
+      }
+    }
+
+    &:checked + span {
+      color: $c-black;
+
+      &:before {
+        border-color: #9d9d9d;
+        background-image: icon(check, "2c2828");
+      }
+    }
+  }
+
+  .btn_register {
+    padding: 8px 14px;
+    color: #fff;
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 4px;
+    background-color: $c-main;
+    box-sizing: border-box;
+    letter-spacing: -0.16px;
+    @include res--mobile {
+      font-size: 14px;
+      margin-left: 15px;
+    }
+
+    &:hover {
+      background-color: #2467ce;
+    }
+  }
+}
+
+.go-to-top {
+  max-width: $max-width;
+  margin: 20px auto 15px;
+  padding: 0 20px;
+
+  a {
+    font-size: 15px;
+    letter-spacing: -0.16px;
+    color: #9d9d9d;
+    padding-left: 20px;
+    background-image: icon(go-to-top, "9d9d9d");
+    background-size: 14px 13px;
+    background-position: 0px 5px;
+    background-repeat: no-repeat;
+
+    &:hover {
+      color: #2c2828;
+      background-image: icon(go-to-top, "2c2828");
+    }
+  }
 }

@@ -4,8 +4,9 @@
 
 // Break Point
 
-$desktop: 1360px; //사용
-$laptop: 1080px; //사용
+$desktop: 1360px;
+$laptop: 1080px;
+$tablet: 798px;
 $mobile: 640px;
 
 // ---------- * ----------
@@ -24,12 +25,12 @@ $mobile: 640px;
   }
 }
 
-// // Tablet
-// @mixin res--tablet {
-//   @media screen and (min-width: #{$tablet}) {
-//     @content;
-//   }
-// }
+// Tablet
+@mixin res--tablet {
+  @media screen and (max-width: #{$tablet}) {
+    @content;
+  }
+}
 
 // Mobile
 @mixin res--mobile {

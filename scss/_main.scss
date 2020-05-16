@@ -19,7 +19,7 @@
   color: #1d1b1b;
 
   @include res--mobile {
-    font-size: 21px;
+    font-size: 20px;
   }
 }
 
@@ -79,16 +79,15 @@
   .info_zone {
     padding: 25px;
     box-sizing: border-box;
-
-    @include res--mobile {
-      padding: 20px;
-    }
   }
 
   .category_post {
     font-size: 13px;
     color: $c-main;
     margin-bottom: 12px;
+    @include res--mobile {
+      font-size: 12px;
+    }
   }
 
   .title_post {
@@ -97,6 +96,12 @@
     font-weight: bold;
     letter-spacing: -0.14px;
     @include ellipsis();
+
+    @include res--mobile {
+      font-size: 17px;
+      @include ellipsis(2);
+      white-space: initial !important;
+    }
   }
 
   .txt_post {
@@ -109,6 +114,11 @@
     @include ellipsis(3);
     letter-spacing: -0.14px;
 
+    @include res--laptop {
+      font-size: 14px;
+      min-height: 60px;
+    }
+
     @include res--mobile {
       margin-top: 6px;
       margin-bottom: 30px;
@@ -118,6 +128,9 @@
   .date_post {
     font-size: 13px;
     color: #969696;
+    @include res--mobile {
+      font-size: 12px;
+    }
   }
 
   .logSkin-list-link {
@@ -149,12 +162,20 @@
         font-weight: bold;
         font-size: 18px;
         margin-top: 12px;
-        margin-bottom: 1px;
+        margin-bottom: 2px;
         letter-spacing: -0.14px;
+        line-height: 1.45;
+        @include res--mobile {
+          font-size: 17px;
+          @include ellipsis(2);
+        }
       }
       .date_post {
         font-size: 13px;
         color: #969696;
+        @include res--mobile {
+          font-size: 12px;
+        }
       }
       &:hover {
         .thumbnail_post {
@@ -278,29 +299,34 @@
         margin-left: auto;
         padding: 54px 40px 54px 160px;
         background-color: #fff;
+        box-shadow: 5px 6px 30px 2px rgba(62, 58, 58, 0.12);
         @include res--desktop {
           width: 100%;
           padding: 20px;
 
-          // &:before {
-          //   position: absolute;
-          //   top: -40px;
-          //   left: 0;
-          //   width: 100%;
-          //   height: 40px;
-          //   background-color: #fff;
-          //   content: "";
-          // }
+          &:before {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            background-color: #fff;
+            content: "";
+          }
         }
 
         .category_post {
           margin-bottom: 25px;
+
+          @include res--desktop {
+            margin-bottom: 13px;
+          }
         }
 
         .txt_post {
-          margin-top: 4px;
+          margin-top: 8px;
           margin-bottom: 45px;
-          line-height: 1.45;
+          line-height: 1.6;
           letter-spacing: -0.15px;
           min-height: 42px;
         }
@@ -391,6 +417,7 @@
       font-size: 20px;
       font-weight: bold;
       letter-spacing: -0.14px;
+      @include ellipsis(2);
       @include res--laptop {
         margin-top: 18px;
         font-size: 18px;
@@ -424,6 +451,14 @@
         font-size: 12px;
       }
     }
+  }
+
+  .inner_index > .logSkin-list-normal {
+    padding: 0 20px;
+  }
+
+  .inner_index > .category_list > .list_horizontal .index_type_common {
+    padding: 0;
   }
 }
 

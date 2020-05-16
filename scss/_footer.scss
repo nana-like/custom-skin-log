@@ -18,6 +18,7 @@
 
     @include res--mobile {
       font-size: 13px;
+      padding-top: 20px;
       @include flex-direction(column);
       @include justify-content(center);
     }
@@ -78,8 +79,13 @@
 }
 
 .admin {
+  display: none !important;
   display: inline-block;
-  margin-right: 6px;
+  margin-left: 6px;
+
+  &:first-child {
+    margin-left: 0;
+  }
 
   a {
     font-size: 13px;

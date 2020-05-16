@@ -41,6 +41,15 @@
   overflow: hidden;
 }
 
+@mixin invisible {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 // 백그라운드 이미지 삽입
 @mixin bgi($imageName, $type: "png") {
   background-image: url(#{$PATH-IMAGE}#{$imageName}.#{$type});
