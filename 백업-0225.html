@@ -865,8 +865,10 @@
                 <!-- 링크 -->
                 <div class="side-links">
                   <ul class="side-links__list">
-                    <li class="side-links__item"><a href="[##_link_url_##]" class="link_slink">[##_link_site_##]</a>
-                    </li>
+                    <s_link_rep>
+                      <li class="side-links__item"><a href="[##_link_url_##]" class="link_slink">[##_link_site_##]</a>
+                      </li>
+                    </s_link_rep>
                   </ul>
                 </div>
 
@@ -875,9 +877,9 @@
 
               <s_sidebar_element>
                 <!-- 관리자 메뉴 -->
-                <!-- <div class="admin">
+                <div class="admin">
                   <a href="[##_owner_url_##]"><span class="">STAFF ONLY</span></a>
-                </div> -->
+                </div>
               </s_sidebar_element>
             </div>
 
@@ -923,7 +925,7 @@
   var profile = document.createElement("div");
   profile.classList.add("article_profile")
   profile.innerHTML += "<div class='profile_img'><img src='https://img1.daumcdn.net/thumb/C100x100.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/4Ftr/image/6PuWflOPDPexDH0f6zSEn81F7gY.jpg' alt='profile'/></div>"
-  profile.innerHTML += "<div class='profile_contents'><strong>나나 (nykim)</strong><p>열심히 나아가는 중! HP 회복이 필요할 땐 아이스 아메리카노를 호로록.</p></div>"
+  profile.innerHTML += "<div class='profile_contents'><strong>나나 (nykim)</strong><p>열심히 굴러가는 중! HP 회복이 필요할 땐 아이스 아메리카노를 호로록.</p></div>"
   $('.container_postbtn').before(profile);
 
   // // 글 출력이 있는 경우

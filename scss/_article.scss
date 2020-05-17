@@ -50,7 +50,7 @@
   // }
 
   .info_post {
-    max-width: $max-width;
+    max-width: $article-max-width;
     margin: 0 auto;
     padding: 40px 2px 25px;
     box-sizing: border-box;
@@ -131,7 +131,8 @@
   text-align: right;
   display: block;
   margin: 20px auto 0;
-  max-width: $max-width;
+  padding: 0 20px;
+  max-width: $article-max-width;
 
   a {
     &:not(:first-child) {
@@ -373,7 +374,7 @@
 
 //태그영역
 .area_tag {
-  max-width: $max-width;
+  max-width: $article-max-width;
   margin: 0 auto 21px;
   padding: 0 20px;
 
@@ -419,7 +420,7 @@
 
   .title_related {
     display: block;
-    max-width: $max-width;
+    max-width: $article-max-width;
     margin: 0 auto 30px;
     display: block;
     margin-bottom: 21px;
@@ -434,7 +435,7 @@
     }
   }
   .list_related {
-    max-width: $max-width;
+    max-width: $article-max-width;
     margin: 0 auto 0px;
     @include flexbox();
     @include res--laptop {
@@ -448,10 +449,6 @@
       width: calc(50% - 20px);
       margin-bottom: 20px;
     }
-    @include res--laptop {
-      width: calc(50% - 20px);
-      margin-bottom: 20px;
-    }
     @include res--mobile {
       width: 100%;
       margin-left: 0;
@@ -459,7 +456,7 @@
     }
 
     &:nth-child(odd) {
-      @include res--mobile {
+      @include res--laptop {
         margin-left: 0;
       }
     }
@@ -515,9 +512,10 @@
 //////// * 본문 영역
 .article_view {
   margin: 90px auto 30px;
-  max-width: $max-width;
+  max-width: $article-max-width;
   padding: 0 0 38px 0;
-  font-size: 16px;
+  // font-size: 16px;
+  font-size: 17px;
   color: #303030;
   letter-spacing: 0.002em;
   border-bottom: solid 1px #e6e6e6;
@@ -529,7 +527,7 @@
 
   @include res--mobile {
     padding-bottom: 30px;
-    font-size: 15px;
+    font-size: 16px;
   }
 
   p {

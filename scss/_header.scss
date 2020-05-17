@@ -26,6 +26,10 @@
     text-decoration: none;
     color: $c-black;
 
+    @include res--mobile {
+      transform: scale(0.9);
+    }
+
     img {
       display: block;
       width: 216px;
@@ -38,6 +42,12 @@
     color: $c-gray;
     font-weight: 400;
     letter-spacing: -0.14px;
+    padding: 0 20px;
+
+    @include res--mobile {
+      font-size: 12px;
+      word-break: keep-all;
+    }
   }
 }
 

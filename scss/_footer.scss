@@ -36,6 +36,10 @@
   font-size: 1.1em;
   margin-bottom: 10px;
 
+  @include res--mobile {
+    margin-top: 10px;
+  }
+
   &__list {
     @include flexbox();
     @include res--mobile {
@@ -50,13 +54,17 @@
 
     &:after {
       position: absolute;
-      top: 2px;
+      top: 5px;
       right: -14px;
       display: block;
       content: "";
       width: 2px;
       height: 15px;
       background-color: #b6b6b6;
+
+      @include res--mobile {
+        height: 13px;
+      }
     }
 
     a {
@@ -152,4 +160,12 @@
   @include res--mobile {
     transform: scale(0.9);
   }
+}
+
+.footer .admin {
+  transform-origin: 0 0;
+  margin-left: 0;
+  margin-top: 6px;
+  opacity: 0.5;
+  transform: scale(0.8);
 }
