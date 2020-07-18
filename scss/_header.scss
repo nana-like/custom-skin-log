@@ -10,7 +10,6 @@
     display: block;
     font-size: 42px;
     font-weight: bold;
-    transition: opacity 0.2s transform 0.2s;
 
     &:hover {
       opacity: 0.7;
@@ -71,6 +70,8 @@
   }
 
   &__gnb {
+    overflow: auto;
+    margin-left: 70px;
     @include flexbox();
     @include align-items(center);
 
@@ -115,15 +116,15 @@
   }
 
   &__menu {
-    display: none;
+    // display: none;
     position: absolute;
     top: 50%;
     transform: translateY(-50%) translateZ(0);
     left: 5px;
 
-    @include res--laptop {
-      display: block;
-    }
+    // @include res--laptop {
+    //   display: block;
+    // }
 
     .btn_menu {
       width: 50px;
@@ -140,6 +141,7 @@
   }
 
   &__utils {
+    padding-left: 30px;
     @include flexbox();
     @include align-items(center);
 
@@ -151,16 +153,20 @@
 
 //검색영역
 .area_search {
+  // visibility: hidden;
+  // opacity: 0;
+  display: none;
   position: relative;
   width: 220px;
   height: 31px;
   margin-right: 4px;
+  transition: opacity 0.2s, visibility 0.2s;
+  // transition-delay: 0ms;
 
   @include res--tablet {
     position: absolute;
     top: 100%;
     right: 0px;
-    // background: rgb(170, 170, 170);
     width: 100%;
     height: 75px;
     margin: 0px;
@@ -208,7 +214,7 @@
       transform: none;
       border: 1px solid #b5b5b5;
       border-radius: 4px;
-      padding: 9px 43px 9px 43px;
+      padding: 9px 40px;
       box-sizing: border-box;
       font-size: 15px;
     }
@@ -232,8 +238,8 @@
     transform: scale(0.8);
 
     @include res--tablet {
-      top: 15px;
-      right: 32px;
+      top: 14px;
+      right: 28px;
       transform: scale(0.9);
     }
 
@@ -270,8 +276,19 @@
 }
 
 .search_on {
-  .btn_search {
+  .btn-search {
+    // visibility: hidden;
+    // opacity: 0;
+    // transition-delay: 0ms;
     display: none;
+  }
+  .area_search {
+    // position: relative;
+    // visibility: visible;
+    // opacity: 1;
+    // max-width: 100%;
+    // transition-delay: 200ms !important;
+    display: block;
   }
 }
 

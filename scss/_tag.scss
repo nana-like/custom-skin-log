@@ -14,20 +14,28 @@
 
   .tag_cont {
     max-width: $max-width;
-    margin: 0 auto;
-    padding: 80px 20px;
+    margin: 40px auto 80px;
+    padding: 60px 20px;
   }
 
   .tag_cloud {
-    padding: 4px 22px;
+    display: inline-block;
+    word-break: keep-all;
+    padding: 0px 16px;
     border-radius: 88px;
     border: solid 1px #c4c4c4;
     background-color: #ffffff;
     font-size: 17px;
-    line-height: 2.18;
+    line-height: 2;
     letter-spacing: 0.17px;
     text-align: left;
     color: #7b7b7b;
     margin-right: 16px;
+    margin-bottom: 10px;
+
+    &:hover {
+      color: #333;
+      border-color: #7b7b7b;
+    }
   }
 }

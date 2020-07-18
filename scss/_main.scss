@@ -3,15 +3,13 @@
   margin: 0 auto;
 
   @include res--desktop {
-    // max-width: 100%;
-    // background: red;
     padding: 0 20px;
     box-sizing: border-box;
   }
 }
 
+// 메인 화면의 카테고리명
 .title_category {
-  // 큼직한 카테고리
   margin-bottom: 20px;
   font-size: 24px;
   font-weight: bold;
@@ -28,13 +26,8 @@
   grid-template-columns: repeat(3, 350px);
   grid-gap: 70px 75px;
 
-  // @include res--desktop {
-  //   max-width: 100%;
-  //   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  //   grid-gap: 60px 60px;
-  // }
-
   @include res--laptop {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     grid-gap: 50px;
   }
   @include res--mobile {
@@ -64,6 +57,7 @@
       }
     }
   }
+
   .thumbnail_post {
     height: 210px;
     display: block;
@@ -203,6 +197,7 @@
 
 .logSkin-showAll {
   // 전체 글 보기
+  display: none;
   margin-top: 110px;
   padding: 60px 0;
   text-align: center;
@@ -243,6 +238,10 @@
 // 홈 화면일 때만 최신 글 다르게 표시
 
 #tt-body-index {
+  .logSkin-showAll {
+    display: block;
+  }
+
   .logSkin-new {
     & > li:first-child {
       position: relative;
@@ -331,6 +330,7 @@
   }
 }
 
+#tt-body-index,
 #tt-body-search,
 #tt-body-category,
 #tt-body-archive,

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <skin>
 	<information>
-		<name>Log Skin (로그 스킨)</name>
+		<name>Log Skin 1111(로그 스킨)</name>
 		<version>1.0</version>
 		<description>
 			<![CDATA[ 기록을 남기는 모든 이들을 위한 스킨. 심플하고 정돈된 느낌을 좋아하는 분들께 추천드려요! ]]>
 		</description>
 		<license>
-			<![CDATA[ MIT License ]]>
+			<![CDATA[누구나 자유롭게 사용할 수 있습니다.]]>
 		</license>
 	</information>
 	<author>
@@ -16,28 +16,28 @@
 		<email>nykim@nykim.net</email>
 	</author>
 	<default>
-		<recentEntries>4</recentEntries>
-		<recentComments>5</recentComments>
-		<recentTrackbacks>5</recentTrackbacks>
-		<itemsOnGuestbook>5</itemsOnGuestbook>
-		<tagsInCloud>20</tagsInCloud>
-		<sortInCloud>3</sortInCloud>
-		<expandComment>1</expandComment>
-		<lengthOfRecentNotice>40</lengthOfRecentNotice>
-		<lengthOfRecentEntry>30</lengthOfRecentEntry>
-		<lengthOfRecentComment>40</lengthOfRecentComment>
-		<lengthOfRecentTrackback>40</lengthOfRecentTrackback>
-		<lengthOfLink>40</lengthOfLink>
-		<commentMessage>
-			<none>0</none>
-			<single>1</single>
-		</commentMessage>
-		<trackbackMessage>
-			<none>0</none>
-			<single>1</single>
-		</trackbackMessage>
-		<contentWidth>1200</contentWidth>
-		<toolbar>white</toolbar>
+		<cover>
+			[
+				{
+					"name": "horizontal",
+					"title": "모든 글",
+					"dataType": "RECENT",
+					"data": {
+						"category": "ALL",
+						"size": 9
+					}
+				},
+				{
+					"name": "gallery",
+					"title": "최신 글",
+					"dataType": "RECENT",
+					"data": {
+						"category": "ALL",
+						"size": 4
+					}
+				}
+			]
+		</cover>
 	</default>
 	<cover>
 		<item>
@@ -69,24 +69,11 @@
 				[
 					{"name":"thema_blue", "label":"블루(기본)", "value":"thema_blue"},
 					{"name":"thema_pink", "label":"핑크", "value":"thema_pink"},
-					{"name":"thema_orange", "label":"오렌지", "value":"thema_orange"},
+					{"name":"thema_orange", "label":"오렌지", "value":"thema_orange"}
 				]
 			]]></option>
 			<default>thema_blue</default>
 		</variable>
-		<!-- <variable>
-			<name>penelopeListType</name>
-			<label>글 목록 형태</label>
-			<description></description>
-			<type>SELECT</type>
-			<option><![CDATA[
-				[
-					{"name":"horizontal", "label":"기본형", "value":"horizontal"},
-					{"name":"gallery", "label":"갤러리", "value":"gallery"}
-				]
-			]]></option>
-			<default>horizontal</default>
-		</variable> -->
 		<variable>
 			<name>footerCopyright</name>
 			<label>하단 카피라이트</label>
@@ -96,11 +83,36 @@
 			<default></default>
 		</variable>
 		<variable>
-			<name>snsFacebook</name>
-			<label>SNS 링크</label>
+			<name>snsPortfolio</name>
+			<label>포트폴리오 링크</label>
 			<description></description>
 			<type>STRING</type>
 			<option></option>
 			<default></default>
 		</variable>
+		<variable>
+			<name>snsFacebook</name>
+			<label>페이스북 링크</label>
+			<description></description>
+			<type>STRING</type>
+			<option></option>
+			<default></default>
+		</variable>
+		<variable>
+			<name>snsTwitter</name>
+			<label>트위터 링크</label>
+			<description></description>
+			<type>STRING</type>
+			<option></option>
+			<default>#</default>
+		</variable>
+		<variable>
+			<name>snsInstagram</name>
+			<label>인스타그램 링크</label>
+			<description></description>
+			<type>STRING</type>
+			<option></option>
+			<default>#</default>
+		</variable>
+	</variables>
 </skin>

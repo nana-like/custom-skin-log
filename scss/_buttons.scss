@@ -1,11 +1,17 @@
 .btn-search {
+  position: relative;
+  // position: absolute;
+  // right: 20px;
+  // visibility: visible;
+  // opacity: 1;
   width: 36px;
   height: 36px;
   background-size: 20px;
   background-image: icon(search, "4b4b4b");
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  transition: opacity 0.2s;
+  transition: all 0.2s;
+  // transition-delay: 200ms;
 
   &:hover {
     opacity: 0.7;

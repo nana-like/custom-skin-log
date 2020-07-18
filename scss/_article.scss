@@ -4,50 +4,14 @@
   }
 
   .header__text {
+    color: #333;
+    font-size: 36px;
     transform: scale(0.85) translateZ(0);
+
+    @include res--tablet {
+      font-size: 30px;
+    }
   }
-}
-
-.article_content {
-  // outline: 3px solid red;
-
-  // .article_top {
-  //   position: relative;
-  //   max-width: $max-width;
-  //   width: 100%;
-  //   margin: 0 auto;
-  //   background-size: cover;
-  //   background-position: 50% 50%;
-  //   margin-bottom: 30px;
-
-  //   &.has-cover {
-  //     padding-top: 280px;
-  //     opacity: 0.9;
-  //     filter: blur(0.4px);
-  //     -webkit-filter: blur(0.4px);
-
-  //     &:after {
-  //       position: absolute;
-  //       display: block;
-  //       content: "";
-  //       top: 0;
-  //       left: 0;
-  //       width: 100%;
-  //       height: 100%;
-  //       background-color: rgba(10, 10, 10, 0.4);
-  //     }
-  //   }
-
-  //   //커버가 없는 경우
-  //   &.no-cover {
-  //     padding: 0;
-  //     border-bottom: solid 2px #313131;
-
-  //     &:after {
-  //       display: none;
-  //     }
-  //   }
-  // }
 
   .info_post {
     max-width: $article-max-width;
@@ -135,11 +99,29 @@
   max-width: $article-max-width;
 
   a {
+    display: inline-block;
+    font-size: 14px;
+    color: #676767;
+    border: 1px solid #cdcdcd;
+    padding: 2px 7px;
+    border-radius: 2px;
+    transition: all 0.2s;
+    @include res--mobile {
+      font-size: 13px;
+      padding: 3px 8px;
+    }
+
+    &:hover {
+      color: $c-black;
+      border-color: #676767;
+    }
+
     &:not(:first-child) {
-      margin-left: 3px;
+      margin-left: 6px;
     }
   }
-  .staff-only {
+
+  .article_admin_edit {
     color: $c-main;
     border-color: $c-main;
     margin-left: 12px !important;
@@ -149,6 +131,11 @@
       background-color: $c-main;
       color: #fff;
     }
+  }
+
+  .article_admmin_delete {
+    color: #9c9c9c;
+    border-color: #d2d2d2;
   }
 }
 
@@ -223,13 +210,27 @@
 //공감 버튼 등
 .container_postbtn {
   padding: 0 !important;
+  @include flexbox();
   @include align-items(center);
+  @include justify-content(space-between);
   @include flex-wrap(wrap);
+
+  &:after {
+    display: none !important;
+  }
+
+  .postbtn_ccl {
+    display: none !important;
+  }
 
   .postbtn_like {
     float: none !important;
     padding: 0 !important;
     border: 0 !important;
+  }
+
+  .btn_subscription {
+    margin: 0 !important;
   }
 
   .ico_like {
@@ -276,6 +277,10 @@
     }
   }
 
+  .btn_post {
+    height: 60px !important;
+  }
+
   //좋아요 숫자
   .btn_post.uoc-icon .txt_like.uoc-count {
     margin-left: 12px !important;
@@ -314,8 +319,8 @@
   }
 
   .wrap_btn {
-    height: 55px !important;
-    line-height: 55px !important;
+    height: 60px !important;
+    line-height: 60px !important;
 
     & > button {
       display: inline-block !important;
@@ -325,7 +330,7 @@
   .wrap_btn_share,
   .wrap_btn_share + .wrap_btn,
   .wrap_btn_etc {
-    margin: 14px 0 0 !important;
+    // margin: 14px 0 0 !important;
   }
 }
 
@@ -335,9 +340,14 @@
   // border-color: #b9b9b9 !important;
   width: auto !important;
   padding: 1px 10px !important;
-  margin: 8px 0px 0px auto !important;
+  margin: 0 !important;
   color: $c-main !important;
   border-color: $c-main !important;
+
+  &:hover {
+    background-color: $c-main !important;
+    color: #fff !important;
+  }
 
   @include res--mobile {
     padding: 0 9px !important;
@@ -411,6 +421,7 @@
 
 .related_type {
   padding: 40px 0;
+  margin-bottom: 20px;
   background-color: #fafafa;
 
   @include res--desktop {
@@ -550,6 +561,7 @@
   h5,
   h6 {
     color: $c-black;
+    font-weight: bold;
     margin-bottom: 20px;
   }
 
@@ -579,14 +591,6 @@
     box-sizing: border-box;
     font-size: 90%;
   }
-
-  // p code {
-  //   border-radius: 2px;
-  //   border: solid 1px #8d8d8d;
-  //   background-color: #f0f0f0;
-  //   font-family: "Source Code Pro", monospace !important;
-  //   font-size: 90%;
-  // }
 
   figcaption {
     color: #9d9d9d;

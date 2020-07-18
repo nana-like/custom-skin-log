@@ -1,4 +1,7 @@
 $(function () {
+
+    console.log("마지막수정:0719-0135")
+
     $('.article_content').find('table').each(function (idx, el) {
         $(el).wrap('<div class="table-overflow">')
     });
@@ -10,15 +13,18 @@ $(function () {
 
         if ($('#wrap').has('menu_on')) {
             $('#container').removeClass('search_on');
-            $('.area_search').hide();
+            // $('.area_search').hide();
+            // $('.area_search').removeClass('searchInp_show');
         }
     }
 
     function searchToggle() {
         $('#container').toggleClass('search_on');
-        $('.area_search').toggle();
+        // $('.area_search').toggle();
+        // $('.area_search').toggleClass('searchInp_show');
 
         if ($('#container').has('search_on')) {
+            $('#header .area_search .inp_search').focus();
             $('#wrap').removeClass('menu_on');
         }
     }
@@ -33,7 +39,7 @@ $(function () {
             $('#wrap').removeClass('menu_on');
             $('.btn_menu').removeClass('btn_menu_off');
             $('#container').removeClass('search_on');
-            $('.area_search').hide();
+            // $('.area_search').hide();
         }
     });
 
@@ -65,6 +71,7 @@ $(function () {
         $('.btn_fold').hide();
         $('.btn_spread').show();
     });
+
     $('.btn_spread').bind('click', function () {
         $('.box_comment_list').slideDown();
         $('.btn_spread').hide();
@@ -174,22 +181,25 @@ $(function () {
     });
 
 
-    // 글 출력이 있는 경우
-    if ($('.area_view_content').length != false) {
-        var seoImage = $('meta[property="og:image"]').attr('content');
-        if (seoImage === "https://t1.daumcdn.net/tistory_admin/static/images/openGraph/opengraph.png") {
-            seoImage = undefined;
-        }
-        if (seoImage != undefined && seoImage != false) {
-            $('.area_view_content .article_top').css({
-                "background-image": "url(" + seoImage + ")"
-            });
-            $('.article_top').addClass('has-cover');
-
-        } else {
-            $('.article_top').addClass('no-cover');
-        }
-
-
+    // 로그인, 로그아웃 버튼 처리
+    var role = window.T.config.ROLE;
+    if (role === "owner") {
+        $('.admin_menu').show();
+    } else if (role === "user" || role === "connected") {
+        $('.user_menu').show();
+    } else {
+        $('.guest_menu').show();
     }
+
+    $('.guest_menu [data-action="login"]').click(function () {
+        document.location.href = 'https://www.tistory.com/auth/login?redirectUrl=' + encodeURIComponent(window.TistoryBlog.url);
+    });
+    $('.admin_menu [data-action="logout"]').click(function () {
+        document.location.href = 'https://www.tistory.com/auth/logout?redirectUrl=' + encodeURIComponent(window.TistoryBlog.url);
+    });
+
+    // 맨 위로
+    $('.go-to-top_link').on('click', function () {
+        $('html, body').animate({ scrollTop: '0' }, 500);
+    });
 });
