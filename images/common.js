@@ -1,163 +1,195 @@
-$(function() {
-    
-    display_control();
-    slider_control();
+$(function () {
+    $('.article_content').find('table').each(function (idx, el) {
+        $(el).wrap('<div class="table-overflow">')
+    });
+
+    function menuToggle() {
+        $('#wrap').toggleClass('menu_on');
+        $('body').toggleClass('prevent-scroll');
+        $('.btn_menu').toggleClass('btn_menu_off');
+
+        if ($('#wrap').has('menu_on')) {
+            $('#container').removeClass('search_on');
+            $('.area_search').hide();
+        }
+    }
+
+    function searchToggle() {
+        $('#container').toggleClass('search_on');
+        $('.area_search').toggle();
+
+        if ($('#container').has('search_on')) {
+            $('#wrap').removeClass('menu_on');
+        }
+    }
 
     $('body').bind('click', function (e) {
         var $target = $(e.target);
         if ($target.closest('.btn_menu').length > 0) {
-            $('.area_sidebar').show();
-            $('.area_popup').hide();
-            $('body').css('overflow', 'hidden');
+            menuToggle();
         } else if ($target.closest('.btn_search').length > 0) {
-            $('.area_sidebar').hide();
-            $('.area_popup').show();
-            $('body').css('overflow', 'hidden');
-        } else if ($target.closest('.inner_sidebar').length == 0 && $target.closest('.area_popup').length == 0) {
-            $('.area_sidebar').hide();
-            $('.area_popup').hide();
-            $('body').css('overflow', '');
+            searchToggle();
+        } else if ($target.closest('.area_search').length == 0 && $target.closest('.area_menu').length == 0) {
+            $('#wrap').removeClass('menu_on');
+            $('.btn_menu').removeClass('btn_menu_off');
+            $('#container').removeClass('search_on');
+            $('.area_search').hide();
+        }
+    });
+
+    $('.dimmed_sidebar').on('click', function () {
+        if ($('#wrap').hasClass('menu_on')) {
+            $('#wrap').removeClass('menu_on');
+            $('body').removeClass('prevent-scroll');
         }
     });
 
     $('.btn_close').on('click', function () {
-        $('.area_sidebar').hide();
-        $('.area_popup').hide();
-        $('body').css('overflow', '');
-    });
-});
-
-function slider_control() {
-    $('#main .type_featured .slide_zone').each(function(i) {
-      var id = 'featured_slide' + i;
-      $(this).closest('.type_featured').attr('id', id);
-
-      $(this).slick({
-        arrows: true,
-        dots: true,
-        infinite: true,
-        speed: 500,
-        fade: true,
-        appendArrows: $('#' + id + ' .box_arrow'),
-        appendDots: $('#' + id + ' .inner_main_slide'),
-        prevArrow: $('#' + id + ' .box_arrow .btn_prev'),
-        nextArrow: $('#' + id + ' .box_arrow .btn_next'),
-        dotsClass: 'slide_page slick-dots thema_apply',
-        customPaging: function(slider, i) {
-          return $('<button type="button" class="ico_circle"/>').text(i + 1);
-        },
-        cssEase: 'linear',
-        responsive: [{
-          breakpoint: 1439,
-          settings: {
-            fade: false
-          }
-        }]
-      });
-    });
-  }
-
-  function display_control() {
-    var $location = $(location),
-        pathname = $location.attr('pathname'),
-        href = $location.attr('href'),
-        parts = pathname.split('/');
-
-    // 검색어 삭제
-    $('.btn_search_del').click(function() {
-      $('.inp_search').val('');
+        $('#wrap').removeClass('menu_on');
+        $('body').removeClass('prevent-scroll');
     });
 
-    // 박스 헤더
-    if ($('#main .area_cover').children(':first-child').hasClass('type_featured')) {
-      $('#wrap').addClass('white');
-    } else if ($('#main .area_cover').length > 0) {
-      $('#main .area_cover').addClass('cover_margin');
+    $('#header .area_search .btn_search_del').bind('click', function () {
+        var search_value = $('#header .area_search .inp_search').val();
+
+        if (search_value) {
+            $('#header .area_search .inp_search').val('').focus();
+        } else {
+            $('#header .area_search .inp_search').val('')
+            searchToggle()
+        }
+    });
+
+    $('.btn_fold').bind('click', function () {
+        $('.box_comment_list').slideUp();
+        $('.btn_fold').hide();
+        $('.btn_spread').show();
+    });
+    $('.btn_spread').bind('click', function () {
+        $('.box_comment_list').slideDown();
+        $('.btn_spread').hide();
+        $('.btn_fold').show();
+    });
+
+    $visitCounter = $('.visit_counter');
+    $boxVisit = $('.box_visit');
+    if ($visitCounter.length == false) {
+        $boxVisit.hide();
+    } else {
+        $boxVisit.find('.data_today .item_visit').text($visitCounter.find('.today').text());
+        $boxVisit.find('.data_yesterday .item_visit').text($visitCounter.find('.yesterday').text());
+        $boxVisit.find('.data_total .item_visit').text($visitCounter.find('.total').text());
     }
 
-    /* 검색 리스크가 있을 경우 처리 */
-    if ($('.category_search_list').length != false) {
-      /* 컨텐츠 출력 영역 숨김 - 목록 표현을 검색 리스트로 대체 */
-      $('.category_index_list').hide();
+    $('.menu_navigation').children('ul:first').addClass('list_gnb').find('a').addClass('link_gnb');
+    $('.menu_navigation').children('.tt_category').children('li:first').children('a').hide();
+    $('.menu_navigation').children('.tt_category').find('.category_list').addClass('list_gnb').children('li').children('a').addClass('link_gnb');
+    $('.menu_navigation').find('.sub_category_list').addClass('list_lnb').find('a').addClass('link_lnb');
 
+    var $relatedPost = $('.related_posts');
+    if ($relatedPost.has()) {
+        $('.related_posts_mobile').html($relatedPost.html());
+    }
+    var $aboutMe = $('.about_me_pc');
+    if ($aboutMe.has()) {
+        $('.about_me_mobile').html($aboutMe.html());
+    }
 
-      /* 검색 리스트 처리 - 글 목록에서 썸네일, 카테고리 정보 참조 */
-      $('.category_search_list .item_category').each(function(i) {
-        var href = $(this).find('.link_category').attr('href'),
-            $category_index_item = $('.category_index_list').find('[href="' + href + '"]'),
-            thumbnail_full_path = $category_index_item.find('.item-thumbnail').css('background-image'),
-            thumbnail_path = window.TistoryBlog.url + pathname;
-          if (thumbnail_full_path != undefined) {
-                thumbnail_path = thumbnail_full_path.replace(/^url\(['"](.+)['"]\)/, '$1');
-          }
-        if (thumbnail_path) {
-          $(this).find('.link_category').data('thumbnail', thumbnail_path).css({
-            "background-image": "url(" + thumbnail_path + ")"
-          });
-          $(this).find('.item-thumbnail').data('thumbnail', thumbnail_path).css({
-            "background-image": "url(" + thumbnail_path + ")"
-          });
+    $('.menu_navigation').find('a').each(function () {
+        $(this).addClass('link_lnb');
+    });
+
+    // index more post
+    $('.index_type_common .list_gallery').each(function () {
+        $container = $(this);
+        if ($container.children('li').length >= 5) {
+            $container.closest('.index_type_common').children('.btn_area').show();
+        }
+    });
+
+    // index more post
+    $('.index_type_common .list_horizontal').each(function () {
+        $container = $(this);
+        if ($container.children('li').length >= 3) {
+            $container.closest('.index_type_common').children('.btn_area').show();
+        }
+    });
+
+    // index more post
+    $('.index_type_common.index_type_post').each(function (i) {
+        $container = $(this);
+
+        if ($container.children('div.article_content').length >= 2) {
+            $container.closest('.index_type_common').children('.btn_area').show();
+        }
+    });
+
+    $('.index_type_common .btn_post_more').bind('click', function () {
+        var $btn = $(this),
+            $container = $btn.closest('.index_type_common');
+
+        if ($container.find('.index_list_container.list_gallery').length > 0) {
+            $container.find('.index_list_container li.list_gallery_item:hidden').each(function (i) {
+                var $o = $(this);
+                if (i < 6) {
+                    $o.slideDown();
+                    $o.closest('.article_content').slideDown();
+                    $o.css('display', 'inline-block');
+                }
+            });
         } else {
-          $(this).find('.item-thumbnail').addClass('no_img');
+            $container.children('.index_list_container').children('li').slideDown();
+            $container.children('.article_content').slideDown();
+            $container.css('display', 'block');
         }
 
-        $(this).find('.summary').text($category_index_item.find('.summary').text());
-      });
-    }
+        // check, has hidden item
+        if ($container.children('.index_list_container').children('li:hidden').length == 0) {
+            $btn.hide();
+        }
+    });
 
-    // 리스트 관련해서 섬네일 없는 경우 no-img class 추가
-    $('.item-thumbnail').each(function(i) {
-      var $o = $(this),
-        thumbnail_path = $o.css('background-image').replace(/^url\(['"](.+)['"]\)/, '$1'),
-        base_path = window.TistoryBlog.url + pathname;
-        
-      if (thumbnail_path == base_path || thumbnail_path == href) {
-        $o.addClass('no-img');
-      }
+    $('.index_type_common .thumbnail_zone').each(function (i) {
+        var $o = $(this);
+        if ($o.children().length == 0) {
+            $o.addClass('no-image');
+        }
     });
-    $('.category_search_list .item_category').each(function(i) {
-      var $o = $(this),
-        thumbnail_path = $o.css('background-image').replace(/^url\(['"](.+)['"]\)/, '$1'),
-        base_path = window.TistoryBlog.url + pathname;
-      if (thumbnail_path == base_path) {
-        $o.addClass('no-img');
-      }
+
+    $('.category_list.index_type_common .article_content .thumbnail_post').each(function (i) {
+        var path = $(this).css('background-image').replace(/^url\(['"](.+)['"]\)/, '$1');
+        var pathname = $(location).attr('pathname'),
+            base_path = window.TistoryBlog.url + pathname;
+
+        if (path == base_path) {
+            $(this).addClass('no_img');
+        }
     });
-    $('.category_search_list .link_category').each(function(i) {
-      var $o = $(this),
-        thumbnail_path = $o.css('background-image').replace(/^url\(['"](.+)['"]\)/, '$1'),
-        base_path = window.TistoryBlog.url + pathname;
-      if (thumbnail_path == base_path) {
-        $o.addClass('no-img');
-      }
+
+    $('.inner_index h2.title_category').each(function (i) {
+        var $o = $(this);
+        if ($o.text() == '') {
+            $o.hide();
+        }
     });
+
 
     // 글 출력이 있는 경우
-    if ($('.area_view').length != false) {
-      var seoImage = $('meta[property="og:image"]').attr('content');
-      if (seoImage != undefined && seoImage != false) {
-        $('.area_view .article_header .inner_header').css({
-          "background-image": "url(" + seoImage + ")"
-        });
-        $('.area_view .article_header').addClass('type_article_header_cover');
+    if ($('.area_view_content').length != false) {
+        var seoImage = $('meta[property="og:image"]').attr('content');
+        if (seoImage === "https://t1.daumcdn.net/tistory_admin/static/images/openGraph/opengraph.png") {
+            seoImage = undefined;
+        }
+        if (seoImage != undefined && seoImage != false) {
+            $('.area_view_content .article_top').css({
+                "background-image": "url(" + seoImage + ")"
+            });
+            $('.article_top').addClass('has-cover');
 
-      } else {
-        $('.area_view .article_header').addClass('type_article_header_common');
-      }
-      if($('#main > .area_cover:first-child > .type_featured:first-child, .type_article_header_cover').length) { $('#wrap').addClass('white');}
+        } else {
+            $('.article_top').addClass('no-cover');
+        }
+
+
     }
-
-    // 로그인, 로그아웃 버튼 처리
-    if (window.T.config.USER.name) {
-      $('.btn-for-user').show();
-    } else {
-      $('.btn-for-guest').show();
-    }
-
-    $('.btn-for-guest [data-action="login"]').click(function() {
-      document.location.href = 'https://www.tistory.com/auth/login?redirectUrl=' + encodeURIComponent(window.TistoryBlog.url);
-    });
-    $('.btn-for-user [data-action="logout"]').click(function() {
-      document.location.href = 'https://www.tistory.com/auth/logout?redirectUrl=' + encodeURIComponent(window.TistoryBlog.url);
-    });
-  }
+});

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* styled by nana (20.07.12 22:48) */
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:500,700&display=swap");
 html,
@@ -193,7 +194,7 @@ body.prevent-scroll {
   border-bottom: 1px solid #e2e2e2; }
   .nav__container {
     position: relative;
-    max-width: 1280px;
+    max-width: 1200px;
     margin: 0 auto;
     height: inherit;
     padding: 0 20px;
@@ -452,7 +453,7 @@ body.prevent-scroll {
       letter-spacing: -0.16px; }
     .area_menu .menu_navigation .category_list .link_sub_item {
       display: block;
-      margin-top: 14px;
+      margin-top: 12px;
       margin-left: 14px;
       font-size: 15px;
       color: #525252; }
@@ -461,7 +462,7 @@ body.prevent-scroll {
   display: block; }
 
 .index_type_common {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto; }
   @media screen and (max-width: 1360px) {
     .index_type_common {
@@ -480,13 +481,8 @@ body.prevent-scroll {
 
 .logSkin-list ul {
   display: grid;
-  grid-template-columns: repeat(3, 370px);
-  grid-gap: 70px 85px; }
-  @media screen and (max-width: 1360px) {
-    .logSkin-list ul {
-      max-width: 100%;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      grid-gap: 60px 60px; } }
+  grid-template-columns: repeat(3, 350px);
+  grid-gap: 70px 75px; }
   @media screen and (max-width: 1080px) {
     .logSkin-list ul {
       grid-gap: 50px; } }
@@ -578,7 +574,7 @@ body.prevent-scroll {
   margin-top: 130px; }
   .logSkin-hot ul {
     display: grid;
-    grid-template-columns: repeat(4, 290px);
+    grid-template-columns: repeat(4, 270px);
     grid-gap: 40px; }
     @media screen and (max-width: 1360px) {
       .logSkin-hot ul {
@@ -872,6 +868,7 @@ body.prevent-scroll {
   min-height: 42px;
   font-size: 14px;
   color: #4b4b4b;
+  word-break: break-all;
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1043,7 +1040,7 @@ body.prevent-scroll {
   border-top: solid 1px #c4c4c4;
   margin-bottom: 30px; }
   .footer__container {
-    max-width: 1280px;
+    max-width: 1200px;
     margin: 0 auto;
     padding-top: 50px;
     display: -webkit-box;
@@ -1184,23 +1181,26 @@ body.prevent-scroll {
       transform: scale(0.9); } }
 
 .footer .admin {
-  transform-origin: 0 0;
   margin-left: 0;
   margin-top: 6px;
   opacity: 0.5;
-  transform: scale(0.8); }
+  transform: scale(0.8);
+  transform-origin: 0 0; }
+  @media screen and (max-width: 640px) {
+    .footer .admin {
+      transform-origin: 50% 50%; } }
 
 .box_tag_trail {
   width: 100%;
   box-sizing: border-box; }
   .box_tag_trail .title_category {
-    max-width: 1280px;
+    max-width: 1200px;
     padding: 0 20px;
     margin: 0 auto; }
   .box_tag_trail .tag_area {
     background-color: #fafafa; }
   .box_tag_trail .tag_cont {
-    max-width: 1280px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 80px 20px; }
   .box_tag_trail .tag_cloud {
@@ -1222,7 +1222,7 @@ body.prevent-scroll {
   transform: scale(0.85) translateZ(0); }
 
 .article_content .info_post {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 40px 2px 25px;
   box-sizing: border-box;
@@ -1299,7 +1299,7 @@ body.prevent-scroll {
   display: block;
   margin: 20px auto 0;
   padding: 0 20px;
-  max-width: 1280px; }
+  max-width: 1200px; }
   .article_admin a:not(:first-child) {
     margin-left: 3px; }
   .article_admin .staff-only {
@@ -1379,11 +1379,6 @@ body.prevent-scroll {
 
 .container_postbtn {
   padding: 0 !important;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
   -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
@@ -1430,19 +1425,13 @@ body.prevent-scroll {
   .container_postbtn .btn_post.uoc-icon .txt_like.uoc-count {
     margin-left: 12px !important;
     margin-right: 16px !important;
-    font-size: 0px !important;
+    font-size: 15px !important;
     height: 55px !important;
     line-height: 58px !important;
     color: #404040 !important;
     text-align: left !important; }
-    .container_postbtn .btn_post.uoc-icon .txt_like.uoc-count:after {
-      display: inline-block;
-      font-size: 14px;
-      content: "좋아요"; }
   .container_postbtn .btn_post .uoc-icon.like_on .txt_like.uoc-count {
-    display: inline-block !important;
-    font-size: 15px !important;
-    margin-right: 12px !important; }
+    display: inline-block !important; }
     .container_postbtn .btn_post .uoc-icon.like_on .txt_like.uoc-count:after {
       display: none !important; }
   .container_postbtn .like_on .ico_like:before {
@@ -1490,7 +1479,7 @@ body.prevent-scroll {
         opacity: 1; } }
 
 .area_tag {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto 21px;
   padding: 0 20px; }
   .area_tag a {
@@ -1524,7 +1513,7 @@ body.prevent-scroll {
       padding: 40px 20px; } }
   .related_type .title_related {
     display: block;
-    max-width: 1280px;
+    max-width: 1200px;
     margin: 0 auto 30px;
     display: block;
     margin-bottom: 21px;
@@ -1537,7 +1526,7 @@ body.prevent-scroll {
       .related_type .title_related {
         font-size: 17px; } }
   .related_type .list_related {
-    max-width: 1280px;
+    max-width: 1200px;
     margin: 0 auto 0px;
     display: -webkit-box;
     display: -moz-box;
@@ -1600,10 +1589,10 @@ body.prevent-scroll {
 
 .article_view {
   margin: 90px auto 30px;
-  max-width: 1280px;
+  max-width: 1200px;
   padding: 0 0 38px 0;
-  font-size: 17px;
-  color: #303030;
+  font-size: 16px;
+  color: #333333;
   letter-spacing: 0.002em;
   border-bottom: solid 1px #e6e6e6;
   box-sizing: border-box; }
@@ -1669,12 +1658,12 @@ body.prevent-scroll {
     border: 0 !important; }
     .article_view blockquote.callout:before {
       position: absolute;
-      top: 19px;
+      top: 22px;
       left: 23px;
       display: inline-block;
       content: "";
-      width: 29px;
-      height: 29px;
+      width: 28px;
+      height: 28px;
       background-image: url(./images/ico_callout.png);
       background-size: 100%; }
 
@@ -1685,7 +1674,7 @@ body.prevent-scroll {
   .area_reply textarea {
     font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", "Nanum Gothic", Dotum, "돋움", Helvetica, sans-serif; }
   .area_reply .box_reply_info {
-    max-width: 1280px;
+    max-width: 1200px;
     margin: 0 auto; }
     .area_reply .box_reply_info .item_info {
       display: block;
@@ -1701,7 +1690,7 @@ body.prevent-scroll {
       .area_reply .box_reply_info .item_info .count {
         font-weight: 400; }
   .area_reply .box_comment_list {
-    max-width: 1280px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0; }
   .area_reply .list_reply:first-child {
@@ -1732,7 +1721,7 @@ body.prevent-scroll {
     align-items: center; }
   .area_reply .box_reply_content .user {
     display: block;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: -0.15px;
     text-align: left;
@@ -1753,9 +1742,9 @@ body.prevent-scroll {
       font-size: 11px; }
   .area_reply .box_reply_content .txt {
     display: block;
-    margin-top: 5px;
+    margin-top: 8px;
     font-size: 15px;
-    line-height: 1.49;
+    line-height: 1.6;
     letter-spacing: -0.15px;
     text-align: left;
     color: #4b4b4b; }
@@ -1805,7 +1794,7 @@ body.prevent-scroll {
   box-sizing: border-box; }
 
 .reply_write {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto; }
   .reply_write .form_guest {
     display: -webkit-box;
@@ -1970,7 +1959,7 @@ body.prevent-scroll {
       background-color: #2467ce; }
 
 .go-to-top {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 20px auto 15px;
   padding: 0 20px; }
   .go-to-top a {
@@ -1993,7 +1982,8 @@ body.prevent-scroll {
   overflow-x: auto;
   padding: 16px;
   background: #100f0f;
-  color: #dcdcdc !important; }
+  color: #dcdcdc !important;
+  font-size: 16px !important; }
 
 .hljs-addition,
 .hljs-deletion {
@@ -2089,7 +2079,7 @@ body.prevent-scroll {
   border: 0; }
 
 .hljs table td {
-  padding: 4px !important; }
+  padding: 0.1em !important; }
 
 .hljs-ln-n {
   margin-right: 0px;
@@ -2109,3 +2099,11 @@ body.prevent-scroll {
   margin-left: 0 !important;
   font-size: 13px;
   margin-right: 5px; }
+
+.table-overflow tr,
+.table-overflow td {
+  border: 1px solid #cdcdcd; }
+
+.table-overflow td {
+  padding: 8px;
+  padding-left: 12px; }

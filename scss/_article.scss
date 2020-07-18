@@ -223,7 +223,6 @@
 //공감 버튼 등
 .container_postbtn {
   padding: 0 !important;
-  @include flexbox();
   @include align-items(center);
   @include flex-wrap(wrap);
 
@@ -281,23 +280,23 @@
   .btn_post.uoc-icon .txt_like.uoc-count {
     margin-left: 12px !important;
     margin-right: 16px !important;
-    font-size: 0px !important;
+    font-size: 15px !important;
     height: 55px !important;
     line-height: 58px !important;
     color: #404040 !important;
     text-align: left !important;
 
     &:after {
-      display: inline-block;
-      font-size: 14px;
-      content: "좋아요";
+      // display: inline-block;
+      // font-size: 15px;
+      // content: "좋아요";
     }
   }
 
   .btn_post .uoc-icon.like_on .txt_like.uoc-count {
     display: inline-block !important;
-    font-size: 15px !important;
-    margin-right: 12px !important;
+    // font-size: 15px !important;
+    // margin-right: 12px !important;
 
     &:after {
       display: none !important;
@@ -514,9 +513,9 @@
   margin: 90px auto 30px;
   max-width: $article-max-width;
   padding: 0 0 38px 0;
-  // font-size: 16px;
-  font-size: 17px;
-  color: #303030;
+  font-size: 16px;
+  // font-size: 17px;
+  color: #333333;
   letter-spacing: 0.002em;
   border-bottom: solid 1px #e6e6e6;
   box-sizing: border-box;
@@ -614,12 +613,12 @@
 
     &:before {
       position: absolute;
-      top: 19px;
+      top: 22px;
       left: 23px;
       display: inline-block;
       content: "";
-      width: 29px;
-      height: 29px;
+      width: 28px;
+      height: 28px;
       background-image: url(./images/ico_callout.png);
       background-size: 100%;
     }

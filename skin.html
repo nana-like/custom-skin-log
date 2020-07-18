@@ -2,883 +2,947 @@
 <html lang="ko">
 
 <head>
-  <title>[##_page_title_##]</title>
+  <title>[##_page_title_##] :: [##_title_##]</title>
   <meta name="title" content="[##_page_title_##] :: [##_title_##]" />
   <meta name="description" Content="[##_desc_##]" />
   <meta charset="utf-8" />
   <meta name="viewport"
     content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
   <link rel="alternate" type="application/rss+xml" title="[##_title_##]" href="[##_rss_url_##]" />
   <link rel="shortcut icon" href="[##_blog_link_##]favicon.ico" />
-  <link rel="stylesheet" href="https://t1.daumcdn.net/tistory_admin/static/font/AvenirLTStd/AvenirLTStd.css" />
-  <!-- <link rel="stylesheet" href="https://t1.daumcdn.net/tistory_admin/static/font/SpoqaHanSans/SpoqaHanSans.css" /> -->
 
-  <!-- 폰트: Noto Sans -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" />
-  <link rel="stylesheet" href="https://t1.daumcdn.net/tistory_admin/static/font/icomoon/icomoon.css" />
   <link rel="stylesheet" href="./style.css" />
-  <link rel="stylesheet" href="./images/slick.css" />
+  <link rel="stylesheet" href="./images/style_webicon.css" />
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-  <script src="./images/slick.js"></script>
   <script src="./images/common.js"></script>
 
 
-  <!--highlight-->
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.6.0/dist/highlightjs-line-numbers.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();
-    hljs.initLineNumbersOnLoad();</script>
-  <script src="https://unpkg.com/vh-check/dist/vh-check.min.js"></script>
-  <script>
-    (function () {
-      // initialize the test
-      var test = vhCheck();
-    }());
-  </script>
+	
+	<meta name="naver-site-verification" content="07485c6684a8a614f18c268f70a8019a7b796f11" />
 </head>
 
-<body id="[##_body_id_##]" class="[##_var_colorSet_##] logSkin">
+<body id="[##_body_id_##]" class="[##_var_penelopeColorSet_##]">
   <s_t3>
-    <div id="wrap">
+    <!-- warp / 테마 변경시 thema_xxx 변경 -->
+    <div id="wrap" class="[##_var_penelopeColorSet_##]">
 
-      <!-- ! 헤더 (.header) -->
-      <header class="header box_header">
-        <div class="nav">
-          <div class="nav__container">
-            <div class="nav__gnb">
-              [##_category_list_##]
-            </div>
-            <div class="nav__utils">
-              <button class="btn-search">
-                <span class="blind">검색</span>
-              </button>
-              <a class="btn-link" href="https://nykim.net" target="_blank" rel="noopener">
-                Portfolio
+      <!-- area_menu -->
+      <div class="area_menu">
+
+        <div class="area_menu_inner">
+
+          <div class="sidebar_header">
+            <!-- <h1 class="title_logo">
+              <a href="[##_blog_link_##]" title="[##_title_##]" class="link_logo">
+                <s_if_var_logoImage>
+                  <img src="[##_var_logoImage_##]" class="img_logo" alt="[##_title_##]">
+                </s_if_var_logoImage>
+                <s_not_var_logoImage>
+                  [##_title_##]
+                </s_not_var_logoImage>
               </a>
-              <!-- ? 메뉴 및 검색 버튼 클릭시 area_sidebar / area_popup 논처리 삭제 / body 에 style="overflow:hidden" 추가 -->
-              <!-- * 모바일에서만 표시 -->
-              <!-- <button type="button" class="btn_menu" title="메뉴"><span class="blind">메뉴</span></button> -->
-
-
-
-            </div>
+            </h1> -->
+            <strong class="area_menu_title">
+              <a href="[##_blog_link_##]" title="[##_title_##]" class="link_logo"> [##_title_##]</a>
+            </strong>
+            <button type="button" class="btn_close" title="닫기"><span class="icon-Close"></span></button>
           </div>
+
+          <nav class="menu_navigation">
+            <a href="[##_blog_link_##]" class="area_menu_nav-home">Home</a>
+            [##_category_list_##]
+          </nav>
+
+          <!-- <ul class="list_sns">
+            <s_if_var_snsFacebook>
+              <li><a href="[##_var_snsFacebook_##]" class="link_sns link_fb" target="_blank"><span
+                    class="blind">페이스북</span></a></li>
+            </s_if_var_snsFacebook>
+            <s_if_var_snsTwitter>
+              <li><a href="[##_var_snsTwitter_##]" class="link_sns link_twitter" target="_blank"><span
+                    class="blind">트위터</span></a></li>
+            </s_if_var_snsTwitter>
+            <s_if_var_snsInstagram>
+              <li><a href="[##_var_snsInstagram_##]" class="link_sns link_insta" target="_blank"><span
+                    class="blind">인스타그램</span></a></li>
+            </s_if_var_snsInstagram>
+          </ul> -->
+
         </div>
-        <h1 class="header__logo">
-          <a href="[##_blog_link_##]" title="[##_title_##]" class="header__link">
-            <s_if_var_logoImage>
-              <img src="[##_var_logoImage_##]" class="img_logo" alt="[##_title_##]">
-            </s_if_var_logoImage>
-            <s_not_var_logoImage>
-              <span class="header__text">
-                [##_title_##]
-              </span>
-            </s_not_var_logoImage>
-          </a>
-          <p class="header__info">[##_desc_##]</p>
-        </h1>
 
-        <!-- <h1 class="title_logo" style="background-image:url('./images/logo.jpg')"></h1> -->
-      </header>
-      <!-- // box_header -->
 
-      <!-- container -->
-      <div id="container">
-
-        <!-- area_sidebar -->
-        <aside class="area_sidebar thema_apply" style="display: none;">
-
-          <div class="inner_sidebar">
-            <div class="sidebar_header">
-              <h1 class="title_logo">
-                <a href="[##_blog_link_##]" title="[##_title_##]" class="link_logo">
-                  <s_if_var_logoImage>
-                    <img src="[##_var_logoImage_##]" class="img_logo" alt="[##_title_##]">
-                  </s_if_var_logoImage>
-                  <s_not_var_logoImage>
-                    [##_title_##]
-                  </s_not_var_logoImage>
-                </a>
-              </h1>
-              <button type="button" class="btn_close" title="닫기"><span class="icon-Close"></span></button>
-            </div>
-
-            <div class="sidebar_contents">
-              <div class="sidebar_menu">
-                <s_sidebar>
-                  <s_sidebar_element>
-                    <div class="sidebar_left">
-                      <!-- 카테고리 메뉴 -->
-                      <div class="box_gnb">
-                        <nav>
-                          [##_category_list_##]
-                        </nav>
-                      </div>
-                  </s_sidebar_element>
-                  <s_sidebar_element>
-                    <!-- 메인 메뉴 -->
-                    <div class="box_gnb">
-                      [##_blog_menu_##]
-                    </div>
-              </div>
-              </s_sidebar_element>
-              <s_sidebar_element>
-                <div class="sidebar_right">
-                  <!-- 링크 -->
-                  <div class="box_sns">
-                    <ul class="list_sns">
-                      <s_link_rep>
-                        <li>
-                          <a href="[##_link_url_##]" class="link_add" target="_blank"
-                            data-site="[##_link_site_##]">[##_link_site_##]</a>
-                        </li>
-                      </s_link_rep>
-                    </ul>
-                  </div>
-              </s_sidebar_element>
-
-              <s_sidebar_element>
-                <!-- RSS 피드 -->
-                <div class="add_link">
-                  <a href="[##_rss_url_##]" target="_blank" class="link_add">RSS 피드</a>
-                </div>
-            </div>
-            </s_sidebar_element>
-            </s_sidebar>
-          </div>
-
-          <!-- 관리 -->
-          <div class="box_tool">
-            <div class="btn-for-guest">
-              <a href="#" class="link_tool" data-action="login">로그인</a>
-            </div>
-            <div class="btn-for-user">
-              <a href="#" class="link_tool" data-action="logout">로그아웃</a>
-              <a href="[##_owner_url_##]/entry/post" class="link_tool">글쓰기</a>
-              <a href="[##_owner_url_##]" class="link_tool">관리</a>
-            </div>
-          </div>
+        <div class="dimmed_sidebar"></div>
       </div>
-    </div>
+      <!-- // area_menu -->
 
-    <div class="dimmed_sidebar"></div>
-    </aside>
+      <!-- container  / header에 btn_search 클릭하면 class에 search_on 추가(모바일에서만 작동) -->
+      <div id="container">
+        <!-- ! 헤더 (.header) -->
+        <header id="header" class="header">
+          <div id="skip"></div>
+          <div class="nav">
+            <div class="nav__container">
+              <div class="nav__gnb">
+                <a href="[##_blog_link_##]" class="nav__gnb-home">Home</a>
+                [##_category_list_##]
+								<a href="https://www.notion.so/nanalike/23d512605b2d4e3caccabf2c5d108347" target="_blank" rel="noopener"  class="nav__gnb-home">About</a>
+              </div>
+              <div class="nav__menu">
 
-    <!-- // area_sidebar -->
+                <!-- ? 메뉴 및 검색 버튼 클릭시 area_sidebar / area_popup 논처리 삭제 / body 에 style="overflow:hidden" 추가 -->
+                <button type="button" class="btn_menu" title="메뉴"><span class="blind">메뉴</span></button>
+              </div>
+              <div class="nav__utils">
+                <button class="btn_search btn-search">
+                  <span class="blind">검색</span>
+                </button>
+                <div class="area_search thema_apply" style="display: none;">
+                  <form action="" method="get">
+                    <legend><span class="blind">컨텐츠 검색</span></legend>
 
-    <!-- area_popup -->
-    <div class="area_popup" style="display: none;">
-      <div class="area_search thema_apply">
-        <div class="search_header">
-          <h1 class="title_logo">
-            <a href="[##_blog_link_##]" title="[##_title_##]" class="link_logo">
+                    <input type="text" name="search" title="Search" placeholder="검색어를 입력해 주세요." value=""
+                      class="inp_search"
+                      onkeypress="if (event.keyCode == 13) { try{window.location.href='/search/'+looseURIEncode(document.getElementsByName('search')[0].value);document.getElementsByName('search')[0].value='';return false;}catch(e){} }">
+
+                    <button type="button" title="검색어 삭제" class="btn_search_del"><span class="blind">삭제</span></button>
+                  </form>
+                </div>
+                <a class="btn-link" href="https://nykim.net" target="_blank" rel="noopener">
+                  Portfolio
+                </a>
+              </div>
+            </div>
+          </div>
+          <h1 class="header__logo">
+            <a href="[##_blog_link_##]" title="[##_title_##]" class="header__link">
               <s_if_var_logoImage>
                 <img src="[##_var_logoImage_##]" class="img_logo" alt="[##_title_##]">
               </s_if_var_logoImage>
               <s_not_var_logoImage>
-                [##_title_##]
+                <span class="header__text">
+                  [##_title_##]
+                </span>
               </s_not_var_logoImage>
             </a>
+            <p class="header__info">[##_desc_##]</p>
           </h1>
-          <button type="button" class="btn_close" title="닫기"><span class="icon-Close"></span></button>
-        </div>
 
-        <div class="search_content">
-          <form action="" method="get">
-            <legend><span class="blind">컨텐츠 검색</span></legend>
-            <div class="box_form">
-              <span class="icon-Search"></span>
-              <s_search>
-                <input type="text" name="[##_search_name_##]" title="검색어 입력" placeholder="SEARCH" value=""
-                  class="inp_search" onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }">
-              </s_search>
-              <button type="button" title="검색어 삭제" class="btn_search_del">
-                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 36 36" class="img_svg">
-                  <defs>
-                    <path id="textDelBtnSvg"
-                      d="M20 2C10.059 2 2 10.059 2 20s8.059 18 18 18 18-8.059 18-18S29.941 2 20 2zm8 24.6L26.6 28 20 21.4 13.4 28 12 26.6l6.6-6.6-6.6-6.6 1.4-1.4 6.6 6.6 6.6-6.6 1.4 1.4-6.6 6.6 6.6 6.6z" />
-                  </defs>
-                  <g fill="none" fill-rule="evenodd" transform="translate(-2 -2)">
-                    <path d="M0 0h40v40H0z" />
-                    <mask id="textDelBtnSvgMask" fill="#fff">
-                      <use xlink:href="#textDelBtnSvg" />
-                    </mask>
-                    <g fill="#000" fill-opacity="1" mask="url(#textDelBtnSvgMask)" class="svg_bg">
-                      <path d="M0 0h40v40H0z" />
-                    </g>
-                  </g>
-                </svg>
-              </button>
-            </div>
-          </form>
+          <!-- <h1 class="title_logo" style="background-image:url('./images/logo.jpg')"></h1> -->
+        </header>
 
-          <s_sidebar>
-            <s_sidebar_element>
-              <!-- 태그 -->
-              <div class="tag_zone">
-                <h3 class="title_sidebar">태그</h3>
-                <div class="box_tag">
-                  <s_random_tags><a href="[##_tag_link_##]" class="[##_tag_class_##]"> [##_tag_name_##]</a>
-                  </s_random_tags>
-                </div>
-              </div>
-            </s_sidebar_element>
-            <s_sidebar_element>
-              <!-- 최근글 -->
-              <div class="tag_board">
-                <h3 class="title_sidebar">최근글</h3>
-                <ul class="list_sidebar">
-                  <s_rctps_rep>
-                    <li class="item_sidebar"><a href="[##_rctps_rep_link_##]"> [##_rctps_rep_title_##]</a></li>
-                  </s_rctps_rep>
-                </ul>
-              </div>
-            </s_sidebar_element>
-            <s_sidebar_element>
-              <!-- 최근 댓글 -->
-              <div class="tag_board">
-                <h3 class="title_sidebar">댓글</h3>
-                <ul class="list_sidebar">
-                  <s_rctrp_rep>
-                    <li class="item_sidebar"><a href="[##_rctrp_rep_link_##]">[##_rctrp_rep_desc_##]</a></li>
-                  </s_rctrp_rep>
-                </ul>
-              </div>
-            </s_sidebar_element>
-            <s_sidebar_element>
-              <!-- 공지사항 -->
-              <s_rct_notice>
-                <div class="tag_board">
-                  <h3 class="title_sidebar">공지사항</h3>
-                  <ul class="list_sidebar">
-                    <s_rct_notice_rep>
-                      <li class="item_sidebar"><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></li>
-                    </s_rct_notice_rep>
-                  </ul>
-                </div>
-              </s_rct_notice>
-            </s_sidebar_element>
-            <s_sidebar_element>
-              <!-- 글 보관함 -->
-              <div class="tag_board">
-                <h3 class="title_sidebar">아카이브</h3>
-                <ul class="list_sidebar">
-                  <s_archive_rep>
-                    <li class="item_sidebar"><a href="[##_archive_rep_link_##]">[##_archive_rep_date_##]</a></li>
-                  </s_archive_rep>
-                </ul>
-              </div>
-            </s_sidebar_element>
-          </s_sidebar>
-        </div>
+        <main id="main">
 
-      </div>
-    </div>
-    <!-- // area_popup -->
-
-    <!-- ! 메인 (#main) -->
-    <main id="main">
-
-      <!-- area_category / 카테고리 타입 따로 css 변경 category_type_notice / category_type_related-->
-      <!-- <s_list>
-        <div class="area_category category_type_[##_var_listType_##] category_search_list">
-
-          <h2 class="title_section">[##_list_conform_##]<span>([##_list_count_##])</span></h2>
-
-          <ul class="list_category">
-            <s_list_rep>
-              <li class="item_category">
-                <a href="[##_list_rep_link_##]" class="link_category">
-                  <span class="thumnail item-thumbnail"></span>
-                  <div class="info">
-                    <strong class="name">[##_list_rep_title_##]</strong>
-                    <p class="text summary"></p>
-                    <span class="date">[##_list_rep_regdate_##]</span>
-                  </div>
-                </a>
-              </li>
-            </s_list_rep>
-          </ul>
-        </div>
-      </s_list> -->
-
-      <!-- <s_list>
-        <div style="outline: 3px solid green;">
-          <h2>불타는 핫한 로그</h2>
-          <ul>
-            <s_rctps_popular_rep>
-              <li>
-                <a href="[##_rctps_rep_link_##]">[##_rctps_rep_title_##]</a>
-                <span class="cnt">[##_rctps_rep_rp_cnt_##]</span>
-                <s_rctps_rep_thumbnail>
-                  <img src="[##_rctps_rep_thumbnail_##]" />
-                </s_rctps_rep_thumbnail>
-                <a href="[##_rctps_rep_category_link_##]">[##_rctps_rep_category_##]</a>
-              </li>
-            </s_rctps_popular_rep>
-          </ul>
-        </div>
-      </s_list> -->
-
-      <!-- area_view -->
-      <div class="area_view">
-        <s_article_rep>
-
-          <s_index_article_rep>
-
-            <s_sidebar_element>
-              <!-- 최근에 올라온 글 -->
-              <div class="recentPost">
-                <h3>최근에 올라온 글 </h3>
-                <ul>
-                  <s_rctps_rep>
-                    <li>
-                      <a href="[##_rctps_rep_link_##]">[##_rctps_rep_title_##]</a>
-                      <span class="cnt">[##_rctps_rep_rp_cnt_##]</span>
-                      <s_rctps_rep_thumbnail>
-                        <img src="[##_rctps_rep_thumbnail_##]" />
-                      </s_rctps_rep_thumbnail>
-                      <a href="[##_rctps_rep_category_link_##]">[##_rctps_rep_category_##]</a>
-                    </li>
-                  </s_rctps_rep>
-                </ul>
-              </div>
-            </s_sidebar_element>
-
-            <div class="list_index category_type_[##_var_listType_##] category_index_list">
-              <div class="item_category">
-                <a href="[##_article_rep_link_##]" class="link_category">
-                  <span class="thumnail item-thumbnail"
-                    style="background-image:url('<s_article_rep_thumbnail>[##_article_rep_thumbnail_url_##]</s_article_rep_thumbnail>')"></span>
-                  <div class="info">
-                    <strong class="name">[##_article_rep_title_##]</strong>
-                    <p class="text summary">[##_article_rep_summary_##]</p>
-                    <span class="date">[##_article_rep_date_##]</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </s_index_article_rep>
-
-          <s_permalink_article_rep>
-
-            <!-- article_content -->
-            <div class="area_article">
-
-              <!-- 뷰페이지 상단 type css 구분 / type_article_header_common or type_article_header_cover -->
-              <div class="article_header">
-                <div class="inner_header" style="background-image:url('')">
-                  <div class="info_text">
-                    <strong class="title_post">[##_article_rep_title_##]</strong>
-                    <p class="info"><span
-                        class="date">[##_article_rep_date_##]</span>ㆍ<span>[##_article_rep_category_##]</span></p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- 에디터 영역 -->
-              <div class="article_view">
-                [##_article_rep_desc_##]
-              </div>
-
-              <!-- article_content -->
-              <div class="article_content">
-                <!-- <ul class="list_share list_sns">
-                                        <li class="item_share"><a href="#" class="link_share link_facebook" data-service="facebook"><span class="icon-Facebook"></span><span class="blind">페이스북</span></a></li>
-                                        <li class="item_share"><a href="#" class="link_share link_twitter" data-service="twitter"><span class="icon-Twitter"></span><span class="blind">트위터</span></a></li>
-                                        <li class="item_share"><a href="#" class="link_share link_story" data-service="kakaostory"><span class="icon-Story"></span><span class="blind">카카오스토리</span></a></li>
-                                        <li class="item_share"><a href="#" class="link_share link_kakao" data-service="kakaotalk"><span class="icon-Kakao"></span><span class="blind">카카오톡</span></a></li>
-                                    </ul> -->
-
-                <s_tag_label>
-                  <!-- area_tag -->
-                  <div class="area_tag">
-                    <h3 class="title_tag">TAG</h3>
-                    <div class="tag_content thema_apply">[##_tag_label_rep_##]</div>
-                  </div>
-                  <!-- // area_tag -->
-                </s_tag_label>
-
-                <s_article_related>
-                  <!-- area_related -->
-                  <div class="area_related">
-                    <h3 class="title_related">관련글</h3>
-                    <ul class="list_related">
-                      <s_article_related_rep>
-                        <li class="item_related">
-                          <a href="[##_article_related_rep_link_##]" class="link_related">
-                            <span class="thumnail item-thumbnail"
-                              style="background-image:url('<s_article_related_rep_thumbnail>[##_article_related_rep_thumbnail_link_##]</s_article_related_rep_thumbnail>')"></span>
-                            <div class="box_content">
-                              <strong>[##_article_related_rep_title_##]</strong>
-                              <span class="info">[##_article_related_rep_date_##]</span>
+          <!-- inner_index -->
+          <div class="inner_index">
+            <s_cover_group>
+              <s_cover_rep>
+                <s_cover name='gallery'>
+                  <!-- index_type_gallery -->
+                  <div class="index_type_common index_type_gallery logSkin-hot">
+                    <h2 class="title_category">[##_cover_title_##]</h2>
+                    <ul class="list_gallery index_list_container">
+                      <s_cover_item>
+                        <s_cover_item_article_info>
+                          <li class="list_gallery_item">
+                            <div class="article_content">
+                              <a href="[##_cover_item_url_##]">
+                                <div class="thumbnail_zone">
+                                  <div class="thumbnail_post" <s_cover_item_thumbnail>
+                                    style="background-image:url('[##_cover_item_thumbnail_##]')"
+                                    </s_cover_item_thumbnail>></div>
+                                </div>
+                                <div class="box_contents">
+                                  <strong class="title_post">[##_cover_item_title_##]</strong>
+                                  <span class="date_post">[##_cover_item_simple_date_##]</span>
+                                </div>
+                              </a>
                             </div>
+                          </li>
+                        </s_cover_item_article_info>
+                      </s_cover_item>
+                    </ul>
+                  </div>
+                  <!-- // index_type_gallery -->
+                  <div class="logSkin-showAll">
+                    <a href="/category">전체 글 보기</a>
+                  </div>
+                </s_cover>
+                <s_cover name='post1'>
+                  <!-- index_type_post  -->
+                  <div class="index_type_common index_type_post index_type_post_line4">
+                    <h2 class="title_category">[##_cover_title_##]</h2>
+                    <s_cover_item>
+                      <div class="article_content">
+                        <a href="[##_cover_item_url_##]" class="link_title"><strong
+                            class="title_post">[##_cover_item_title_##]</strong></a>
+
+                        <s_cover_item_article_info>
+                          <div class="info_post">
+                            <!-- 카테고리 링크 줄 수 없음 -->
+                            <a class="link_category thema_apply"><span
+                                class="category">[##_cover_item_category_##]</span></a>
+                            <span class="date">[##_cover_item_date_##]</span>
+                          </div>
+                        </s_cover_item_article_info>
+
+                        <a href="[##_cover_item_url_##]" class="link_article">
+                          <div class="content_post">
+                            <div class="thumbnail_zone">
+                              <span class="thumbnail_post"
+                                <s_cover_item_thumbnail>style="background-image:url('[##_cover_item_thumbnail_##]')"
+                                </s_cover_item_thumbnail>>
+                            </div>
+                            <p class="txt_post">
+                              [##_cover_item_summary_##]
+                            </p>
+                          </div>
+                          <button type="button" class="btn_more thema_apply mobile_blind">Read
+                            More</button>
+                        </a>
+                      </div>
+                    </s_cover_item>
+
+                    <div class="btn_area">
+                      <button class="btn_post_more">MORE POST</button>
+                    </div>
+                  </div>
+                  <!-- // index_type_post -->
+                </s_cover>
+
+                <s_cover name='post2'>
+                  <!-- index_type_post  -->
+                  <div class="index_type_common index_type_post index_type_post_line11">
+                    <h2 class="title_category">[##_cover_title_##]</h2>
+                    <s_cover_item>
+                      <div class="article_content">
+                        <a href="[##_cover_item_url_##]" class="link_title"><strong
+                            class="title_post">[##_cover_item_title_##]</strong></a>
+
+                        <s_cover_item_article_info>
+                          <div class="info_post">
+                            <!-- 카테고리 링크 줄 수 없음 -->
+                            <a class="link_category thema_apply"><span
+                                class="category">[##_cover_item_category_##]</span></a>
+                            <span class="date">[##_cover_item_date_##]</span>
+                          </div>
+                        </s_cover_item_article_info>
+
+                        <a href="[##_cover_item_url_##]" class="link_article">
+                          <div class="content_post">
+                            <div class="thumbnail_zone">
+                              <s_cover_item_thumbnail>
+                                <span class="thumbnail_post"> <img src="[##_cover_item_thumbnail_##]"></span>
+                              </s_cover_item_thumbnail>
+                            </div>
+
+                            <p class="txt_post">
+                              [##_cover_item_summary_##]
+                            </p>
+
+                          </div>
+                          <button type="button" class="btn_more thema_apply mobile_blind">Read
+                            More</button>
+                        </a>
+                      </div>
+                    </s_cover_item>
+
+                    <div class="btn_area">
+                      <button class="btn_post_more">MORE POST</button>
+                    </div>
+                  </div>
+                  <!-- // index_type_post -->
+                </s_cover>
+
+                <s_cover name="horizontal">
+                  <!-- index_type_list  -->
+                  <div class="index_type_common index_type_horizontal index_type_horizontal_line2 logSkin-list">
+                    <h2 class="title_category">[##_cover_title_##]</h2>
+                    <ul class="list_horizontal index_list_container logSkin-new">
+                      <s_cover_item>
+                        <li class="list_horizontal_item">
+                          <div class="article_content">
+
+                            <a href="[##_cover_item_url_##]" class="logSkin-list-link">
+                              <div class="thumbnail_zone">
+                                <div class="thumbnail_post" <s_cover_item_thumbnail>
+                                  style="background-image:url('[##_cover_item_thumbnail_##]')"
+                                  </s_cover_item_thumbnail>></div>
+                              </div>
+                              <s_cover_item_article_info>
+                                <div class="info_zone">
+                                  <p class="category_post">[##_cover_item_category_##]</p>
+                                  <strong class="title_post">[##_cover_item_title_##]</strong>
+                                  <p class="txt_post">
+                                    [##_cover_item_summary_##]
+                                  </p>
+                                  <p class="date_post">[##_cover_item_simple_date_##]</p>
+                                </div>
+                              </s_cover_item_article_info>
+                            </a>
+                          </div>
+                        </li>
+                      </s_cover_item>
+                    </ul>
+
+                  </div>
+                  <!-- // index_type_list -->
+
+                </s_cover>
+
+                <s_cover name="blind">
+                  <!-- related_type_index -->
+                  <div class="related_type related_type_index">
+                    <h2 class="title_related">[##_cover_title_##]</h2>
+                    <ul class="list_related">
+                      <s_cover_item>
+                        <li>
+                          <a href="[##_cover_item_url_##]" class="link_related"
+                            <s_cover_item_thumbnail>style="background-image:url('[##_cover_item_thumbnail_##]')"
+                            </s_cover_item_thumbnail>>
+                            <span class="bg"></span>
+                            <span class="txt"><strong>[##_cover_item_title_##]</strong>
+                              <s_cover_item_article_info>[##_cover_item_category_##]</s_cover_item_article_info>
+                            </span>
                           </a>
                         </li>
-                      </s_article_related_rep>
+                      </s_cover_item>
                     </ul>
                   </div>
-                  <!-- // area_related -->
-                </s_article_related>
+                </s_cover>
+              </s_cover_rep>
+            </s_cover_group>
 
-                <!-- area_reply -->
-                <div class="area_reply">
+            <s_list>
+              <div class="category_list index_type_common index_type_horizontal">
+                <h2 class="title_category">[##_list_conform_##] <span
+                    class="title_category_num">([##_list_count_##])</span></h2>
+              </div>
+            </s_list>
 
-                  <div class="box_reply_info">
-                    <a href="#rp" onclick="[##_article_rep_rp_link_##]" class="reply_events">댓글
-                      <span>[##_article_rep_rp_cnt_##]</span></a>
-                  </div>
 
-                  <!-- reply_content -->
-                  <div class="reply_content">
-                    <button type="button" class="btn_more btn_replymore" style="display:none;">+ 이전 댓글 더보기</button>
+            <!-- category_list -->
+            <s_article_rep>
+              <div class="logSkin-list-normal category_list index_type_common index_type_[##_var_penelopeListType_##]">
+                <ul class="list_[##_var_penelopeListType_##]">
 
-                    <s_rp>
-                      <!-- box_comment_list -->
-                      <div class="box_comment_list">
-                        <s_rp_container>
-                          <ul class="list_reply">
-                            <s_rp_rep>
-                              <li id='[##_rp_rep_id_##]' class="item_reply [##_rp_rep_class_##]">
-                                <div class="thumbnail_reply">
-                                  <img src="//i1.daumcdn.net/thumb/C100x100/?fname=[##_rp_rep_logo_##]" width="50"
-                                    height="50" alt="프로필사진">
-                                </div>
-                                <div class="box_reply_content">
-                                  <div class="user">[##_rp_rep_name_##]<span class="date"><span class="dot">ㆍ
-                                      </span>[##_rp_rep_date_##]</span></div>
-                                  <p class="txt">[##_rp_rep_desc_##]</p>
-                                  <div class="modify">
-                                    <a href="#" onclick="[##_rp_rep_onclick_delete_##]">수정/삭제</a><span
-                                      class="slash">I</span><a href="#" onclick="[##_rp_rep_onclick_reply_##]">답글</a>
-                                  </div>
-                                </div>
+                  <li class="list_horizontal_item">
+                    <s_index_article_rep>
 
-                                <s_rp2_container>
-                                  <!-- list_reply_comment -->
-                                  <ul class="list_reply_comment">
-                                    <s_rp2_rep>
-                                      <li id='[##_rp_rep_id_##]' class="item_comment reply [##_rp_rep_class_##]">
-                                        <div class="ico_commnent">ㄴ</div>
-                                        <div class="thumbnail_reply">
-                                          <img
-                                            src="https://t1.daumcdn.net/tistory_admin/blog/admin/profile_default_07.png"
-                                            width="50" height="50" alt="프로필사진">
-                                        </div>
-                                        <div class="box_reply_content">
-                                          <div class="user"><a class="link_name">[##_rp_rep_name_##]</a><span
-                                              class="date"><span class="dot">ㆍ </span>[##_rp_rep_date_##]</span></div>
-                                          <p class="txt">[##_rp_rep_desc_##]</p>
-                                          <div class="modify">
-                                            <a href="#" onclick="[##_rp_rep_onclick_delete_##]">수정/삭제</a>
+                      <a href="[##_article_rep_link_##]" class="link_article">
+                        <div class="article_content">
+
+                          <div class="thumbnail_zone">
+                            <div class="thumbnail_post" <s_article_rep_thumbnail>
+                              style="background-image:url('[##_article_rep_thumbnail_url_##]')
+                              !important"
+                              </s_article_rep_thumbnail>></div>
+                          </div>
+
+                          <div class="info_zone">
+                            <p class="category">[##_article_rep_category_##]</p>
+                            <strong class="title_post">[##_article_rep_title_##]</strong>
+                            <p class="txt_post">
+                              [##_article_rep_summary_##]
+                            </p>
+                            <p class="date">[##_article_rep_simple_date_##]</p>
+                          </div>
+                        </div>
+                      </a>
+                    </s_index_article_rep>
+                  </li>
+                  <!-- // category_list -->
+
+                  <s_permalink_article_rep>
+                    <li class="category_content_area">
+                      <!-- area_view_content -->
+                      <div class="area_view_content">
+
+                        <!-- article_content -->
+                        <div class="article_content">
+                          <div class="info_post">
+
+                            <div class="article_top"></div>
+                            <div class="view_info_post">
+                              <p class="link_category"><a
+                                  href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a></p>
+                              <h1 class="link_title">[##_article_rep_title_##]
+                              </h1>
+                              <div class="line">
+                                <p class="date">[##_article_rep_simple_date_##]</p>
+                                <p class="author">by. [##_article_rep_author_##]</p>
+                              </div>
+
+                            </div>
+                          </div>
+
+                          <s_ad_div>
+                            <div class="article_admin admin">
+                              <a href="[##_s_ad_m_link_##]">수정</a>
+                              <a href="#" onclick="[##_s_ad_d_onclick_##]">삭제</a>
+
+                              <a href="[##_owner_url_##]" class="staff-only"><span>관리자 화면</span></a>
+                              <!-- <a href="#" onclick="[##_s_ad_s2_onclick_##]">[##_s_ad_s2_label_##]</a> -->
+                            </div>
+                          </s_ad_div>
+
+                          <!-- 본문 내용 영역 -->
+                          <div class="article_view">
+                            [##_article_rep_desc_##]
+                          </div>
+
+                          <s_tag_label>
+                            <!-- area_tag -->
+                            <div class="area_tag">
+                              <div class="tag_content">[##_tag_label_rep_##]</div>
+                            </div>
+                            <!-- // area_tag -->
+                          </s_tag_label>
+
+
+
+                          <!-- area_reply -->
+                          <div class="area_reply">
+
+                            <div class="box_reply_info">
+                              <p class="item_info">댓글 <span class="count">
+                                  <s_rp_count>[##_article_rep_rp_cnt_##]</s_rp_count>
+                                </span></p>
+                            </div>
+                            <!-- reply_content -->
+                            <div class="reply_content">
+                              <button type="button" class="btn_more btn_replymore" style="display:none;">+ 이전 댓글
+                                더보기</button>
+
+                              <s_rp>
+                                <!-- box_comment_list -->
+                                <div class="box_comment_list">
+                                  <s_rp_container>
+                                    <ul class="list_reply">
+                                      <s_rp_rep>
+                                        <li id='[##_rp_rep_id_##]' class="item_reply [##_rp_rep_class_##]">
+
+                                          <div class="reply-line">
+                                            <div class="thumbnail_reply">
+                                              <img src="//i1.daumcdn.net/thumb/C100x100/?fname=[##_rp_rep_logo_##]"
+                                                width="50" height="50" alt="프로필사진">
+                                            </div>
+                                            <div class="box_reply_content">
+                                              <div class="reply-info-top"><span class="user">
+                                                  [##_rp_rep_name_##]
+                                                </span><span class="date">[##_rp_rep_date_##]</span></div>
+                                              <p class="txt">[##_rp_rep_desc_##]</p>
+                                              <div class="modify">
+                                                <a href="#" onclick="[##_rp_rep_onclick_delete_##]">수정/삭제</a><span
+                                                  class="slash"></span><a href="#"
+                                                  onclick="[##_rp_rep_onclick_reply_##]">답글</a>
+                                              </div>
+                                            </div>
                                           </div>
-                                        </div>
-                                      </li>
-                                    </s_rp2_rep>
-                                  </ul>
-                                  <!-- // list_reply_comment -->
-                                </s_rp2_container>
-                              </li>
-                            </s_rp_rep>
-                          </ul>
-                        </s_rp_container>
-                      </div>
-                      <!-- // box_comment_list -->
 
-                      <s_rp_input_form>
-                        <!-- reply_write -->
-                        <form method="post">
-                          <div class="reply_write">
-                            <s_rp_member>
-                              <s_rp_guest>
-                                <div class="form_guest">
-                                  <!-- name -->
-                                  <div class="box_inp">
-                                    <div class="inner_inp">
-                                      <input type="text" name="[##_rp_input_name_##]" value="[##_guest_name_##]"
-                                        title="이름" placeholder="이름" class="inp_comment inp_name" />
-                                    </div>
-                                  </div>
-                                  <!-- password -->
-                                  <div class="box_inp">
-                                    <div class="inner_inp">
-                                      <input type="password" name="[##_rp_input_password_##]"
-                                        value="[##_rp_admin_check_##]" title="비밀번호" maxlength="12" placeholder="비밀번호"
-                                        class="inp_comment inp_password" />
-                                    </div>
-                                  </div>
+                                          <s_rp2_container>
+                                            <!-- list_reply_comment -->
+                                            <ul class="list_reply_comment">
+                                              <s_rp2_rep>
+                                                <li id='[##_rp_rep_id_##]'
+                                                  class="item_comment reply [##_rp_rep_class_##]">
+                                                  <div class="ico_commnent">ㄴ</div>
+                                                  <div class="thumbnail_reply">
+                                                    <!-- <img
+                                                                                src="https://t1.daumcdn.net/tistory_admin/blog/admin/profile_default_07.png"
+                                                                                width="50" height="50" alt="프로필사진"> -->
+                                                    <img
+                                                      src="//i1.daumcdn.net/thumb/C100x100/?fname=[##_rp_rep_logo_##]"
+                                                      width="50" height="50" alt="프로필사진">
+                                                  </div>
+                                                  <div class="box_reply_content">
+                                                    <div class="reply-info-top"><span class="user">
+                                                        [##_rp_rep_name_##]
+                                                      </span><span class="date">[##_rp_rep_date_##]</span></div>
+                                                    <p class="txt">[##_rp_rep_desc_##]</p>
+                                                    <div class="modify">
+                                                      <a href="#" onclick="[##_rp_rep_onclick_delete_##]">수정/삭제</a>
+                                                    </div>
+                                                  </div>
+                                                </li>
+                                              </s_rp2_rep>
+                                            </ul>
+                                            <!-- // list_reply_comment -->
+                                          </s_rp2_container>
+                                        </li>
+                                      </s_rp_rep>
+                                    </ul>
+                                  </s_rp_container>
                                 </div>
-                              </s_rp_guest>
-                            </s_rp_member>
-                            <div class="form_content">
-                              <textarea id="[##_rp_input_comment_##]" name="[##_rp_input_comment_##]"
-                                placeholder="댓글을 입력해주세요."></textarea>
-                            </div>
+                                <!-- // box_comment_list -->
 
-                            <div class="form_reg thema_apply">
-                              <label><input type="checkbox" name="[##_rp_input_is_secret_##]"> 비공개</label>
-                              <button type="button" class="btn_register" onclick="[##_rp_onclick_submit_##]">댓글
-                                남기기</button>
-                            </div>
+                                <s_rp_input_form>
+                                  <!-- reply_write -->
+                                  <form method="post">
+                                    <div class="reply-form-container">
+                                      <div class="reply_write">
+                                        <s_rp_member>
+                                          <s_rp_guest>
+                                            <div class="form_guest">
+                                              <!-- name -->
+                                              <div class="box_inp">
+                                                <div class="inner_inp">
+                                                  <input type="text" name="[##_rp_input_name_##]"
+                                                    value="[##_guest_name_##]" title="이름" placeholder="이름"
+                                                    class="inp_comment inp_name" />
+                                                </div>
+                                              </div>
+                                              <!-- password -->
+                                              <div class="box_inp">
+                                                <div class="inner_inp">
+                                                  <input type="password" name="[##_rp_input_password_##]"
+                                                    value="[##_rp_admin_check_##]" title="비밀번호" maxlength="12"
+                                                    placeholder="비밀번호" class="inp_comment inp_password" />
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </s_rp_guest>
+                                        </s_rp_member>
+                                        <div class="form_content">
+                                          <textarea class="reply-form-textarea" id="[##_rp_input_comment_##]"
+                                            name="[##_rp_input_comment_##]" placeholder="댓글은 언제든 환영입니다 :D"></textarea>
+                                        </div>
 
-                          </div>
-                        </form>
-                        <!-- // reply_write -->
-                      </s_rp_input_form>
-                    </s_rp>
-
-                  </div>
-                  <!-- // reply_content -->
-
-                </div>
-                <!-- // area_reply -->
-              </div>
-              <!-- // article_content -->
-
-            </div>
-            <!-- article_content -->
-
-
-          </s_permalink_article_rep>
-        </s_article_rep>
-
-      </div>
-      <!-- // area_view -->
-
-
-
-
-      <s_article_protected>
-        <s_permalink_article_rep>
-          <!-- area_view -->
-          <div class="area_view">
-
-            <!-- article_content -->
-            <div class="area_article">
-
-              <!-- 뷰페이지 상단 type css 구분 / type_article_header_common or type_article_header_cover -->
-              <div class="article_header">
-                <div class="inner_header" style="background-image:url('')">
-                  <div class="info_text">
-                    <strong class="title_post">[##_article_rep_title_##]</strong>
-                    <p class="info"><span
-                        class="date">[##_article_rep_date_##]</span>ㆍ<span>[##_article_rep_category_##]</span></p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- 에디터 영역 -->
-              <div class="article_view">
-                <!-- 본문 내용 (치환자 적용 영역) -->
-                <form class="protected_form" onsubmit="[##_article_dissolve_##]">
-                  <p>보호되어 있는 글입니다. 내용을 보시려면 비밀번호를 입력하세요.</p>
-                  <input type="password" id="[##_article_password_##]" name="[##_article_password_##]" value=""
-                    placeholder="비밀번호" />
-                  <button type="submit">확인</button>
-                </form>
-              </div>
-            </div>
-            <!-- article_content -->
-          </div>
-        </s_permalink_article_rep>
-
-        <!-- // area_view -->
-      </s_article_protected>
-
-      <s_page_rep>
-        <div class="area_article">
-          <div class="article_header">
-            <div class="inner_header" style="background-image:url('')">
-              <div class="info_text">
-                <strong class="title_post">[##_article_rep_title_##]</strong>
-                <p class="info"><span class="date">[##_article_rep_date_##]
-                  </span></p>
-              </div>
-            </div>
-          </div>
-          <div class="article_view">
-            [##_article_rep_desc_##]
-          </div>
-        </div>
-      </s_page_rep>
-
-      <s_notice_rep>
-        <s_index_article_rep>
-          <div class="list_index category_type_[##_var_listType_##] category_index_list">
-            <div class="item_category">
-              <a href="[##_notice_rep_link_##]" class="link_category">
-                <span class="thumnail item-thumbnail"
-                  style="background-image:url('<s_notice_rep_thumbnail>[##_notice_rep_thumbnail_url_##]</s_notice_rep_thumbnail>')"></span>
-                <div class="info">
-                  <strong class="name">[##_notice_rep_title_##]</strong>
-                  <p class="text summary">[##_notice_rep_summary_##]</p>
-                  <span class="date">[##_notice_rep_date_##]</span>
-                </div>
-              </a>
-            </div>
-          </div>
-        </s_index_article_rep>
-        <s_permalink_article_rep>
-          <!-- article_content -->
-          <div class="area_article">
-
-            <!-- 뷰페이지 상단 type css 구분 / type_article_header_common or type_article_header_cover -->
-            <div class="article_header">
-              <div class="inner_header" style="background-image:url('')">
-                <div class="info_text">
-                  <strong class="title_post">[##_notice_rep_title_##]</strong>
-                  <p class="info"><span class="date">[##_notice_rep_date_##]</span></p>
-                </div>
-              </div>
-            </div>
-
-            <!-- 에디터 영역 -->
-            <div class="article_view">
-              [##_notice_rep_desc_##]
-            </div>
-          </div>
-          <!-- article_content -->
-
-          </div>
-          <!-- // area_view -->
-        </s_permalink_article_rep>
-      </s_notice_rep>
-
-      <s_tag>
-        <!-- area_view -->
-        <div class="area_common">
-
-          <h3 class="title_common">태그</h3>
-          <div class="tag_zone">
-            <s_tag_rep>
-              <a href="[##_tag_link_##]" class="[##_tag_class_##]">[##_tag_name_##]</a>
-            </s_tag_rep>
-          </div>
-
-        </div>
-        <!-- // area_view -->
-      </s_tag>
-
-      <s_local>
-        <!-- area_view -->
-        <div class="area_common">
-          <section id="localog" class="box_tag_trail row nonEntry main">
-            <h3 class="title_common">Local Log</h3>
-            <s_local_spot_rep>
-              <div class="spot" style="margin-left: [##_local_spot_depth_##]px">
-                [##_local_spot_##]
-              </div>
-            </s_local_spot_rep>
-            <s_local_info_rep>
-              <div class="info" style="margin-left: [##_local_info_depth_##]px">
-                <a href="[##_local_info_link_##]">[##_local_info_title_##]</a>
-              </div>
-            </s_local_info_rep>
-          </section>
-        </div>
-        <!-- // area_view -->
-      </s_local>
-
-      <s_guest>
-        <!-- area_view -->
-        <div class="area_common">
-          <!-- article_content -->
-          <div class="area_article">
-            <!-- area_reply -->
-            <div class="area_reply">
-
-              <h2 class="title_common">방명록</h2>
-
-              <!-- reply_content -->
-              <div class="reply_content">
-                <!-- box_comment_list -->
-                <div class="box_comment_list">
-                  <s_guest_container>
-                    <ul class="list_reply">
-                      <s_guest_rep>
-                        <li id='[##_guest_rep_id_##]' class="item_reply [##_guest_rep_class_##]">
-                          <div class="thumbnail_reply">
-                            <img src="https://t1.daumcdn.net/tistory_admin/blog/admin/profile_default_07.png" width="50"
-                              height="50" alt="프로필사진">
-                          </div>
-                          <div class="box_reply_content">
-                            <div class="user"><a class="link_name">[##_guest_rep_name_##]</a><span class="date">ㆍ
-                                [##_guest_rep_date_##]</span></div>
-                            <p class="txt">[##_guest_rep_desc_##]</p>
-                            <div class="modify">
-                              <a href="#" onclick="[##_guest_rep_onclick_delete_##]">수정/삭제</a><span
-                                class="slash">I</span><a href="#" onclick="[##_guest_rep_onclick_reply_##]">답글</a>
-                            </div>
-                          </div>
-
-                          <s_guest_reply_container>
-                            <!-- list_reply_comment -->
-                            <ul class="list_reply_comment">
-                              <s_guest_reply_rep>
-                                <li id='[##_guest_rep_id_##]' class="item_comment reply [##_guest_rep_class_##]">
-                                  <div class="ico_commnent">ㄴ</div>
-                                  <div class="thumbnail_reply">
-                                    <img src="https://t1.daumcdn.net/tistory_admin/blog/admin/profile_default_07.png"
-                                      width="50" height="50" alt="프로필사진">
-                                  </div>
-                                  <div class="box_reply_content">
-                                    <div class="user"><a class="link_name">[##_guest_rep_name_##]</a><span
-                                        class="date">ㆍ
-                                        [##_guest_rep_date_##]</span></div>
-                                    <p class="txt">[##_guest_rep_desc_##]</p>
-                                    <div class="modify">
-                                      <a href="#" onclick="[##_guest_rep_onclick_delete_##]">수정/삭제</a>
+                                        <div class="form_reg thema_apply">
+                                          <label><input type="checkbox" name="[##_rp_input_is_secret_##]"><span>비밀
+                                              댓글</span></label>
+                                          <button type="button" class="btn_register"
+                                            onclick="[##_rp_onclick_submit_##]">댓글 남기기</button>
+                                        </div>
+                                      </div>
                                     </div>
-                                  </div>
-                                </li>
-                              </s_guest_reply_rep>
-                            </ul>
-                            <!-- // list_reply_comment -->
-                          </s_guest_reply_container>
-                        </li>
-                      </s_guest_rep>
-                    </ul>
-                  </s_guest_container>
-                </div>
-                <!-- // box_comment_list -->
+                                  </form>
+                                  <!-- // reply_write -->
+                                </s_rp_input_form>
+                              </s_rp>
 
-                <s_guest_input_form>
-                  <!-- reply_write -->
-                  <form method="post">
-                    <div class="reply_write">
-                      <s_guest_member>
-                        <s_guest_form>
-                          <div class="form_guest">
-                            <div class="box_inp">
-                              <div class="inner_inp">
-                                <input type="text" name="[##_guest_input_name_##]" value="이름" title="이름"
-                                  placeholder="이름" class="inp_comment inp_name" />
-                              </div>
                             </div>
-                            <div class="box_inp">
-                              <div class="inner_inp">
-                                <input type="text" name="[##_guest_input_password_##]" value="비밀번호" title="비밀번호"
-                                  placeholder="비밀번호" class="inp_comment inp_password" />
-                              </div>
-                            </div>
-                            <div class="box_inp">
-                              <div class="inner_inp">
-                                <input type="url" name="[##_guest_input_homepage_##]" value="홈페이지" title="홈페이지"
-                                  placeholder="홈페이지" class="inp_comment inp_homepage" />
-                              </div>
-                            </div>
+                            <!-- // reply_content -->
+
                           </div>
-                        </s_guest_form>
-                      </s_guest_member>
-                      <div class="form_content">
-                        <textarea id="[##_rguestinput_comment_##]" name="[##_guest_input_comment_##]"
-                          placeholder="방명록을 입력해주세요."></textarea>
-                      </div>
+                          <!-- // area_reply -->
 
-                      <div class="form_reg thema_apply">
-                        <label><input type="checkbox" name="[##_guest_input_is_secret_##]"> 비공개</label>
-                        <button type="button" class="btn_register" onclick="[##_guest_onclick_submit_##]">방명록
-                          남기기</button>
-                      </div>
+                          <s_article_related>
+                            <!-- related_type_view -->
+                            <div class="related_type related_type_view">
+                              <h2 class="title_related"> <a href="[##_article_rep_category_link_##]"
+                                  class="link_add thema_apply">관련글</a></h2>
+                              <ul class="list_related">
+                                <s_article_related_rep>
+                                  <li class="item_related">
+                                    <a href="[##_article_related_rep_link_##]" class="link_related">
 
-                    </div>
-                  </form>
-                  <!-- // reply_write -->
-                </s_guest_input_form>
+                                      <span class="thumbnail"
+                                        <s_article_related_rep_thumbnail>style="background-image:url('[##_article_related_rep_thumbnail_link_##]')
+                                        !important"</s_article_related_rep_thumbnail>></span>
+                                      <div class="box_content">
+                                        <strong>[##_article_related_rep_title_##]</strong>
+                                        <span class="info">[##_article_related_rep_date_##]</span>
+                                      </div>
+                                    </a>
+                                  </li>
+                                </s_article_related_rep>
+                              </ul>
+                            </div>
+                            <!-- // related_type_view -->
+                          </s_article_related>
+
+
+                          <div class="go-to-top">
+                            <a href="#skip">맨 위로</a>
+                          </div>
+                        </div>
+                        <!-- article_content -->
+
+                      </div>
+                    </li>
+                  </s_permalink_article_rep>
+
+
+                </ul>
               </div>
-              <!-- // reply_content -->
+            </s_article_rep>
 
+            <s_article_protected>
+              <s_index_article_rep>
+                <div class="category_list index_type_common index_type_horizontal">
+                  <ul class="list_horizontal">
+                    <li class="list_horizontal_item">
+                      <a href="[##_article_rep_link_##]" class="link_title  protected-list">
+                        <div class="article_content">
+
+
+                          <div class="thumbnail_zone">
+                            <div class="thumbnail_post"></div>
+                          </div>
+
+                          <div class="info_zone">
+                            <p class="category">[##_article_rep_category_##]</p>
+                            <strong class="title_post">[##_article_rep_title_##]</strong>
+                            <p class="txt_post">
+                              보호되어 있는 글입니다. 비밀번호를 입력해야 내용을 볼 수 있어요.
+                            </p>
+                            <p class="date">[##_article_rep_simple_date_##]</p>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+              </s_index_article_rep>
+
+
+              <s_permalink_article_rep>
+                <!-- area_view_content -->
+                <div class="area_view_content">
+
+                  <!-- article_content -->
+                  <div class="article_content">
+                    <div class="info_post">
+                      <a href="[##_article_rep_link_##]" class="link_title"><strong
+                          class="title_view">[##_article_rep_title_##]</strong></a>
+                      <a href="[##_article_rep_category_link_##]" class="link_category thema_apply"><span
+                          class="category">[##_article_rep_category_##]</span></a>
+                      <span class="date">[##_article_rep_date_##]</span>
+                    </div>
+
+                    <!-- 본문 내용 영역 -->
+                    <div class="article_view">
+                      <!-- 본문 내용 (치환자 적용 영역) -->
+                      <form class="protected_form" onsubmit="[##_article_dissolve_##]">
+                        <p>보호되어 있는 글입니다. 내용을 보시려면 비밀번호를 입력하세요.</p>
+                        <input type="password" id="[##_article_password_##]" name="[##_article_password_##]" value=""
+                          placeholder="비밀번호" />
+                        <button type="submit">확인</button>
+                      </form>
+                    </div>
+
+                  </div>
+                  <!-- article_content -->
+
+                </div>
+              </s_permalink_article_rep>
+            </s_article_protected>
+
+            <s_page_rep>
+              <s_permalink_article_rep>
+                <!-- area_view_content -->
+                <div class="area_view_content">
+                  <!-- article_content -->
+                  <div class="article_content">
+                    <!-- 본문 내용 영역 -->
+                    <div class="article_view">
+                      [##_article_rep_desc_##]
+                    </div>
+                  </div>
+                  <!-- article_content -->
+                </div>
+              </s_permalink_article_rep>
+            </s_page_rep>
+
+            <s_notice_rep>
+              <s_index_article_rep>
+                <div class="category_list index_type_common index_type_horizontal">
+                  <ul class="list_horizontal">
+                    <li class="list_horizontal_item">
+                      <div class="article_content">
+                        <s_notice_rep_thumbnail>
+                          <a href="[##_notice_rep_link_##]" class="thumbnail_post"
+                            data-image="[##_notice_rep_thumbnail_url_##]"
+                            style="background-image:url('[##_notice_rep_thumbnail_url_##]')"></a>
+                        </s_notice_rep_thumbnail>
+
+                        <div class="box_contents">
+                          <a href="[##_notice_rep_link_##]" class="link_title"><strong
+                              class="title_post">[##_notice_rep_title_##]</strong></a>
+                          <div class="info_post">
+                            <a class="link_category thema_apply"><span
+                                class="category">[##_notice_rep_category_##]</span></a>
+                            <span class="date">[##_notice_rep_date_##]</span>
+                          </div>
+
+                          <a href="[##_notice_rep_link_##]" class="link_article">
+                            <p class="txt_post">
+                              [##_notice_rep_summary_##]
+                            </p>
+                            <button type="button" class="btn_more thema_apply mobile_blind">Read
+                              More</button>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </s_index_article_rep>
+              <s_permalink_article_rep>
+                <!-- area_view_content -->
+                <div class="area_view_content">
+                  <!-- article_content -->
+                  <div class="article_content">
+                    <div class="info_post">
+                      <a href="[##_article_rep_link_##]" class="link_title"><strong
+                          class="title_post">[##_notice_rep_title_##]</strong></a>
+                      <span class="category">공지</span>
+                      <span class="date">[##_notice_rep_date_##]</span>
+
+                      <s_ad_div>
+                        <div class="admin">
+                          <a href="[##_s_ad_m_link_##]">수정</a> |
+                          <a href="#" onclick="[##_s_ad_d_onclick_##]">삭제</a>
+                        </div>
+                      </s_ad_div>
+                    </div>
+
+                    <!-- 본문 내용 영역 -->
+                    <div class="article_view">
+                      [##_notice_rep_desc_##]
+                    </div>
+
+                  </div>
+                  <!-- article_content -->
+                </div>
+              </s_permalink_article_rep>
+            </s_notice_rep>
+
+            <s_tag>
+              <div class="box_tag_trail">
+                <h3 class="title_category">🕶 태그별 톺아보기</h3>
+                <div class="tag_area">
+                  <div class="tag_cont">
+                    <!-- 마지막 콤마(,) 를 javascript 로 지워줘야 하나. by osh -->
+                    <s_tag_rep>
+                      <a href="[##_tag_link_##]" class="tag_cloud [##_tag_class_##]">[##_tag_name_##]</a>
+                    </s_tag_rep>
+                  </div>
+                </div>
+              </div>
+            </s_tag>
+
+            <s_local>
+              <section id="localog" class="box_tag_trail row nonEntry main">
+                <h3 class="title_category">Local Log</h3>
+                <s_local_spot_rep>
+                  <div class="spot" style="margin-left: [##_local_spot_depth_##]px">
+                    [##_local_spot_##]
+                  </div>
+                </s_local_spot_rep>
+                <s_local_info_rep>
+                  <div class="info" style="margin-left: [##_local_info_depth_##]px">
+                    <a href="[##_local_info_link_##]">[##_local_info_title_##]</a>
+                  </div>
+                </s_local_info_rep>
+              </section>
+            </s_local>
+
+            <s_guest>
+              <div class="area_view_content">
+                <div class="area_reply">
+                  <s_guest_input_form>
+                    <!-- reply_write -->
+                    <form method="post">
+                      <div class="reply_write">
+
+                        <div class="form_content thema_apply">
+                          <textarea id="[##_guest_input_comment_##]" name="[##_guest_input_comment_##]"
+                            placeholder="방명록을 입력해주세요."></textarea>
+                        </div>
+                        <s_guest_member>
+                          <s_guest_form>
+                            <div class="form_guest">
+                              <div class="box_inp">
+                                <div class="inner_inp">
+                                  <input type="text" name="[##_guest_input_name_##]" value="" title="이름"
+                                    placeholder="이름" class="inp_comment inp_name" />
+                                </div>
+                              </div>
+                              <div class="box_inp">
+                                <div class="inner_inp">
+                                  <input type="password" name="[##_guest_input_password_##]" value="" title="비밀번호"
+                                    maxlength="12" placeholder="비밀번호" class="inp_comment inp_password" />
+                                </div>
+                              </div>
+                            </div>
+                          </s_guest_form>
+                        </s_guest_member>
+
+                        <div class="form_reg">
+                          <button type="button" class="btn_register thema_apply"
+                            onclick="[##_guest_onclick_submit_##]">등록</button>
+                        </div>
+                      </div>
+                    </form>
+                    <!-- // reply_write -->
+                  </s_guest_input_form>
+
+                  <div class="box_comment_list">
+                    <s_guest_container>
+                      <div class="comment-list">
+                        <ul>
+                          <s_guest_rep>
+                            <li id="[##_guest_rep_id_##]">
+                              <div class="author-meta">
+                                <img src="//t1.daumcdn.net/tistory_admin/static/skin/avatar_default.gif" class="avatar"
+                                  alt="">
+                                <span class="nickname">[##_guest_rep_name_##]</span>
+                                <span class="date">[##_guest_rep_date_##]</span>
+                              </div>
+                              <p>[##_guest_rep_desc_##]</p>
+                              <div class="control">
+                                <a href="#" onclick="[##_guest_rep_onclick_delete_##]">수정/삭제</a>
+                                <a href="#" onclick="[##_guest_rep_onclick_reply_##]">댓글쓰기</a>
+                              </div>
+                              <s_guest_reply_container>
+                                <ul>
+                                  <s_guest_reply_rep>
+                                    <li id="[##_guest_rep_id_##]">
+                                      <div class="author-meta">
+                                        <img src="//t1.daumcdn.net/tistory_admin/static/skin/avatar_default.gif"
+                                          class="avatar" alt="">
+                                        <span class="nickname">[##_guest_rep_name_##]</span>
+                                        <span class="date">[##_guest_rep_date_##]</span>
+                                      </div>
+                                      <p>[##_guest_rep_desc_##]</p>
+                                      <div class="control">
+                                        <a href="#" onclick="[##_guest_rep_onclick_delete_##]">수정/삭제</a>
+                                      </div>
+                                    </li>
+                                  </s_guest_reply_rep>
+                                </ul>
+                              </s_guest_reply_container>
+                            </li>
+                          </s_guest_rep>
+                        </ul>
+                      </div>
+                    </s_guest_container>
+                  </div>
+                </div>
+              </div>
+            </s_guest>
+
+            <s_paging>
+              <!-- area_paging -->
+              <div class="area_paging">
+                <div class="inner_paging thema_apply">
+                  <a [##_prev_page_##] class="link_page link_prev [##_no_more_prev_##]"><span
+                      class="icon-Keyboard-Arrow---Left"></span><span class="blind">이전</span></a>
+                  <div class="paging_num">
+                    <s_paging_rep>
+                      <a [##_paging_rep_link_##] class="link_num">[##_paging_rep_link_num_##]</a>
+                    </s_paging_rep>
+                  </div>
+                  <a [##_next_page_##] class="link_page link_next [##_no_more_next_##]"></span><span
+                      class="blind">다음</span><span class="icon-Keyboard-Arrow---Right"></span></a>
+                </div>
+              </div>
+              <!-- // area_paging -->
+            </s_paging>
+
+
+
+          </div>
+          <!-- // inner_index -->
+
+        </main>
+
+        <!-- ! footer -->
+        <footer id="footer" class="footer">
+
+          <div class="footer__container">
+
+
+            <div class="footer-left">
+
+              <s_sidebar_element>
+                <!-- 링크 -->
+                <div class="side-links">
+                  <ul class="side-links__list">
+										<s_link_rep>
+                    <li class="side-links__item"><a href="[##_link_url_##]" class="link_slink" target="_blank">[##_link_site_##]</a>
+                    </li>
+											</s_link_rep>
+                  </ul>
+                </div>
+
+              </s_sidebar_element>
+
+
+              <s_sidebar_element>
+                <!-- 관리자 메뉴 -->
+                <div class="admin">
+                  <a href="[##_owner_url_##]"><span class="">nana_log</span></a>
+                </div>
+              </s_sidebar_element>
             </div>
-            <!-- // area_reply -->
+
+            <div class="footer-right">
+
+              <div class="side-blog-info">
+                <!-- 방문자수 -->
+                <div class="visit-counter">
+                  <p class="visit-counter__list">
+                    <span class="visit-counter__tit">Today</span>
+                    <span class="visit-counter__num">[##_count_today_##]</span>
+                  </p>
+                  <p class="visit-counter__list">
+                    <span class="visit-counter__tit">Total</span>
+                    <span class="visit-counter__num">[##_count_total_##]</span>
+                  </p>
+                </div>
+
+                <p class="copyright">
+                  [##_var_footerCopyright_##]</p>
+              </div>
+            </div>
 
           </div>
-          <!-- article_content -->
-        </div>
-        <!-- // area_view -->
-      </s_guest>
-
-      <s_paging>
-        <!-- area_paging -->
-        <div class="area_paging">
-          <a [##_prev_page_##] class="link_page link_prev [##_no_more_prev_##]"><span
-              class="icon-Keyboard-Arrow---Left"></span></a>
-          <div class="paging_num thema_apply">
-            <s_paging_rep>
-              <a [##_paging_rep_link_##] class="link_num">[##_paging_rep_link_num_##]</a>
-            </s_paging_rep>
+          <div class="logSkin-copy">
+            Designed by <a target="_blank" rel="noopener" href="https://nykim.work/">nana</a>
           </div>
-          <a [##_next_page_##] class="link_page link_next [##_no_more_next_##]"><span
-              class="icon-Keyboard-Arrow---Right"></span></a>
-        </div>
-        <!-- // area_paging -->
-      </s_paging>
+        </footer>
 
-
-
-    </main>
-
-    </div>
-    <!-- // container -->
-
-
-    <s_sidebar_element>
-      <!-- 이 블로그 인기글 -->
-      <div class="popularPost">
-        <h3 style="color: red; font-size:40px;">이 블로그 닝끼글 </h3>
-        <ul>
-          <s_rctps_popular_rep>
-            <li>
-              <a href="[##_rctps_rep_link_##]">[##_rctps_rep_title_##]</a>
-              <span class="cnt">[##_rctps_rep_rp_cnt_##]</span>
-              <s_rctps_rep_thumbnail>
-                <img src="[##_rctps_rep_thumbnail_##]" />
-              </s_rctps_rep_thumbnail>
-              <a href="[##_rctps_rep_category_link_##]">[##_rctps_rep_category_##]</a>
-            </li>
-          </s_rctps_popular_rep>
-        </ul>
       </div>
-    </s_sidebar_element>
-
-
-
-    <!-- footer -->
-    <footer id="footer">
-      <div class="inner_footer">
-        <s_if_var_footerLink1Name>
-          <a href="[##_var_footerLink1Url_##]" class="link_footer">[##_var_footerLink1Name_##]</a>
-        </s_if_var_footerLink1Name>
-        <s_if_var_footerLink2Name>
-          <a href="[##_var_footerLink2Url_##]" class="link_footer">[##_var_footerLink2Name_##]</a>
-        </s_if_var_footerLink2Name>
-        <s_if_var_footerLink3Name>
-          <a href="[##_var_footerLink3Url_##]" class="link_footer">[##_var_footerLink3Name_##]</a>
-        </s_if_var_footerLink3Name>
-        <s_if_var_footerLink4Name>
-          <a href="[##_var_footerLink4Url_##]" class="link_footer">[##_var_footerLink4Name_##]</a>
-        </s_if_var_footerLink4Name>
-      </div>
-      <div>
-        <div class="counter">
-          <p class="counter-today"><strong>Today</strong><em class="counter-num">[##_count_today_##]</em></p>
-          <p class="counter-total"><strong>Total</strong><em class="counter-num">[##_count_total_##]</em></p>
-        </div>
-        <address>[##_var_footerCopyright_##]</address>
-      </div>
-
-    </footer>
-    <!-- // footer -->
+      <!-- // container -->
 
     </div>
     <!-- // wrap -->
   </s_t3>
+
 </body>
 <script>
-  $('.article_view').find('table').each(function (idx, el) {
+  $('.article_content').find('table').each(function (idx, el) {
     $(el).wrap('<div class="table-overflow">')
   })
+
+  var profile = document.createElement("div");
+  profile.classList.add("article_profile")
+  profile.innerHTML += "<div class='profile_img'><img src='https://img1.daumcdn.net/thumb/C100x100.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/4Ftr/image/6PuWflOPDPexDH0f6zSEn81F7gY.jpg' alt='profile'/></div>"
+  profile.innerHTML += "<div class='profile_contents'><strong>나나 (nykim)</strong><p>열심히 굴러가는 중! HP 회복이 필요할 땐 아이스 아메리카노를 호로록.</p></div>"
+  $('.container_postbtn').before(profile);
+	
+	//$(".logSkin-new txt_post").replace(/</g, "&lt;");
+
+
+  if ($('.tag_content').length != false) {
+
+    function rmvComma() {
+      var rmvTagComma = document.getElementsByClassName("tag_content");
+      if (rmvTagComma) { rmvTagComma[0].innerHTML = rmvTagComma[0].innerHTML.replace(/,/g, " "); }
+    }
+    rmvComma();
+  }
 </script>
 
+  <!--highlight-->
+	
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.6.0/dist/highlightjs-line-numbers.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();</script>
+  <!--//highlight-->
 </html>

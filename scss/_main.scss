@@ -25,14 +25,14 @@
 
 .logSkin-list ul {
   display: grid;
-  grid-template-columns: repeat(3, 370px);
-  grid-gap: 70px 85px;
+  grid-template-columns: repeat(3, 350px);
+  grid-gap: 70px 75px;
 
-  @include res--desktop {
-    max-width: 100%;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    grid-gap: 60px 60px;
-  }
+  // @include res--desktop {
+  //   max-width: 100%;
+  //   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  //   grid-gap: 60px 60px;
+  // }
 
   @include res--laptop {
     grid-gap: 50px;
@@ -144,7 +144,7 @@
 
   ul {
     display: grid;
-    grid-template-columns: repeat(4, 290px);
+    grid-template-columns: repeat(4, 270px);
     grid-gap: 40px;
 
     @include res--desktop {
@@ -430,6 +430,7 @@
       min-height: 42px;
       font-size: 14px;
       color: #4b4b4b;
+      word-break: break-all;
       @include ellipsis(2);
       @include res--laptop {
         margin-bottom: 30px;
