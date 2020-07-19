@@ -84,7 +84,10 @@
             <div class="nav__container">
               <div class="nav__gnb">
                 <a href="[##_blog_link_##]" class="nav__gnb-home">Home</a>
-                [##_category_list_##]
+
+                <s_if_var_showCategories>
+                  [##_category_list_##]
+                </s_if_var_showCategories>
 
                 <!-- ! TODO: 배포 전 삭제 예정 -->
                 <a href="https://www.notion.so/nanalike/23d512605b2d4e3caccabf2c5d108347" target="_blank" rel="noopener"
@@ -839,8 +842,10 @@
 
   var profile = document.createElement("div");
   profile.classList.add("article_profile")
-  profile.innerHTML += "<div class='profile_img'><img src='https://img1.daumcdn.net/thumb/C100x100.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/4Ftr/image/6PuWflOPDPexDH0f6zSEn81F7gY.jpg' alt='profile'/></div>"
-  profile.innerHTML += "<div class='profile_contents'><strong>나나 (nykim)</strong><p>열심히 굴러가는 중! HP 회복이 필요할 땐 아이스 아메리카노를 호로록.</p></div>"
+  profile.innerHTML +=
+    "<div class='profile_img'><img src='https://img1.daumcdn.net/thumb/C100x100.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/4Ftr/image/6PuWflOPDPexDH0f6zSEn81F7gY.jpg' alt='profile'/></div>"
+  profile.innerHTML +=
+    "<div class='profile_contents'><strong>나나 (nykim)</strong><p>열심히 굴러가는 중! HP 회복이 필요할 땐 아이스 아메리카노를 호로록.</p></div>"
   $('.container_postbtn').before(profile);
 
   //$(".logSkin-new txt_post").replace(/</g, "&lt;");
@@ -850,7 +855,9 @@
 
     function rmvComma() {
       var rmvTagComma = document.getElementsByClassName("tag_content");
-      if (rmvTagComma) { rmvTagComma[0].innerHTML = rmvTagComma[0].innerHTML.replace(/,/g, " "); }
+      if (rmvTagComma) {
+        rmvTagComma[0].innerHTML = rmvTagComma[0].innerHTML.replace(/,/g, " ");
+      }
     }
     rmvComma();
   }
@@ -859,10 +866,12 @@
 <!--highlight-->
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
-<script
-  src="https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.6.0/dist/highlightjs-line-numbers.min.js"></script>
-<script>hljs.initHighlightingOnLoad();
-  hljs.initLineNumbersOnLoad();</script>
+<script src="https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.6.0/dist/highlightjs-line-numbers.min.js">
+</script>
+<script>
+  hljs.initHighlightingOnLoad();
+  hljs.initLineNumbersOnLoad();
+</script>
 <!--//highlight-->
 
 </html>

@@ -1742,6 +1742,7 @@ body.prevent-scroll {
     padding-left: 18px;
     color: #2c2828 !important;
     font-size: 1.15em !important; }
+  .article_view blockquote[data-ke-style='style3'],
   .article_view blockquote.callout {
     position: relative;
     margin: 16px 0 !important;
@@ -1752,6 +1753,7 @@ body.prevent-scroll {
     font-size: 1em !important;
     line-height: 1.65 !important;
     border: 0 !important; }
+    .article_view blockquote[data-ke-style='style3']:before,
     .article_view blockquote.callout:before {
       position: absolute;
       top: 22px;

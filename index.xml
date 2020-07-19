@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <skin>
 	<information>
-		<name>Log Skin 1111(로그 스킨)</name>
+		<name>Log Skin 0719(로그 스킨)</name>
 		<version>1.0</version>
 		<description>
 			<![CDATA[ 기록을 남기는 모든 이들을 위한 스킨. 심플하고 정돈된 느낌을 좋아하는 분들께 추천드려요! ]]>
@@ -73,6 +73,16 @@
 				]
 			]]></option>
 			<default>thema_blue</default>
+		</variable>
+		<variable>
+			<name>showCategories</name>
+			<label>메뉴 표시</label>
+			<type>BOOL</type>
+			<option />
+			<default>true</default>
+			<description>
+				<![CDATA[ 상단 헤더에 대분류 카테고리 제목을 나열합니다. ]]>
+			</description>
 		</variable>
 		<variable>
 			<name>footerCopyright</name>
