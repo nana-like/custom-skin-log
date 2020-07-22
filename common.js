@@ -1,6 +1,6 @@
 $(function () {
 
-    console.log("마지막수정:0719-0135")
+    console.log("마지막수정:0722-2311")
 
     $('.article_content').find('table').each(function (idx, el) {
         $(el).wrap('<div class="table-overflow">')
@@ -200,6 +200,8 @@ $(function () {
 
     // 맨 위로
     $('.go-to-top_link').on('click', function () {
-        $('html, body').animate({ scrollTop: '0' }, 500);
+        $('html, body').animate({
+            scrollTop: '0'
+        }, 500);
     });
 });

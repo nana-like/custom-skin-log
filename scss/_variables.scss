@@ -1,7 +1,12 @@
+:root {
+  --pointColor: #bada77;
+}
+
 $c-black: #2c2828;
 $c-gray: #4b4b4b;
 
-$c-main: #3e87f8;
+// $c-main: #3e87f8;
+$c-main: var(--pointColor);
 
 $padding: 40px;
 $max-width: 1200px;

@@ -12,6 +12,7 @@
   .box_reply_info {
     max-width: $max-width;
     margin: 0 auto;
+
     .item_info {
       display: block;
       margin-bottom: 21px;
@@ -70,6 +71,7 @@
       @include flexbox();
       @include align-items(center);
     }
+
     .user {
       display: block;
       font-size: 16px;
@@ -82,6 +84,7 @@
         text-decoration: underline;
       }
     }
+
     .date {
       display: block;
       font-size: 13px;
@@ -97,6 +100,7 @@
         font-size: 11px;
       }
     }
+
     .txt {
       display: block;
       margin-top: 8px;
@@ -106,6 +110,7 @@
       text-align: left;
       color: #4b4b4b;
     }
+
     .modify {
       margin-top: 8px;
 
@@ -122,6 +127,7 @@
   .reply-line {
     @include flexbox();
   }
+
   //답글의 경우
   .list_reply_comment {
     margin-left: 90px;
@@ -171,12 +177,14 @@
     @include res--mobile {
       .box_inp {
         width: 40%;
+
         &:first-child {
           margin-right: 10px;
         }
       }
     }
   }
+
   .inp_comment {
     font-size: 15px;
     padding: 10px 14px;
@@ -229,6 +237,7 @@
     outline: 0;
     box-sizing: border-box;
     border-radius: 4px;
+
     @include res--mobile {
       font-size: 14px;
       padding: 12px;
@@ -278,6 +287,7 @@
       background-size: 12px;
       background-repeat: no-repeat;
       background-position: 50% 50%;
+
       @include res--mobile {
         width: 15px;
         height: 15px;
@@ -289,7 +299,7 @@
   input[type="checkbox"] {
     @include invisible;
 
-    &:hover + span {
+    &:hover+span {
       color: $c-black;
 
       &:before {
@@ -297,7 +307,7 @@
       }
     }
 
-    &:checked + span {
+    &:checked+span {
       color: $c-black;
 
       &:before {
@@ -308,6 +318,7 @@
   }
 
   .btn_register {
+    position: relative;
     padding: 8px 14px;
     color: #fff;
     margin-left: 20px;
@@ -317,13 +328,32 @@
     background-color: $c-main;
     box-sizing: border-box;
     letter-spacing: -0.16px;
+
     @include res--mobile {
       font-size: 14px;
       margin-left: 15px;
     }
 
     &:hover {
-      background-color: #2467ce;
+      // background-color: darken(var(--pointColor), 20%);
+      // background-color: #2467ce;
+    }
+
+    &:before {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 4px;
+      background-color: rgba(52, 52, 52, 0.5);
+      content: '';
+    }
+
+    &:hover:before {
+      mix-blend-mode: overlay;
+      display: block;
     }
   }
 }

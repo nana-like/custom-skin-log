@@ -23,10 +23,14 @@
   <meta name="naver-site-verification" content="07485c6684a8a614f18c268f70a8019a7b796f11" />
 </head>
 
-<body id="[##_body_id_##]" class="[##_var_penelopeColorSet_##]">
+<body id="[##_body_id_##]" data-color="[##_var_pointColor_##]">
+  <script>
+    var pointColorCode = document.body.dataset.color;
+    document.documentElement.style.setProperty('--pointColor', pointColorCode)
+  </script>
   <s_t3>
     <!-- ! TODO: 테마 변경시 thema_xxx 변경 대응!! -->
-    <div id="wrap" class="[##_var_penelopeColorSet_##]">
+    <div id="wrap">
 
       <!-- * area_menu (사이드 메뉴) -->
       <div class="area_menu">
@@ -83,9 +87,11 @@
           <div class="nav">
             <div class="nav__container">
               <div class="nav__gnb">
-                <a href="[##_blog_link_##]" class="nav__gnb-home">Home</a>
 
                 <s_if_var_showCategories>
+                  <s_if_var_showHomeMenu>
+                    <a href="[##_blog_link_##]" class="nav__gnb-home">Home</a>
+                  </s_if_var_showHomeMenu>
                   [##_category_list_##]
                 </s_if_var_showCategories>
 
