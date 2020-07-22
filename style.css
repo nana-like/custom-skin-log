@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* styled by nana (20.07.19 00:25) */
+/* styled by nana (20.07.22 22:41) */
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:500,700&display=swap");
 html,
@@ -1740,30 +1740,61 @@ body.prevent-scroll {
     margin: 16px 0 !important;
     border-left: 3px solid #2c2828;
     padding-left: 18px;
-    color: #2c2828 !important;
+    color: #2c2828;
     font-size: 1.15em !important; }
-  .article_view blockquote[data-ke-style='style3'],
-  .article_view blockquote.callout {
-    position: relative;
-    margin: 16px 0 !important;
-    padding: 25px 25px 25px 62px;
-    border-radius: 4px;
-    background-color: #f4f4f4;
-    color: #2c2828 !important;
-    font-size: 1em !important;
-    line-height: 1.65 !important;
-    border: 0 !important; }
-    .article_view blockquote[data-ke-style='style3']:before,
-    .article_view blockquote.callout:before {
-      position: absolute;
-      top: 22px;
-      left: 23px;
-      display: inline-block;
-      content: "";
-      width: 28px;
-      height: 28px;
-      background-image: url(./images/ico_callout.png);
-      background-size: 100%; }
+
+#tt-body-page blockquote[data-ke-style='style3'],
+blockquote.callout {
+  position: relative;
+  margin: 16px 0;
+  padding: 25px 25px 25px 62px;
+  border-radius: 4px;
+  background-color: #f4f4f4;
+  color: #2c2828;
+  font-size: 1em;
+  line-height: 1.65;
+  border: 0; }
+  #tt-body-page blockquote[data-ke-style='style3']:before,
+  blockquote.callout:before {
+    position: absolute;
+    top: 22px;
+    left: 23px;
+    display: inline-block;
+    content: "";
+    width: 28px;
+    height: 28px;
+    background-image: url(./images/ico_callout.png);
+    background-size: 100%; }
+
+div[data-ke-type="moreLess"] {
+  margin: 8px 0; }
+
+.btn-toggle-moreless {
+  color: #2c2828 !important; }
+  .btn-toggle-moreless:before {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-right: 8px;
+    transform: scale(0.9);
+    transition: transform 200ms;
+    border-style: solid;
+    border-width: 6px 0 6px 10px;
+    border-color: transparent transparent transparent #2c2828;
+    content: ''; }
+  .open .btn-toggle-moreless:before {
+    transform: scale(0.9) rotate(90deg); }
+  .btn-toggle-moreless:hover {
+    opacity: 1 !important;
+    color: #3e87f8 !important; }
+  .btn-toggle-moreless:hover:before {
+    border-color: transparent transparent transparent #3e87f8; }
+
+.moreless-content {
+  margin: 10px 0px 20px;
+  padding: 10px 17px;
+  border: 1px dashed #c9c9c9;
+  color: #585858; }
 
 .area_reply {
   margin-top: 48px;
