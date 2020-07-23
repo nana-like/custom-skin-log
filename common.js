@@ -1,6 +1,6 @@
 $(function () {
 
-    console.log("마지막수정:0722-2311")
+    console.log("마지막수정:0723-2353")
 
     $('.article_content').find('table').each(function (idx, el) {
         $(el).wrap('<div class="table-overflow">')
@@ -191,10 +191,10 @@ $(function () {
         $('.guest_menu').show();
     }
 
-    $('.guest_menu [data-action="login"]').click(function () {
+    $('.footer_menu [data-action="login"]').click(function () {
         document.location.href = 'https://www.tistory.com/auth/login?redirectUrl=' + encodeURIComponent(window.TistoryBlog.url);
     });
-    $('.admin_menu [data-action="logout"]').click(function () {
+    $('.footer_menu [data-action="logout"]').click(function () {
         document.location.href = 'https://www.tistory.com/auth/logout?redirectUrl=' + encodeURIComponent(window.TistoryBlog.url);
     });
 

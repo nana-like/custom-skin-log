@@ -1831,9 +1831,9 @@ div[data-ke-type="moreLess"] {
     border-top: solid 1px #e6e6e6;
     padding-top: 35px; }
   .area_reply .list_reply:last-child {
-    margin-bottom: 40px; }
+    margin-bottom: 54px; }
   .area_reply .item_reply {
-    margin-top: 40px; }
+    margin-top: 54px; }
     .area_reply .item_reply:first-child {
       margin-top: 0; }
     .area_reply .item_reply .thumbnail_reply {
@@ -1859,7 +1859,10 @@ div[data-ke-type="moreLess"] {
     font-weight: 700;
     letter-spacing: -0.15px;
     text-align: left;
-    color: #2c2828; }
+    color: #2c2828;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
     .area_reply .box_reply_content .user a {
       vertical-align: middle; }
     .area_reply .box_reply_content .user a:hover {
@@ -1938,10 +1941,21 @@ div[data-ke-type="moreLess"] {
   content: '블로그 주인';
   border: 1px solid var(--pointColor);
   padding: 2px 6px;
-  border-radius: 16px;
-  vertical-align: text-bottom;
-  transform: scale(0.95);
-  transform-origin: 100% 50%; }
+  border-radius: 20px;
+  transform: scale(0.94);
+  transform-origin: 100% -100%; }
+
+.hiddenComment > .box_reply_content .txt {
+  color: #7d7d7d; }
+  .hiddenComment > .box_reply_content .txt:before {
+    display: inline-block;
+    content: '('; }
+  .hiddenComment > .box_reply_content .txt:after {
+    display: inline-block;
+    content: ')'; }
+
+.hiddenComment > .box_reply_content .date {
+  margin-left: 0; }
 
 .reply_write {
   max-width: 1200px;
