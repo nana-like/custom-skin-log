@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* styled by nana (20.07.22 23:39) */
+/* styled by nana (20.07.23 23:09) */
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:500,700&display=swap");
 :root {
@@ -1860,6 +1860,8 @@ div[data-ke-type="moreLess"] {
     letter-spacing: -0.15px;
     text-align: left;
     color: #2c2828; }
+    .area_reply .box_reply_content .user a {
+      vertical-align: middle; }
     .area_reply .box_reply_content .user a:hover {
       text-decoration: underline; }
   .area_reply .box_reply_content .date {
@@ -1890,6 +1892,8 @@ div[data-ke-type="moreLess"] {
       letter-spacing: -0.13px;
       text-align: left;
       color: #b9b9b9; }
+      .area_reply .box_reply_content .modify a:hover {
+        color: #989898; }
   .area_reply .reply-line {
     display: -webkit-box;
     display: -moz-box;
@@ -1926,6 +1930,18 @@ div[data-ke-type="moreLess"] {
 .reply-form-container {
   padding: 0px 0 53px;
   box-sizing: border-box; }
+
+.rp_admin > .reply-line .user:after {
+  display: inline-block;
+  font-size: 11px;
+  color: var(--pointColor);
+  content: '블로그 주인';
+  border: 1px solid var(--pointColor);
+  padding: 2px 6px;
+  border-radius: 16px;
+  vertical-align: text-bottom;
+  transform: scale(0.95);
+  transform-origin: 100% 50%; }
 
 .reply_write {
   max-width: 1200px;

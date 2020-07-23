@@ -1,4 +1,4 @@
-//댓글여역
+//댓글영역
 .area_reply {
   margin-top: 48px;
   padding: 0 20px;
@@ -80,6 +80,10 @@
       text-align: left;
       color: #2c2828;
 
+      a {
+        vertical-align: middle;
+      }
+
       a:hover {
         text-decoration: underline;
       }
@@ -120,6 +124,10 @@
         letter-spacing: -0.13px;
         text-align: left;
         color: #b9b9b9;
+
+        &:hover {
+          color: #989898;
+        }
       }
     }
   }
@@ -162,6 +170,24 @@
   padding: 0px 0 53px;
   // background-color: #f3f3f3;
   box-sizing: border-box;
+}
+
+//댓글 분기
+.rp_admin {
+  // 관리자가 작성한 덧글
+
+  &>.reply-line .user:after {
+    display: inline-block;
+    font-size: 11px;
+    color: $c-main;
+    content: '블로그 주인';
+    border: 1px solid $c-main;
+    padding: 2px 6px;
+    border-radius: 16px;
+    vertical-align: text-bottom;
+    transform: scale(0.95);
+    transform-origin: 100% 50%;
+  }
 }
 
 .reply_write {
@@ -332,11 +358,6 @@
     @include res--mobile {
       font-size: 14px;
       margin-left: 15px;
-    }
-
-    &:hover {
-      // background-color: darken(var(--pointColor), 20%);
-      // background-color: #2467ce;
     }
 
     &:before {
