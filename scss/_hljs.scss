@@ -5,10 +5,12 @@
   display: block;
   overflow-x: auto;
   // padding: 0.5em;
-  padding: 16px;
-  background: #100f0f;
+  padding: 30px;
+  // background: #17173d;
+  background: #031833;
   color: #dcdcdc !important;
   font-size: 16px !important;
+  border-radius: 7px;
 }
 
 .hljs-addition,
@@ -54,7 +56,7 @@
 .hljs-params,
 .hljs-subst,
 .hljs-title {
-  color: #dcdcdc;
+  color: #ebbbff;
 }
 
 .hljs-comment,
@@ -75,7 +77,7 @@
 
 .hljs-template-variable,
 .hljs-variable {
-  color: #bd63c5;
+  color: #ff9da4;
 }
 
 .hljs-attr,
@@ -137,6 +139,7 @@
 .hljs-ln td {
   padding: 0.6px 0;
 }
+
 .hljs-ln-line {
   margin-left: 20px;
 }
@@ -145,8 +148,85 @@
   border-left: 0 !important;
   border-right: 1px solid #676767 !important;
 }
+
 .hljs-ln-numbers .hljs-ln-line {
   margin-left: 0 !important;
   font-size: 13px;
   margin-right: 5px;
 }
+
+/* Tomorrow Night Blue Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+// .tomorrow-comment,
+// pre .comment,
+// pre .title {
+//   color: #7285b7;
+// }
+
+// .tomorrow-red,
+// pre .variable,
+// pre .attribute,
+// pre .tag,
+// pre .regexp,
+// pre .ruby .constant,
+// pre .xml .tag .title,
+// pre .xml .pi,
+// pre .xml .doctype,
+// pre .html .doctype,
+// pre .css .id,
+// pre .css .class,
+// pre .css .pseudo {
+//   color: #ff9da4;
+// }
+
+// .tomorrow-orange,
+// pre .number,
+// pre .preprocessor,
+// pre .built_in,
+// pre .literal,
+// pre .params,
+// pre .constant {
+//   color: #ffc58f;
+// }
+
+// .tomorrow-yellow,
+// pre .class,
+// pre .ruby .class .title,
+// pre .css .rules .attribute {
+//   color: #ffeead;
+// }
+
+// .tomorrow-green,
+// pre .string,
+// pre .value,
+// pre .inheritance,
+// pre .header,
+// pre .ruby .symbol,
+// pre .xml .cdata {
+//   color: #d1f1a9;
+// }
+
+// .tomorrow-aqua,
+// pre .css .hexcolor {
+//   color: #99ffff;
+// }
+
+// .tomorrow-blue,
+// pre .function,
+// pre .python .decorator,
+// pre .python .title,
+// pre .ruby .function .title,
+// pre .ruby .title .keyword,
+// pre .perl .sub,
+// pre .javascript .title,
+// pre .coffeescript .title {
+//   color: #bbdaff;
+// }
+
+// .tomorrow-purple,
+// pre .keyword,
+// pre .javascript .function {
+//   color: #ebbbff;
+// }

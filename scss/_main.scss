@@ -21,7 +21,7 @@
   }
 }
 
-.logSkin-list ul {
+#tt-body-index .logSkin-list ul {
   display: grid;
   grid-template-columns: repeat(3, 350px);
   grid-gap: 70px 75px;
@@ -30,6 +30,7 @@
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     grid-gap: 50px;
   }
+
   @include res--mobile {
     grid-template-columns: repeat(auto-fill, 100%);
     grid-gap: 30px;
@@ -49,9 +50,11 @@
     &:hover {
       cursor: pointer;
       border-color: #bebebe;
+
       .thumbnail_post {
         opacity: 0.9;
       }
+
       .txt_post {
         text-decoration: underline;
       }
@@ -65,6 +68,7 @@
     background-size: cover;
     background-position: 50% 50%;
     transition: opacity 0.2s;
+
     @include res--mobile {
       height: 170px;
     }
@@ -79,6 +83,7 @@
     font-size: 13px;
     color: $c-main;
     margin-bottom: 12px;
+
     @include res--mobile {
       font-size: 12px;
     }
@@ -122,6 +127,7 @@
   .date_post {
     font-size: 13px;
     color: #969696;
+
     @include res--mobile {
       font-size: 12px;
     }
@@ -146,6 +152,7 @@
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       grid-gap: 30px;
     }
+
     @include res--mobile {
       grid-template-columns: repeat(auto-fill, 100%);
     }
@@ -159,28 +166,34 @@
         margin-bottom: 2px;
         letter-spacing: -0.14px;
         line-height: 1.45;
+
         @include res--mobile {
           font-size: 17px;
           @include ellipsis(2);
         }
       }
+
       .date_post {
         font-size: 13px;
         color: #969696;
+
         @include res--mobile {
           font-size: 12px;
         }
       }
+
       &:hover {
         .thumbnail_post {
           opacity: 0.9;
         }
+
         .title_post {
           text-decoration: underline;
         }
       }
     }
   }
+
   .thumbnail_post {
     height: 270px;
     display: block;
@@ -203,15 +216,17 @@
   text-align: center;
   background-color: #f7f7f7;
   letter-spacing: -0.2px;
+
   @include res--laptop {
     margin-top: 80px;
   }
+
   @include res--mobile {
     margin-top: 60px;
     padding: 40px 0;
   }
 
-  & > a {
+  &>a {
     font-size: 18px;
     font-weight: bold;
     padding-right: 21px;
@@ -220,6 +235,7 @@
     background-repeat: no-repeat;
     background-position: 100% 49%;
     background-size: 14px 14px;
+
     @include res--mobile {
       font-size: 16px;
     }
@@ -243,22 +259,24 @@
   }
 
   .logSkin-new {
-    & > li:first-child {
+    &>li:first-child {
       position: relative;
       grid-column-start: 1;
       grid-column-end: 4;
       padding: 40px 40px;
       border: 0;
       background: #f2f2f2;
+
       @include res--desktop {
         grid-column-end: 1;
         padding: 20px;
       }
+
       @include res--laptop {
         padding: 20px;
       }
-      @include res--mobile {
-      }
+
+      @include res--mobile {}
 
       &:hover {
         border: 0;
@@ -267,6 +285,7 @@
       .thumbnail_post {
         width: 350px;
         height: 230px;
+
         @include res--desktop {
           width: calc(100% - 25px);
           height: 200px;
@@ -279,6 +298,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+
         @include res--desktop {
           z-index: 1;
           width: 100%;
@@ -295,6 +315,7 @@
         padding: 54px 40px 54px 160px;
         background-color: #fff;
         box-shadow: 5px 6px 30px 2px rgba(62, 58, 58, 0.12);
+
         @include res--desktop {
           width: 100%;
           padding: 20px;
@@ -354,10 +375,12 @@
 
     .link_article {
       display: block;
+
       &:hover {
         .thumbnail_post {
           opacity: 0.9;
         }
+
         .txt_post {
           text-decoration: underline;
         }
@@ -366,6 +389,7 @@
 
     .thumbnail_zone {
       flex-shrink: 0;
+
       @include res--laptop {
         width: 30%;
       }
@@ -379,10 +403,12 @@
       background-size: cover;
       background-position: 50% 50%;
       transition: opacity 0.2s;
+
       @include res--laptop {
         width: 100%;
         height: 200px;
       }
+
       @include res--mobile {
         height: 140px;
       }
@@ -390,9 +416,11 @@
 
     .info_zone {
       padding: 20px 20px 20px 40px;
+
       @include res--laptop {
         padding-left: 30px;
       }
+
       @include res--mobile {
         padding: 3px 0 0 15px;
       }
@@ -401,6 +429,7 @@
     .category {
       font-size: 13px;
       color: $c-main;
+
       @include res--mobile {
         font-size: 12px;
       }
@@ -414,15 +443,18 @@
       font-weight: bold;
       letter-spacing: -0.14px;
       @include ellipsis(2);
+
       @include res--laptop {
         margin-top: 18px;
         font-size: 18px;
       }
+
       @include res--mobile {
         font-size: 16px;
         margin-top: 8px;
       }
     }
+
     .txt_post {
       margin-bottom: 40px;
       line-height: 1.45;
@@ -432,29 +464,33 @@
       color: #4b4b4b;
       word-break: break-all;
       @include ellipsis(2);
+
       @include res--laptop {
         margin-bottom: 30px;
       }
+
       @include res--mobile {
         font-size: 13px;
         margin-bottom: 20px;
         min-height: 39px;
       }
     }
+
     .date {
       font-size: 13px;
       color: #969696;
+
       @include res--mobile {
         font-size: 12px;
       }
     }
   }
 
-  .inner_index > .logSkin-list-normal {
+  .inner_index>.logSkin-list-normal {
     padding: 0 20px;
   }
 
-  .inner_index > .category_list > .list_horizontal .index_type_common {
+  .inner_index>.category_list>.list_horizontal .index_type_common {
     padding: 0;
   }
 }
@@ -467,6 +503,7 @@
       text-decoration: underline;
     }
   }
+
   .title {
     display: block;
     margin-top: 20px;
@@ -474,10 +511,12 @@
     font-size: 20px;
     font-weight: bold;
     letter-spacing: -0.14px;
+
     @include res--laptop {
       margin-top: 18px;
       font-size: 18px;
     }
+
     @include res--mobile {
       font-size: 16px;
       margin-top: 8px;

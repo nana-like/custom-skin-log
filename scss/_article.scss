@@ -587,7 +587,7 @@
   h5,
   h6 {
     color: $c-black;
-    font-weight: bold;
+    font-weight: bold !important;
     margin-bottom: 20px;
   }
 
@@ -641,7 +641,7 @@ blockquote.callout {
   border-radius: 4px;
   background-color: #f4f4f4;
   color: $c-black;
-  font-size: 1em;
+  font-size: 1em !important;
   line-height: 1.65;
   border: 0;
 
