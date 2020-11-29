@@ -18,9 +18,6 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
   <script src="./images/common.js"></script>
-
-  <!-- ! TODO: 배포 전 삭제!! -->
-  <meta name="naver-site-verification" content="07485c6684a8a614f18c268f70a8019a7b796f11" />
 </head>
 
 <body id="[##_body_id_##]" data-color="[##_var_pointColor_##]">
@@ -28,18 +25,17 @@
     var pointColorCode = document.body.dataset.color;
     document.documentElement.style.setProperty('--pointColor', pointColorCode)
   </script>
+
   <s_t3>
-    <!-- ! TODO: 테마 변경시 thema_xxx 변경 대응!! -->
     <div id="wrap">
 
-      <!-- * area_menu (사이드 메뉴) -->
+      <!-- *  area_menu (사이드 메뉴) -->
       <div class="area_menu">
 
         <div class="area_menu_inner">
-
           <div class="sidebar_header">
             <strong class="area_menu_title">
-              <a href="[##_blog_link_##]" title="[##_title_##]" class="link_logo"> [##_title_##]</a>
+              <a href="[##_blog_link_##]" title="[##_title_##]" class="link_logo">[##_title_##]</a>
             </strong>
             <button type="button" class="btn_close" title="닫기"><span class="icon-Close"></span></button>
           </div>
@@ -48,39 +44,17 @@
             <a href="[##_blog_link_##]" class="area_menu_nav-home">Home</a>
             [##_category_list_##]
           </nav>
-
-          <ul class="list_sns">
-            <s_if_var_snsFacebook>
-              <li><a href="[##_var_snsFacebook_##]" class="link_sns link_fb" target="_blank"><span
-                    class="blind">페이스북</span></a></li>
-            </s_if_var_snsFacebook>
-            <s_if_var_snsTwitter>
-              <li><a href="[##_var_snsTwitter_##]" class="link_sns link_twitter" target="_blank"><span
-                    class="blind">트위터</span></a></li>
-            </s_if_var_snsTwitter>
-            <s_if_var_snsInstagram>
-              <li><a href="[##_var_snsInstagram_##]" class="link_sns link_insta" target="_blank"><span
-                    class="blind">인스타그램</span></a></li>
-            </s_if_var_snsInstagram>
-            <s_if_var_snsGithub>
-              <li><a href="[##_var_snsGithub_##]" class="link_sns link_github" target="_blank"><span
-                    class="blind">깃허브</span></a></li>
-            </s_if_var_snsGithub>
-          </ul>
-
         </div>
 
         <div class="dimmed_sidebar"></div>
 
       </div>
 
-      <!-- container  / header에 btn_search 클릭하면 class에 search_on 추가(모바일에서만 작동) -->
       <div id="container">
 
         <!-- * 헤더 (.header) -->
         <header id="header" class="header">
 
-          <!-- ! TODO: 맨 위로 삭제?? -->
           <div id="skip"></div>
 
           <!-- * 상단 네비게이션 (.nav) -->
@@ -88,6 +62,7 @@
             <div class="nav__container">
               <div class="nav__gnb">
 
+                <!-- * 변수 설정에 따른 홈메뉴 노출 -->
                 <s_if_var_showCategories>
                   <s_if_var_showHomeMenu>
                     <a href="[##_blog_link_##]" class="nav__gnb-home">Home</a>
@@ -165,7 +140,7 @@
               <s_cover_rep>
                 <s_cover name='gallery'>
                   <!-- index_type_gallery -->
-                  <div class="index_type_common index_type_gallery logSkin-hot">
+                  <div class="index_type_common index_type_gallery logSkin-gallery">
                     <h2 class="title_category">[##_cover_title_##]</h2>
                     <ul class="list_gallery index_list_container">
                       <s_cover_item>
@@ -188,9 +163,6 @@
                         </s_cover_item_article_info>
                       </s_cover_item>
                     </ul>
-                  </div>
-                  <div class="logSkin-showAll">
-                    <a href="/category">전체 글 보기</a>
                   </div>
                 </s_cover>
 
@@ -229,10 +201,6 @@
                   <!-- // index_type_list -->
 
                 </s_cover>
-                <div class="logSkin-showAll">
-                  <a href="/category">전체 글 보기</a>
-                </div>
-
 
               </s_cover_rep>
             </s_cover_group>
@@ -365,11 +333,8 @@
                                               <s_rp2_rep>
                                                 <li id='[##_rp_rep_id_##]'
                                                   class="item_comment reply [##_rp_rep_class_##]">
-                                                  <div class="ico_commnent">ㄴ</div>
+                                                  <div class="ico_commnent"></div>
                                                   <div class="thumbnail_reply">
-                                                    <!-- <img
-                                                                                src="https://t1.daumcdn.net/tistory_admin/blog/admin/profile_default_07.png"
-                                                                                width="50" height="50" alt="프로필사진"> -->
                                                     <img
                                                       src="//i1.daumcdn.net/thumb/C100x100/?fname=[##_rp_rep_logo_##]"
                                                       width="50" height="50" alt="프로필사진">
@@ -763,11 +728,14 @@
               </div>
               <!-- // area_paging -->
             </s_paging>
-
           </div>
           <!-- // inner_index -->
 
         </main>
+
+        <div class="logSkin-showAll">
+          <a href="/category">전체 글 보기</a>
+        </div>
 
         <!-- ! footer -->
         <footer id="footer" class="footer">
@@ -792,22 +760,24 @@
               </s_sidebar_element>
 
 
-              <s_sidebar_element>
-                <!-- 게스트 메뉴 -->
-                <div class="footer_menu guest_menu">
-                  <a href="#" class="guest_btn" data-action="login">로그인</a>
-                </div>
-                <!-- 로그인 사용자 메뉴 -->
-                <div class="footer_menu user_menu">
-                  <a href="#" class="user_btn" data-action="logout">로그아웃</a>
-                </div>
-                <!-- 관리자 메뉴 -->
-                <div class="footer_menu admin_menu">
-                  <a href="#" class="admin_btn" data-action="logout">로그아웃</a>
-                  <a href="[##_owner_url_##]/entry/post" class="admin_btn"><span>글쓰기</span></a>
-                  <a href="[##_owner_url_##]" class="admin_btn"><span>관리</span></a>
-                </div>
-              </s_sidebar_element>
+              <s_if_var_showAdminMenu>
+                <s_sidebar_element>
+                  <!-- 게스트 메뉴 -->
+                  <div class="footer_menu guest_menu">
+                    <a href="#" class="guest_btn" data-action="login">Tistory 로그인</a>
+                  </div>
+                  <!-- 로그인 사용자 메뉴 -->
+                  <div class="footer_menu user_menu">
+                    <a href="#" class="user_btn" data-action="logout">Tistory 로그아웃</a>
+                  </div>
+                  <!-- 관리자 메뉴 -->
+                  <div class="footer_menu admin_menu">
+                    <a href="#" class="admin_btn" data-action="logout">로그아웃</a>
+                    <a href="[##_owner_url_##]/entry/post" class="admin_btn"><span>글쓰기</span></a>
+                    <a href="[##_owner_url_##]" class="admin_btn"><span>관리</span></a>
+                  </div>
+                </s_sidebar_element>
+              </s_if_var_showAdminMenu>
             </div>
 
             <div class="footer-right">
@@ -826,7 +796,8 @@
                 </div>
 
                 <p class="copyright">
-                  [##_var_footerCopyright_##]</p>
+                  [##_var_footerCopyright_##]
+                </p>
               </div>
             </div>
 
@@ -835,6 +806,10 @@
             Designed by <a target="_blank" rel="noopener" href="https://nykim.work/">Nana</a>
           </div>
         </footer>
+
+        <div class="userProfileImg" style="display:none;">[##_blog_image_##]</div>
+        <div class="userProfileName" style="display:none;">[##_blogger_##]</div>
+        <div class="userProfileText" style="display:none;">[##_var_userProfileText_##]</div>
 
       </div>
       <!-- // container -->
@@ -850,14 +825,18 @@
   })
 
   var profile = document.createElement("div");
-  profile.classList.add("article_profile")
-  profile.innerHTML +=
-    "<div class='profile_img'><img src='https://img1.daumcdn.net/thumb/C100x100.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/4Ftr/image/6PuWflOPDPexDH0f6zSEn81F7gY.jpg' alt='profile'/></div>"
-  profile.innerHTML +=
-    "<div class='profile_contents'><strong>나나 (nykim)</strong><p>열심히 굴러가는 중! HP 회복이 필요할 땐 아이스 아메리카노를 호로록.</p></div>"
-  $('.container_postbtn').before(profile);
+  var profileContents = {
+    img: $('.userProfileImg img').attr('src'),
+    name: $('.userProfileName').text(),
+    text: $('.userProfileText').text(),
+  }
+  profile.classList.add("article_profile");
 
-  //$(".logSkin-new txt_post").replace(/</g, "&lt;");
+  profile.innerHTML +=
+    "<div class='profile_img'><img src='"+profileContents.img+"' alt='profile'/></div>"
+  profile.innerHTML +=
+    "<div class='profile_contents'><strong>"+profileContents.name+"</strong><p>"+profileContents.text+"</p></div>"
+  $('.container_postbtn').before(profile);
 
 
   if ($('.tag_content').length != false) {

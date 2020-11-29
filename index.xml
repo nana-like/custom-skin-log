@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <skin>
 	<information>
-		<name>Log Skin 0719(로그 스킨)</name>
+		<name>Log Skin 1129(로그 스킨_테스트용)</name>
 		<version>1.0</version>
 		<description>
 			<![CDATA[ 기록을 남기는 모든 이들을 위한 스킨. 심플하고 정돈된 느낌을 좋아하는 분들께 추천드려요! ]]>
 		</description>
 		<license>
-			<![CDATA[누구나 자유롭게 사용할 수 있습니다.]]>
+			<![CDATA[ 누구나 자유롭게 사용할 수 있습니다. (CC BY-NC-SA) ]]>
 		</license>
 	</information>
 	<author>
@@ -61,20 +61,6 @@
 			<default></default>
 		</variable>
 		<variable>
-			<name>penelopeColorSet</name>
-			<label>메인 컬러</label>
-			<description></description>
-			<type>SELECT</type>
-			<option><![CDATA[
-				[
-					{"name":"thema_blue", "label":"블루(기본)", "value":"thema_blue"},
-					{"name":"thema_pink", "label":"핑크", "value":"thema_pink"},
-					{"name":"thema_orange", "label":"오렌지", "value":"thema_orange"}
-				]
-			]]></option>
-			<default>thema_blue</default>
-		</variable>
-		<variable>
 			<name>showCategories</name>
 			<label>헤더에 카테고리 표시</label>
 			<type>BOOL</type>
@@ -107,44 +93,36 @@
       </description>
     </variable>
 		<variable>
-			<name>footerCopyright</name>
-			<label>하단 카피라이트</label>
+			<name>userProfileText</name>
+			<label>포스팅 하단 프로필 문구</label>
 			<description></description>
 			<type>STRING</type>
 			<option></option>
-			<default></default>
+			<default>쉽고, 재밌고, 특별한 걸 찾아다닙니다. 가끔은 호다닥 뛰고 가끔은 느릿느릿 걸으면서 나아가는 중이에요.</default>
 		</variable>
 		<variable>
 			<name>snsPortfolio</name>
-			<label>포트폴리오 링크</label>
+			<label>상단 포트폴리오 링크</label>
+			<description></description>
+			<type>STRING</type>
+			<option/>
+			<default></default>
+		</variable>
+		<variable>
+			<name>footerCopyright</name>
+			<label>하단 우측 카피라이트</label>
 			<description></description>
 			<type>STRING</type>
 			<option></option>
 			<default></default>
 		</variable>
 		<variable>
-			<name>snsFacebook</name>
-			<label>페이스북 링크</label>
+			<name>showAdminMenu</name>
+			<label>하단 좌측 관리메뉴 표시</label>
 			<description></description>
-			<type>STRING</type>
+			<type>BOOL</type>
 			<option></option>
-			<default></default>
-		</variable>
-		<variable>
-			<name>snsTwitter</name>
-			<label>트위터 링크</label>
-			<description></description>
-			<type>STRING</type>
-			<option></option>
-			<default></default>
-		</variable>
-		<variable>
-			<name>snsInstagram</name>
-			<label>인스타그램 링크</label>
-			<description></description>
-			<type>STRING</type>
-			<option></option>
-			<default></default>
+			<default>true</default>
 		</variable>
 	</variables>
 </skin>
