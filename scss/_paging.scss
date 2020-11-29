@@ -36,13 +36,22 @@
   .link_num {
     margin: 0 8px;
   }
+
+  .link_num:not([href]) span {
+    color: #aaa;
+    font-weight: 500;
+  }
+
   .link_num span {
     display: block;
-    min-width: 21px;
+    width: 24px;
+    height: 24px;
+    line-height: 22px;
     text-align: center;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
     color: $c-black;
+
     @include res--mobile {
       position: relative;
       font-size: 13px;
@@ -56,6 +65,14 @@
         color: $c-main;
         background-color: transparent;
       }
+    }
+
+    &:not(.selected) {
+      opacity: 0.8;
+    }
+
+    &:hover {
+      opacity: 1;
     }
   }
 
@@ -94,10 +111,25 @@
 
   .link_prev {
     margin-right: 4px;
+
+
+    background-image: icon(arrow-left, "4b4b4b");
+    background-repeat: no-repeat;
+    background-position:  top 12px left 8px;
+    background-size: 14px 14px;
   }
 
   .link_next {
+    opacity: 0.8;
     margin-left: 4px;
+    background-image: icon(arrow-right, "4b4b4b");
+    background-repeat: no-repeat;
+    background-position: top 12px right 8px;
+    background-size: 14px 14px;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 

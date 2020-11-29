@@ -27,21 +27,21 @@
 .icon-Cancel:before {
   content: "\e900";
 }
-.icon-Close:before {
+/* .icon-Close:before {
   content: "\e901";
-}
+} */
 .icon-Facebook:before {
   content: "\e902";
 }
 .icon-Kakao:before {
   content: "\e903";
 }
-.icon-Keyboard-Arrow---Left:before {
+/* .icon-Keyboard-Arrow---Left:before {
   content: "\e904";
 }
 .icon-Keyboard-Arrow---Right:before {
   content: "\e905";
-}
+} */
 .icon-Menu:before {
   content: "\e906";
 }

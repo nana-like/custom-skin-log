@@ -195,7 +195,7 @@
   .profile_contents {
     &>strong {
       display: block;
-      margin-bottom: 2px;
+      margin-bottom: 4px;
       font-size: 20px;
       font-weight: bold;
 
@@ -211,8 +211,9 @@
 
     &>p {
       font-size: 15px;
-      color: #2c2828;
+      color: #403d3d;
       line-height: 1.6;
+      word-break: keep-all;
 
       @include res--tablet {
         font-size: 13px;
@@ -270,7 +271,7 @@
       width: 100%;
       height: 100%;
       background-repeat: no-repeat;
-      background-position: 50%;
+      background-position: 50% 55%;
       background-size: 25px;
       transition: opacity 0.3s;
     }
@@ -294,6 +295,12 @@
 
   .btn_post {
     height: 60px !important;
+
+    // &:after {
+    //   display: inline-block;
+    //   font-size: 15px;
+    //   content: "좋아요";
+    // }
   }
 
   //좋아요 숫자
@@ -305,12 +312,6 @@
     line-height: 58px !important;
     color: #404040 !important;
     text-align: left !important;
-
-    &:after {
-      // display: inline-block;
-      // font-size: 15px;
-      // content: "좋아요";
-    }
   }
 
   .btn_post .uoc-icon.like_on .txt_like.uoc-count {
@@ -587,14 +588,13 @@
   h5,
   h6 {
     color: $c-black;
-    font-weight: bold !important;
     margin-bottom: 20px;
   }
 
   h1,
   h2 {
     font-size: 28px;
-    font-weight: 700;
+    font-weight: 700 !important;
   }
 
   h3 {
@@ -606,6 +606,64 @@
   h6 {
     font-size: 20px;
   }
+
+  // ul[data-ke-list-type='disc'],
+  // #tt-body-page ul[data-ke-list-type='disc'] {
+  //   padding-left: 20px;
+  // }
+
+  // ol[data-ke-list-type='decimal'],
+  // #tt-body-page ul[data-ke-list-type='decimal'] {
+  //   list-style-type: none !important;
+  //   padding-left: 20px;
+  // }
+
+  // ul[data-ke-list-type='circle'],
+  // #tt-body-page ul[data-ke-list-type='circle'] {
+  //   list-style-type: circle;
+  //   padding-left: 20px;
+  // }
+
+  // ul[data-ke-list-type='disc'] li,
+  // #tt-body-page ul[data-ke-list-type='disc'] li,
+  // ul[data-ke-list-type='decimal'] li,
+  // #tt-body-page ul[data-ke-list-type='decimal'] li,
+  // ul[data-ke-list-type='circle'] li,
+  // #tt-body-page ul[data-ke-list-type='circle'] li {
+  //   margin: 4px 0;
+  // }
+
+  ul[data-ke-list-type],
+  ol[data-ke-list-type] {
+    padding-left: 18px;
+  }
+
+  [data-ke-list-type] li {
+    position: relative;
+    list-style: none !important;
+    margin: 5px 0;
+
+    &:before {
+      position: absolute;
+      top: 11px;
+      left: -13px;
+      width: 3px;
+      height: 3px;
+      background-color: #1d1b1b;
+      border: 1px solid #1d1b1b;
+      border-radius: 50%;
+      display: inline-block;
+      content: '';
+      vertical-align: middle;
+    }
+  }
+
+  [data-ke-list-type='circle'] li {
+    &:before {
+      background-color: #fff;
+    }
+  }
+
 
   p code {
     background: #fff2c3;

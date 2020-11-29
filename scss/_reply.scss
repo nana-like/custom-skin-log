@@ -69,7 +69,7 @@
   .box_reply_content {
     .reply-info-top {
       @include flexbox();
-      @include align-items(center);
+      // @include align-items(center);
     }
 
     .user {
@@ -79,11 +79,8 @@
       letter-spacing: -0.15px;
       text-align: left;
       color: #2c2828;
+      line-height: 120%;
       @include ellipsis();
-
-      a {
-        vertical-align: middle;
-      }
 
       a:hover {
         text-decoration: underline;
@@ -94,12 +91,12 @@
       position: relative;
       top: 2px;
       display: block;
+      margin-left: 10px;
       font-size: 13px;
+      color: #9d9d9d;
       font-weight: 400;
       letter-spacing: -0.14px;
       text-align: left;
-      color: #9d9d9d;
-      margin-left: 10px;
 
       a {
         opacity: 0.7;
@@ -168,17 +165,17 @@
   }
 }
 
-//댓글작성영역
+//댓글작성 영역
 .reply-form-container {
   padding: 0px 0 53px;
-  // background-color: #f3f3f3;
   box-sizing: border-box;
 }
 
 //댓글 분기
 .rp_admin {
-  // 관리자가 작성한 덧글
+  // 관리자가 작성한 댓글
 
+  &>.box_reply_content .user:after,
   &>.reply-line .user:after {
     display: inline-block;
     font-size: 11px;
@@ -188,7 +185,7 @@
     padding: 2px 6px;
     border-radius: 20px;
     transform: scale(0.94);
-    transform-origin: 100% -100%;
+    transform-origin: 100% 50%;
   }
 }
 
@@ -334,7 +331,7 @@
       background-color: #f5f5f5;
       content: "";
       background-image: icon(check, "cecece");
-      background-size: 12px;
+      background-size: 11px;
       background-repeat: no-repeat;
       background-position: 50% 50%;
 

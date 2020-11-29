@@ -306,7 +306,7 @@
     box-sizing: border-box;
     width: 80vw;
     min-width: 280px;
-    max-width: 600px;
+    max-width: 500px;
     height: 100%;
     overflow: auto;
     background-color: #fff;
@@ -353,6 +353,8 @@
   }
 
   .menu_navigation {
+    overflow-y: auto;
+    max-height: calc(100vh - 220px);
     margin-top: 50px;
 
     a:hover {
