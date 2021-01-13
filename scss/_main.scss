@@ -73,7 +73,7 @@
   .thumbnail_post {
     height: 210px;
     display: block;
-    background: url(images/bg_empty.jpg) no-repeat;
+    background: url(images/bg_empty.png) no-repeat;
     background-size: cover;
     background-position: 50% 50%;
     transition: opacity 0.2s;
@@ -210,7 +210,7 @@
   .thumbnail_post {
     height: 270px;
     display: block;
-    background: url(images/bg_empty.jpg) no-repeat;
+    background: url(images/bg_empty.png) no-repeat;
     background-size: cover;
     background-position: 50% 50%;
     transition: opacity 0.2s;
@@ -271,14 +271,14 @@
   }
 
   .logSkin-new {
-    &:first-child {
-      &>li:first-child {
+    &.list_horizontal{
+      .list_horizontal_item:first-child {
         position: relative;
         grid-column-start: 1;
         grid-column-end: 4;
         padding: 40px 40px;
         border: 0;
-        background: #f2f2f2;
+        background: #f5f5f5;
 
         @include res--desktop {
           grid-column-end: 1;
@@ -415,7 +415,7 @@
       display: block;
       width: 350px;
       height: 220px;
-      background: url(images/bg_empty.jpg) no-repeat;
+      background: url(images/bg_empty.png) no-repeat;
       background-size: cover;
       background-position: 50% 50%;
       transition: opacity 0.2s;
@@ -546,6 +546,29 @@
   .category-protected {
     color: #ff567a;
   }
+
+  .protected_form {
+    padding-bottom: 120px;
+
+    input {
+      height: 36px;
+      margin-top: 12px;
+      border-radius: 2px;
+      padding: 0 10px;
+      border: 1px solid #aaa;
+      box-sizing: border-box;
+    }
+    button[type="submit"] {
+      display: inline;
+      height: 36px;
+      padding: 0 10px;
+      color: #333;
+      border: 1px solid #2c2c2c;
+      border-radius: 2px;
+      vertical-align: middle;
+      box-sizing: border-box;
+    }
+  }
 }
 
 .logSkin-list-normal {
@@ -559,3 +582,93 @@
 }
 
 
+// 공지글인 경우
+.logSkin-notice-view {
+  .category {
+    display: block;
+    font-size: 16px;
+    color: crimson;
+    letter-spacing: -0.15px;
+  }
+
+  .date {
+    display: block;
+    font-size: 14px;
+    letter-spacing: -0.15px;
+    color: #7b7b7b;
+  }
+
+  .info_post_bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .admin a:not(:first-child) {
+    margin-left: 6px;
+  }
+
+  .article_view {
+    border-bottom: 0;
+  }
+}
+
+
+// 방명록
+.logSkin-guestbook {
+  .area_reply {
+    padding: 0;
+
+    .box_comment_list {
+      max-width: 100%;
+      padding: 40px 20px 0;
+      // background-color: #fafafa;
+
+      .comment-list {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+    }
+    .list_reply:first-child {
+      border-top: 0;
+    }
+    .list_reply:last-child {
+      margin-bottom: 0;
+    }
+
+    .item_reply {
+      margin-top: 0;
+      border-bottom: solid 1px #e6e6e6;
+      padding: 40px 0;
+
+      &:first-child {
+        border-top: 1px solid #e6e6e6;
+      }
+    }
+
+    .list_reply_comment {
+      margin-left: 50px;
+
+      .item_comment.reply {
+        margin-top: 30px;
+      }
+    }
+  }
+  .guestbook_title {
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-top: solid 4px #313131;
+    font-size: 22px;
+    padding: 40px 2px 25px;
+  }
+
+  form {
+    padding: 0 20px;
+  }
+
+  .area_paging {
+    margin-top: 0;
+  }
+}

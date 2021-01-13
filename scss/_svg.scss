@@ -8,9 +8,9 @@
 @function icon($icon-name, $color, $color2: "") {
   $icons: (
     //SVG 아이콘 목록
-      // 검색
-      search:
-      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 20" xml:space="preserve"><g transform="translate(-1160.543 -67.822)"><circle cx="1168.5" cy="75.39" r="7.5" fill="none"/><circle cx="1168.5" cy="75.39" r="6.58" fill="none" stroke="%23#{$color}" stroke-width="1.8" /><path fill="none" stroke="%23#{$color}" stroke-width="1.8" d="M1172.5 80.39l6 6"/></g></svg>',
+    // 검색
+    search:
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 20" xml:space="preserve"><g transform="translate(-1160.543 -67.822)"><circle cx="1168.5" cy="75.39" r="7.5" fill="none"/><circle cx="1168.5" cy="75.39" r="6.58" fill="none" stroke="%23#{$color}" stroke-width="1.8" /><path fill="none" stroke="%23#{$color}" stroke-width="1.8" d="M1172.5 80.39l6 6"/></g></svg>',
     // 아래 화살표
       arrow-bottom:
       '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 13"><path d="M1.6 2.7L9.9 11l8.3-8.3" fill="none" stroke="%23#{$color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
@@ -26,6 +26,12 @@
     // 체크 모양
       check:
       '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 9"><path fill="none" stroke="%23#{$color}" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M1.5 3.6l3.2 4.3 4.8-6.4"/></svg>',
+    // 메뉴
+      burger:
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117 82" xml:space="preserve"><style>.st0{fill:none;stroke:%23#{$color};stroke-width:11;stroke-miterlimit:10}</style><path class="st0" d="M117 6H0M117 41H0M117 76H0"/></svg>',
+    // 취소
+      cancle:
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 20"><style>.st2{fill:none;stroke:%23#{$color};stroke-width:1.8;stroke-linecap:round}</style><g><path class="st2" d="M3 2.5l15 15M18 2.5l-15 15"/></g></svg>',
     //맨위로
       go-to-top:
       '<svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 18 19" xml:space="preserve"><path class="st0" d="M.25 2h17M2 11l6.75-6L16 11M8.75 5v14"  fill="none" stroke="%23#{$color}" stroke-width="1.72"/></svg>'

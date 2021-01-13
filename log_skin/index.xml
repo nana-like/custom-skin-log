@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <skin>
 	<information>
-		<name>Log Skin 1129(로그 스킨_테스트용)</name>
+		<name>Log Skin</name>
 		<version>1.0</version>
 		<description>
-			<![CDATA[ 기록을 남기는 모든 이들을 위한 스킨. 심플하고 정돈된 느낌을 좋아하는 분들께 추천드려요! ]]>
+			<![CDATA[ 기록을 남기는 모든 이들을 위한 스킨 ]]>
 		</description>
 		<license>
-			<![CDATA[ 누구나 자유롭게 사용할 수 있습니다. (CC BY-NC-SA) ]]>
+			<![CDATA[ 누구나 자유롭게 사용할 수 있습니다.]]>
 		</license>
 	</information>
 	<author>
 		<name>나나(nykim)</name>
 		<homepage>https://nykim.work</homepage>
-		<email>nykim@nykim.net</email>
+		<email></email>
 	</author>
+	<cover>
+		<item>
+			<name>horizontal</name>
+			<label><![CDATA[ 리스트 ]]></label>
+			<description><![CDATA[ 사진, 제목, 날짜, 내용 미리보기로 구성된 리스트입니다. ]]></description>
+		</item>
+		<item>
+			<name>gallery</name>
+			<label><![CDATA[ 갤러리 리스트 ]]></label>
+			<description><![CDATA[ 사진을 크게 보여주며, 내용 없이 제목과 날짜만 표시하는 형태입니다. ]]></description>
+		</item>
+	</cover>
 	<default>
 		<cover>
 			[
@@ -39,18 +51,6 @@
 			]
 		</cover>
 	</default>
-	<cover>
-		<item>
-			<name>horizontal</name>
-			<label><![CDATA[ 리스트 ]]></label>
-			<description><![CDATA[ 사진, 제목, 날짜, 내용 미리보기로 구성된 리스트입니다. ]]></description>
-		</item>
-		<item>
-			<name>gallery</name>
-			<label><![CDATA[ 갤러리 리스트 ]]></label>
-			<description><![CDATA[ 사진을 크게 보여주며, 내용 없이 제목과 날짜만 표시하는 형태입니다. ]]></description>
-		</item>
-	</cover>
 	<variables>
 		<variable>
 			<name>logoImage</name>
@@ -59,6 +59,18 @@
 			<type>IMAGE</type>
 			<option></option>
 			<default></default>
+		</variable>
+		<variable>
+			<name>pointColor</name>
+			<label>
+				<![CDATA[ 대표 색 ]]>
+			</label>
+			<type>COLOR</type>
+			<option />
+			<default><![CDATA[#3e87f8]]></default>
+			<description>
+				<![CDATA[대표 색을 지정합니다.]]>
+			</description>
 		</variable>
 		<variable>
 			<name>showCategories</name>
@@ -81,28 +93,16 @@
 			</description>
 		</variable>
 		<variable>
-      <name>pointColor</name>
-      <label>
-        <![CDATA[ 대표 색 ]]>
-      </label>
-      <type>COLOR</type>
-      <option />
-      <default><![CDATA[#e0a8a0]]></default>
-      <description>
-        <![CDATA[대표 색을 지정합니다.]]>
-      </description>
-    </variable>
-		<variable>
-			<name>userProfileText</name>
-			<label>포스팅 하단 프로필 문구</label>
+			<name>mainLinkText</name>
+			<label>상단 메인 링크 텍스트</label>
 			<description></description>
 			<type>STRING</type>
-			<option></option>
-			<default>쉽고, 재밌고, 특별한 걸 찾아다닙니다. 가끔은 호다닥 뛰고 가끔은 느릿느릿 걸으면서 나아가는 중이에요.</default>
+			<option/>
+			<default>Portfolio</default>
 		</variable>
 		<variable>
-			<name>snsPortfolio</name>
-			<label>상단 포트폴리오 링크</label>
+			<name>mainLinkHref</name>
+			<label>상단 메인 링크 주소</label>
 			<description></description>
 			<type>STRING</type>
 			<option/>
@@ -111,6 +111,14 @@
 		<variable>
 			<name>footerCopyright</name>
 			<label>하단 우측 카피라이트</label>
+			<description></description>
+			<type>STRING</type>
+			<option></option>
+			<default>Powered by ⓒ Kakao Corp.</default>
+		</variable>
+		<variable>
+			<name>userProfileText</name>
+			<label>포스팅 하단 프로필 문구</label>
 			<description></description>
 			<type>STRING</type>
 			<option></option>

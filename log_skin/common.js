@@ -1,35 +1,31 @@
 $(function () {
-
-    console.log("마지막수정:0723-2353")
+    var $wrap = $('#wrap');
+    var $body = $('body');
 
     $('.article_content').find('table').each(function (idx, el) {
         $(el).wrap('<div class="table-overflow">')
     });
 
     function menuToggle() {
-        $('#wrap').toggleClass('menu_on');
-        $('body').toggleClass('prevent-scroll');
+        $wrap.toggleClass('menu_on');
         $('.btn_menu').toggleClass('btn_menu_off');
 
-        if ($('#wrap').has('menu_on')) {
+        if ($wrap.has('menu_on')) {
             $('#container').removeClass('search_on');
-            // $('.area_search').hide();
-            // $('.area_search').removeClass('searchInp_show');
+            $wrap.css('padding-right', '');
         }
     }
 
     function searchToggle() {
         $('#container').toggleClass('search_on');
-        // $('.area_search').toggle();
-        // $('.area_search').toggleClass('searchInp_show');
 
         if ($('#container').has('search_on')) {
             $('#header .area_search .inp_search').focus();
-            $('#wrap').removeClass('menu_on');
+            $wrap.removeClass('menu_on');
         }
     }
 
-    $('body').bind('click', function (e) {
+    $body.bind('click', function (e) {
         var $target = $(e.target);
         if ($target.closest('.btn_menu').length > 0) {
             menuToggle();
@@ -39,20 +35,17 @@ $(function () {
             $('#wrap').removeClass('menu_on');
             $('.btn_menu').removeClass('btn_menu_off');
             $('#container').removeClass('search_on');
-            // $('.area_search').hide();
         }
     });
 
     $('.dimmed_sidebar').on('click', function () {
         if ($('#wrap').hasClass('menu_on')) {
             $('#wrap').removeClass('menu_on');
-            $('body').removeClass('prevent-scroll');
         }
     });
 
     $('.btn_close').on('click', function () {
         $('#wrap').removeClass('menu_on');
-        $('body').removeClass('prevent-scroll');
     });
 
     $('#header .area_search .btn_search_del').bind('click', function () {
@@ -204,4 +197,6 @@ $(function () {
             scrollTop: '0'
         }, 500);
     });
+
+
 });

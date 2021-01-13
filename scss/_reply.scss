@@ -67,23 +67,38 @@
   }
 
   .box_reply_content {
+    @include res--mobile {
+      max-width: calc(100% - 68px);
+    }
     .reply-info-top {
       @include flexbox();
-      // @include align-items(center);
+      @include align-items(center);
+
+      @include res--mobile {
+        flex-wrap: wrap;
+      }
     }
 
     .user {
+      @include ellipsis();
+      @include res--mobile {
+        max-width: calc(100vw - 110px);
+      }
       display: block;
+      margin-right: 10px;
       font-size: 16px;
       font-weight: 700;
       letter-spacing: -0.15px;
       text-align: left;
       color: #2c2828;
-      line-height: 120%;
-      @include ellipsis();
+      // line-height: 120%;
 
       a:hover {
-        text-decoration: underline;
+        height: 100%;
+      }
+
+      & > a {
+        vertical-align: middle;
       }
     }
 
@@ -91,12 +106,12 @@
       position: relative;
       top: 2px;
       display: block;
-      margin-left: 10px;
       font-size: 13px;
       color: #9d9d9d;
       font-weight: 400;
       letter-spacing: -0.14px;
       text-align: left;
+      // line-height: 170%;
 
       a {
         opacity: 0.7;
@@ -157,6 +172,12 @@
         background: #b9b9b9;
         transform: rotate(-40deg);
       }
+
+      .box_reply_content {
+        @include res--mobile {
+          max-width: calc(100% - 68px);
+        }
+      }
     }
 
     .ico_commnent {
@@ -185,6 +206,7 @@
     padding: 2px 6px;
     border-radius: 20px;
     transform: scale(0.94);
+    margin-left: 2px;
     transform-origin: 100% 50%;
   }
 }

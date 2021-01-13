@@ -18,15 +18,12 @@
 
   .info_post {
     max-width: $article-max-width;
+    width: calc(100% - 40px);
     margin: 0 auto;
     padding: 40px 2px 25px;
     box-sizing: border-box;
     border-top: solid 4px #313131;
     border-bottom: solid 1px #dadada;
-
-    @include res--desktop {
-      margin: 0 20px;
-    }
 
     @include res--tablet {
       padding: 30px 4px 20px;
@@ -188,6 +185,8 @@
     img {
       display: block;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
       border-radius: 50%;
     }
   }
@@ -221,10 +220,15 @@
       }
     }
   }
+
+  & + .container_postbtn {
+    margin-top: 0;
+  }
 }
 
 //공감 버튼 등
 .container_postbtn {
+  margin-top: 100px;
   padding: 0 !important;
   @include flexbox();
   @include align-items(center);
@@ -541,7 +545,7 @@
     display: block;
     width: 100%;
     padding-top: 50%;
-    background: url(images/bg_empty.jpg) no-repeat;
+    background: url(images/bg_empty.png) no-repeat;
     background-size: cover !important;
     background-position: 50% 50% !important;
   }
@@ -757,4 +761,10 @@ div[data-ke-type="moreLess"] {
   padding: 10px 17px;
   border: 1px dashed #c9c9c9;
   color: #585858;
+}
+
+#tt-body-page h2[data-ke-size],
+#tt-body-page h3[data-ke-size],
+#tt-body-page h4[data-ke-size] {
+  font-weight: 500;
 }
