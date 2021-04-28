@@ -32,7 +32,11 @@
     img {
       display: block;
       width: auto;
-      max-width: 500px;
+      max-width: 300px;
+
+      @include res--mobile {
+        max-width: 75vw;
+      }
     }
   }
 

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* LOG SKIN by Nana (v1.1) */
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:500,700&display=swap");
 :root {
@@ -179,7 +180,10 @@ body.prevent-scroll {
     .header__link img {
       display: block;
       width: auto;
-      max-width: 500px; }
+      max-width: 300px; }
+      @media screen and (max-width: 640px) {
+        .header__link img {
+          max-width: 75vw; } }
   .header__info {
     max-width: 640px;
     margin: 5px auto 0;
@@ -1145,18 +1149,30 @@ body.prevent-scroll {
       opacity: 0.8; }
     .area_paging .link_num span:hover {
       opacity: 1; }
+  .area_paging .link_page {
+    width: 10px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%; }
   @media screen and (max-width: 640px) {
     .area_paging {
       margin: 40px 0; }
       .area_paging .link_page {
-        font-size: 22px;
+        width: 16px;
+        height: 16px;
+        background-size: 11px 11px;
         color: rgba(0, 0, 0, 0.75); }
       .area_paging .link_num {
         margin: 0; }
       .area_paging .link_num span {
-        padding: 0 10px; }
+        padding: 0 4px;
+        height: 22px; }
         .area_paging .link_num span:not(.selected) {
           display: none; }
+      .area_paging .link_prev {
+        background-position: 8px 3px; }
+      .area_paging .link_next {
+        background-position: 5px 3px; }
       .area_paging .link_num:last-child span {
         display: block; }
       .area_paging .link_num:last-child span:not(.selected) {
@@ -1164,7 +1180,7 @@ body.prevent-scroll {
         .area_paging .link_num:last-child span:not(.selected):before {
           content: "";
           position: absolute;
-          top: 4px;
+          top: 6px;
           left: -8px;
           width: 1px;
           height: 11px;
@@ -1172,17 +1188,11 @@ body.prevent-scroll {
           transform: rotate(18deg); } }
   .area_paging .link_prev {
     margin-right: 4px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.2 20.6"><path d="M10.7 2.1l-8.3 8.3 8.3 8.3" fill="none" stroke="%234b4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-    background-repeat: no-repeat;
-    background-position: top 12px left 8px;
-    background-size: 14px 14px; }
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.2 20.6"><path d="M10.7 2.1l-8.3 8.3 8.3 8.3" fill="none" stroke="%234b4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'); }
   .area_paging .link_next {
     opacity: 0.8;
     margin-left: 4px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.2 20.6"><path d="M2.4 18.7l8.3-8.3-8.3-8.3" fill="none" stroke="%234b4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-    background-repeat: no-repeat;
-    background-position: top 12px right 8px;
-    background-size: 14px 14px; }
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12.2 20.6"><path d="M2.4 18.7l8.3-8.3-8.3-8.3" fill="none" stroke="%234b4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'); }
     .area_paging .link_next:hover {
       opacity: 1; }
 
