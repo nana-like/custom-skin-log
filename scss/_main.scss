@@ -509,6 +509,29 @@
   .inner_index>.category_list>.list_horizontal .index_type_common {
     padding: 0;
   }
+
+  .index_type_wiki {
+    .thumbnail_zone {
+      display: none;
+    }
+
+    .category {
+      display: none;
+    }
+
+    .title_post {
+      margin-top: 0;
+    }
+
+    .info_zone {
+      padding: 0;
+    }
+
+    .txt_post {
+      margin-bottom: 10px;
+    }
+  }
+
 }
 
 //보호글인 경우

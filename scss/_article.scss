@@ -645,7 +645,8 @@
   [data-ke-list-type] li {
     position: relative;
     list-style: none !important;
-    margin: 5px 0;
+    margin: 7px 0;
+    line-height: 1.65;
 
     &:before {
       position: absolute;
@@ -668,8 +669,14 @@
     }
   }
 
+  [data-ke-list-type] li > ul > li {
+    margin: 5px 0;
+  }
 
-  p code {
+
+  p code,
+  ul code:not(.hljs),
+  ol code:not(.hljs) {
     background: #fff2c3;
     padding: 2px 4px;
     margin-right: 4px;
@@ -678,6 +685,11 @@
     border-radius: 2px;
     box-sizing: border-box;
     font-size: 90%;
+  }
+
+  ul code:not(.hljs),
+  ol code:not(.hljs) {
+    font-size: 80%;
   }
 
   figcaption {
@@ -691,6 +703,16 @@
     color: $c-black;
     font-size: 1.15em !important;
   }
+
+  [data-ke-list-type="decimal"] > li:before {
+    display: none;
+  }
+
+  [data-ke-list-type="decimal"] > li {
+    list-style: decimal !important;
+  }
+
+
 }
 
 
